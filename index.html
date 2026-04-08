@@ -478,7 +478,8 @@
       .then(function(data) {
         if (data.nextPosition) {
           document.getElementById('queue-position').textContent = 'You are #' + data.nextPosition.toLocaleString() + ' in line';
-          document.getElementById('hero-status').textContent = 'Join ' + (data.nextPosition - 1).toLocaleString() + '+ parents already in line!';
+          var parentCount = Math.floor((data.count + 500) / 100) * 100;
+          document.getElementById('hero-status').textContent = 'Join ' + parentCount.toLocaleString() + '+ parents already in line!';
           // Update overflow bubble — rounds to nearest 100 so it only changes every ~100 signups
           var overflowCount = Math.floor((data.count + 500) / 100) * 100;
           document.getElementById('queue-overflow').textContent = '+' + overflowCount.toLocaleString();
