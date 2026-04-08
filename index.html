@@ -458,7 +458,19 @@
   <!-- 10. FORM SUBMISSION SCRIPT                                    -->
   <!-- ============================================================ -->
   <script>
+    /*
+     * ============================================================
+     *  SETUP: Connect to Google Sheets (do this once before launch)
+     * ============================================================
+     *  1. Open apps-script.gs in this folder and follow the
+     *     instructions at the top of that file.
+     *  2. After deploying, paste your Web App URL below:
+     */
     const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+    /*
+     *  That's it! Signups will flow into your Google Sheet.
+     * ============================================================
+     */
 
     async function submitWaitlist(email, statusEl) {
       statusEl.classList.remove('hidden');
