@@ -472,21 +472,17 @@
      * ============================================================
      */
 
-    async function submitWaitlist(email, statusEl) {
+    async function submitWaitlist(email, statusEl, formEl) {
       statusEl.classList.remove('hidden');
       statusEl.textContent = 'Submitting…';
 
       // Disable submit button to prevent double submission
-      const submitBtn = statusEl.closest('form').querySelector('[type="submit"]');
+      const submitBtn = formEl ? formEl.querySelector('[type="submit"]') : null;
       if (submitBtn) submitBtn.disabled = true;
 
       let position;
 
       try {
-        if (!SCRIPT_URL || SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-          throw new Error('Script URL not configured');
-        }
-
         const res = await fetch(SCRIPT_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
@@ -496,27 +492,33 @@
         const data = await res.json();
         position = data.position ?? (Math.floor(Math.random() * 100) + 501);
       } catch (_) {
-        if (submitBtn) submitBtn.disabled = false;
-        const position = Math.floor(Math.random() * 100) + 501;
-        window.location.href = `thankyou.html?position=${position}`;
-        return;
+        position = Math.floor(Math.random() * 100) + 501;
       }
 
-      window.location.href = `thankyou.html?position=${position}`;
+      if (submitBtn) submitBtn.disabled = false;
+
+      // Navigate to thank-you page — works on hosted sites and local file://
+      try {
+        window.location.href = 'thankyou.html?position=' + position;
+      } catch (_) {
+        window.location.assign('thankyou.html?position=' + position);
+      }
     }
 
     function handleHeroSubmit(e) {
       e.preventDefault();
       const email = document.getElementById('hero-email').value.trim();
       const statusEl = document.getElementById('hero-status');
-      submitWaitlist(email, statusEl);
+      const formEl = document.getElementById('hero-form');
+      submitWaitlist(email, statusEl, formEl);
     }
 
     function handleCtaSubmit(e) {
       e.preventDefault();
       const email = document.getElementById('cta-email').value.trim();
       const statusEl = document.getElementById('cta-status');
-      submitWaitlist(email, statusEl);
+      const formEl = document.getElementById('cta-form');
+      submitWaitlist(email, statusEl, formEl);
     }
   </script>
 
