@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya — AI Sticker Printer for Kids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#fcf5e5',
+            'surface-low': '#fcf9ef',
+            card: '#ffffff',
+            primary: '#e4002b',
+            'primary-shadow': '#4e0008',
+            'primary-soft': '#ff7572',
+            secondary: '#00743c',
+            'secondary-section': '#037f59',
+            'accent-pink': '#ff8eb2',
+            'accent-green': '#71f69d',
+            outline: '#bbb9b0',
+            'on-surface': '#383831',
+            'on-surface-muted': '#65655d',
+          },
+          fontFamily: {
+            headline: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Be Vietnam Pro"', 'sans-serif'],
+          },
+          borderRadius: {
+            DEFAULT: '1rem',
+            lg: '2rem',
+            xl: '3rem',
+            full: '9999px',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .sticker-border {
+      outline: 4px solid #bbb9b0;
+    }
+    .btn-primary {
+      background: #e4002b;
+      color: #fff;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      box-shadow: 0 8px 0 0 #4e0008;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 0 0 #4e0008;
+    }
+    .btn-primary:active {
+      transform: translateY(4px);
+      box-shadow: 0 4px 0 0 #4e0008;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+
+  <!-- ============================================================ -->
+  <!-- 1. STICKY NAVIGATION                                          -->
+  <!-- ============================================================ -->
+  <nav class="fixed top-0 w-full z-50 bg-[#fcf5e5]/80 backdrop-blur-md shadow-[0_8px_24px_rgba(56,56,49,0.06)]">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Wordmark -->
+      <a href="#" class="text-3xl font-black italic font-headline text-primary tracking-tight select-none">papaya</a>
+
+      <!-- Center nav links (hidden on mobile) -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="font-headline font-bold text-on-surface hover:text-primary transition-colors">How it Works</a>
+        <a href="#features" class="font-headline font-bold text-on-surface hover:text-primary transition-colors">Features</a>
+        <a href="#safety" class="font-headline font-bold text-on-surface hover:text-primary transition-colors">Safety</a>
+        <a href="#social" class="font-headline font-bold text-on-surface hover:text-primary transition-colors">Community</a>
+      </div>
+
+      <!-- CTA pill -->
+      <button
+        onclick="document.getElementById('hero-email').focus(); document.getElementById('hero-email').scrollIntoView({ behavior: 'smooth', block: 'center' });"
+        class="btn-primary px-6 py-2.5 text-sm font-headline"
+      >
+        Join Waitlist
+      </button>
+    </div>
+  </nav>
+
+  <main class="pt-24">
+
+    <!-- ============================================================ -->
+    <!-- 2. HERO SECTION                                               -->
+    <!-- ============================================================ -->
+    <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+      <!-- Left: product image -->
+      <div class="relative group flex justify-center">
+        <img
+          src="https://placehold.co/600x600/fce4e4/e4002b?text=Papaya+Printer"
+          alt="Papaya AI Sticker Printer"
+          class="rounded-xl sticker-border shadow-[0_20px_48px_rgba(56,56,49,0.15)] rotate-[2deg] group-hover:rotate-0 transition-all duration-500 w-full max-w-md object-cover aspect-square"
+        />
+        <!-- AI Powered sticker badge -->
+        <div class="absolute -bottom-5 -right-2 md:-right-6 bg-accent-green px-5 py-3 rounded-xl rotate-[12deg] sticker-border shadow-[4px_4px_0_0_#383831] z-10">
+          <span class="material-symbols-outlined text-on-surface text-xl align-middle">auto_awesome</span>
+          <span class="font-headline font-extrabold text-on-surface text-sm ml-1">AI Powered!</span>
+        </div>
+      </div>
+
+      <!-- Right: headline + form -->
+      <div class="space-y-8">
+        <h1 class="text-[clamp(3.5rem,8vw,7rem)] font-headline font-black text-on-surface leading-[0.9] tracking-tighter">
+          Stickers <span class="text-primary italic">Born from</span> Imagination.
+        </h1>
+        <p class="text-lg md:text-xl text-on-surface-muted max-w-lg leading-relaxed font-body">
+          The first AI-powered sticker printer designed for Korean kids. Turn any drawing, word, or dream into a real sticker in seconds.
+        </p>
+
+        <!-- Email capture card -->
+        <div class="bg-card p-7 rounded-xl sticker-border space-y-4 shadow-[0_8px_32px_rgba(56,56,49,0.08)]">
+          <label for="hero-email" class="block font-headline font-bold text-on-surface text-lg">
+            Reserve your spot in the playground
+          </label>
+          <form id="hero-form" class="flex flex-col sm:flex-row gap-3" onsubmit="handleHeroSubmit(event)">
+            <input
+              id="hero-email"
+              type="email"
+              required
+              placeholder="Enter your email"
+              class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body"
+            />
+            <button type="submit" class="btn-primary px-7 py-4 font-headline whitespace-nowrap">
+              Join Waitlist
+            </button>
+          </form>
+          <p id="hero-status" class="text-sm text-on-surface-muted italic">
+            Join 500+ parents already in line!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. QUEUE TRACKER                                              -->
+    <!-- ============================================================ -->
+    <section class="max-w-4xl mx-auto px-6 py-8 mb-8">
+      <div class="bg-card p-8 md:p-10 rounded-xl sticker-border shadow-[0_12px_36px_rgba(56,56,49,0.10)] -rotate-[1deg] relative overflow-hidden">
+        <!-- Green top accent strip -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-accent-green rounded-t-xl"></div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-2">
+          <!-- Left: ticket + text -->
+          <div class="flex items-center gap-5">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-3xl">local_activity</span>
+            </div>
+            <div>
+              <h3 class="font-headline font-extrabold text-2xl text-on-surface">You are #501 in line</h3>
+              <p class="text-on-surface-muted font-body">Early bird discount secured!</p>
+            </div>
+          </div>
+
+          <!-- Right: avatars + overflow bubble -->
+          <div class="flex items-center -space-x-3">
+            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#fce4e4] flex items-center justify-center overflow-hidden">
+              <img src="https://placehold.co/48x48/fce4e4/e4002b?text=A" alt="Parent" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#e4fce9] flex items-center justify-center overflow-hidden">
+              <img src="https://placehold.co/48x48/e4fce9/00743c?text=B" alt="Parent" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#fff4e4] flex items-center justify-center overflow-hidden">
+              <img src="https://placehold.co/48x48/fff4e4/e4002b?text=C" alt="Parent" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#f1ede3] flex items-center justify-center font-headline font-bold text-xs text-on-surface">
+              +500
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. FEATURES GRID                                              -->
+    <!-- ============================================================ -->
+    <section id="features" class="bg-secondary-section py-24 w-full">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Title -->
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-headline font-black text-white mb-4">Why Papaya?</h2>
+          <div class="h-2 w-32 bg-accent-pink mx-auto rounded-full"></div>
+        </div>
+
+        <!-- 3-column card grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <!-- AI Magic -->
+          <div class="bg-card p-8 rounded-xl sticker-border shadow-xl rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default">
+            <div class="w-16 h-16 bg-accent-pink rounded-full flex items-center justify-center mb-6 border-4 border-on-surface shadow-[4px_4px_0_0_#383831]">
+              <span class="material-symbols-outlined text-on-surface text-3xl">auto_awesome</span>
+            </div>
+            <h3 class="text-2xl font-headline font-black text-on-surface mb-3">AI Magic</h3>
+            <p class="text-on-surface-muted leading-relaxed">Simply describe what you want, and our kid-friendly AI generates a unique sticker illustration in seconds.</p>
+          </div>
+
+          <!-- Instant Fun -->
+          <div class="bg-card p-8 rounded-xl sticker-border shadow-xl -rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default">
+            <div class="w-16 h-16 bg-accent-green rounded-full flex items-center justify-center mb-6 border-4 border-on-surface shadow-[4px_4px_0_0_#383831]">
+              <span class="material-symbols-outlined text-on-surface text-3xl">bolt</span>
+            </div>
+            <h3 class="text-2xl font-headline font-black text-on-surface mb-3">Instant Fun</h3>
+            <p class="text-on-surface-muted leading-relaxed">No ink, no mess. Our thermal printing technology makes stickers pop out instantly — ready to peel and stick.</p>
+          </div>
+
+          <!-- Kid-Safe -->
+          <div class="bg-card p-8 rounded-xl sticker-border shadow-xl rotate-[2deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default">
+            <div class="w-16 h-16 bg-primary-soft rounded-full flex items-center justify-center mb-6 border-4 border-on-surface shadow-[4px_4px_0_0_#383831]">
+              <span class="material-symbols-outlined text-on-surface text-3xl">shield</span>
+            </div>
+            <h3 class="text-2xl font-headline font-black text-on-surface mb-3">Kid-Safe</h3>
+            <p class="text-on-surface-muted leading-relaxed">BPA-free materials and a moderated AI environment ensure your child's safety is our #1 priority.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. PRODUCT VIDEO                                              -->
+    <!-- ============================================================ -->
+    <section class="bg-secondary-section py-16 w-full">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="relative rounded-xl overflow-hidden sticker-border shadow-2xl aspect-video group cursor-pointer">
+          <!-- Placeholder image -->
+          <img
+            src="https://placehold.co/1280x720/037f59/ffffff?text=Product+Video+Coming+Soon"
+            alt="Papaya product video"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <!-- Play button -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+              <span class="material-symbols-outlined text-secondary-section text-5xl translate-x-0.5">play_arrow</span>
+            </div>
+          </div>
+          <!-- Bottom-left text overlay -->
+          <div class="absolute bottom-6 left-6">
+            <p class="text-white text-2xl md:text-3xl font-headline font-black drop-shadow-lg">Watch Papaya in Action!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. PARENT APPROVED / SAFETY                                   -->
+    <!-- ============================================================ -->
+    <section id="safety" class="bg-surface py-24">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: headline + checklist -->
+        <div class="space-y-8">
+          <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface leading-tight">
+            Safety first,<br />playtime always.
+          </h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-white text-base">check</span>
+              </div>
+              <p class="text-lg font-body font-medium text-on-surface leading-relaxed">
+                BPA-free, non-toxic sticker rolls tested for heavy metal safety.
+              </p>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-white text-base">check</span>
+              </div>
+              <p class="text-lg font-body font-medium text-on-surface leading-relaxed">
+                Curated AI engine with strict safety filters for age-appropriate content.
+              </p>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-white text-base">check</span>
+              </div>
+              <p class="text-lg font-body font-medium text-on-surface leading-relaxed">
+                Built-in parental controls via the Papaya Companion App.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: KC certification badge -->
+        <div class="flex justify-center md:justify-end">
+          <div class="bg-card w-60 h-60 rounded-xl sticker-border rotate-[6deg] flex flex-col items-center justify-center p-8 shadow-[0_20px_48px_rgba(56,56,49,0.12)]">
+            <div class="w-28 h-28 rounded-full bg-[#0051a8] flex items-center justify-center mb-4">
+              <span class="font-headline font-black text-4xl text-white">KC</span>
+            </div>
+            <p class="text-center font-headline font-bold text-[#0051a8] text-sm">
+              KC Certified<br />
+              <span class="font-body font-normal text-on-surface-muted text-xs">Safety Standard</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. SOCIAL PROOF                                               -->
+    <!-- ============================================================ -->
+    <section id="social" class="bg-[#f5eedc] py-24">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Section heading -->
+        <div class="text-center mb-14">
+          <span class="font-headline font-bold text-primary uppercase tracking-widest text-sm">#MadeWithPapaya</span>
+          <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface mt-2">What Parents are Saying</h2>
+        </div>
+
+        <!-- 2×2 / 4-col grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
+
+          <!-- Card 1 -->
+          <div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-[2deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
+            <img
+              src="https://placehold.co/400x400/fce4e4/e4002b?text=@sunny_mom"
+              alt="@sunny_mom review"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+              <p class="text-white text-sm font-headline font-bold">@sunny_mom</p>
+              <p class="text-white/80 text-xs font-body">"My kid is obsessed!"</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative aspect-square sticker-border rounded-xl overflow-hidden rotate-[3deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
+            <img
+              src="https://placehold.co/400x400/e4fce9/00743c?text=@min_jun_dad"
+              alt="@min_jun_dad review"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+              <p class="text-white text-sm font-headline font-bold">@min_jun_dad</p>
+              <p class="text-white/80 text-xs font-body">"Zero mess art time."</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-[3deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
+            <img
+              src="https://placehold.co/400x400/e4eafc/0051a8?text=@playtime_korea"
+              alt="@playtime_korea review"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+              <p class="text-white text-sm font-headline font-bold">@playtime_korea</p>
+              <p class="text-white/80 text-xs font-body">"Best birthday gift ever."</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="relative aspect-square sticker-border rounded-xl overflow-hidden rotate-[2deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
+            <img
+              src="https://placehold.co/400x400/fff4e4/e47000?text=@art_with_jisu"
+              alt="@art_with_jisu review"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+              <p class="text-white text-sm font-headline font-bold">@art_with_jisu</p>
+              <p class="text-white/80 text-xs font-body">"Endless creative joy!"</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 8. BOTTOM CTA BANNER                                          -->
+    <!-- ============================================================ -->
+    <section class="py-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-primary text-white rounded-xl sticker-border shadow-2xl p-12 text-center space-y-6 relative overflow-hidden">
+          <!-- Decorative blobs -->
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary-soft rounded-full blur-3xl opacity-40 pointer-events-none"></div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+
+          <h2 class="relative z-10 text-4xl md:text-5xl font-headline font-black">Ready to play?</h2>
+          <p class="relative z-10 text-lg text-white/90 max-w-md mx-auto font-body leading-relaxed">
+            We're launching soon. Join the waitlist now to get 10% off your first Papaya Starter Pack.
+          </p>
+
+          <form id="cta-form" class="relative z-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleCtaSubmit(event)">
+            <input
+              id="cta-email"
+              type="email"
+              required
+              placeholder="Your best email"
+              class="flex-1 bg-white/15 backdrop-blur-sm px-5 py-4 rounded-xl border-2 border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:border-white font-body"
+            />
+            <button
+              type="submit"
+              class="bg-white text-primary font-headline font-extrabold px-8 py-4 rounded-full hover:bg-surface-low transition-colors whitespace-nowrap shadow-[0_6px_0_0_rgba(0,0,0,0.15)]"
+            >
+              Count Me In!
+            </button>
+          </form>
+
+          <p id="cta-status" class="relative z-10 text-white/80 text-sm font-body hidden"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- 9. FOOTER                                                     -->
+  <!-- ============================================================ -->
+  <footer class="bg-[#fcf9ef] border-t-4 border-outline/30">
+    <div class="max-w-7xl mx-auto px-8 py-14 flex flex-col md:flex-row justify-between items-center gap-8 font-headline">
+
+      <!-- Left: wordmark + nav links -->
+      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-14">
+        <span class="text-2xl font-black italic text-primary tracking-tight">papaya</span>
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-bold tracking-widest text-on-surface">
+          <a href="#" class="hover:text-primary transition-colors">INSTAGRAM</a>
+          <a href="#" class="hover:text-primary transition-colors">TIKTOK</a>
+          <a href="#" class="hover:text-primary transition-colors">SAFETY SPECS</a>
+          <a href="#" class="hover:text-primary transition-colors">PRIVACY</a>
+        </div>
+      </div>
+
+      <!-- Right: copyright -->
+      <div class="text-xs font-bold tracking-widest text-on-surface-muted text-center md:text-right">
+        © 2026 PAPAYA. MADE FOR LITTLE CREATORS.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- 10. FORM SUBMISSION SCRIPT                                    -->
+  <!-- ============================================================ -->
+  <script>
+    const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+    async function submitWaitlist(email, statusEl) {
+      statusEl.classList.remove('hidden');
+      statusEl.textContent = 'Submitting…';
+
+      let position;
+
+      try {
+        if (!SCRIPT_URL || SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+          throw new Error('Script URL not configured');
+        }
+
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ email }),
+        });
+
+        const data = await res.json();
+        position = data.position;
+      } catch (_) {
+        // Fallback: generate a random position
+        position = Math.floor(Math.random() * 100) + 501;
+      }
+
+      window.location.href = `thankyou.html?position=${position}`;
+    }
+
+    function handleHeroSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('hero-email').value.trim();
+      const statusEl = document.getElementById('hero-status');
+      submitWaitlist(email, statusEl);
+    }
+
+    function handleCtaSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('cta-email').value.trim();
+      const statusEl = document.getElementById('cta-status');
+      submitWaitlist(email, statusEl);
+    }
+  </script>
+
+</body>
+</html>
