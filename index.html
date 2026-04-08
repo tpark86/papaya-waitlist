@@ -184,7 +184,7 @@
             <div class="w-12 h-12 rounded-full border-4 border-card bg-[#fff4e4] flex items-center justify-center overflow-hidden">
               <img src="https://placehold.co/48x48/fff4e4/e4002b?text=C" alt="Parent" class="w-full h-full object-cover" />
             </div>
-            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#f1ede3] flex items-center justify-center font-headline font-bold text-xs text-on-surface">
+            <div id="queue-overflow" class="w-12 h-12 rounded-full border-4 border-card bg-[#f1ede3] flex items-center justify-center font-headline font-bold text-xs text-on-surface">
               +500
             </div>
           </div>
@@ -479,6 +479,9 @@
         if (data.nextPosition) {
           document.getElementById('queue-position').textContent = 'You are #' + data.nextPosition.toLocaleString() + ' in line';
           document.getElementById('hero-status').textContent = 'Join ' + (data.nextPosition - 1).toLocaleString() + '+ parents already in line!';
+          // Update overflow bubble — rounds to nearest 100 so it only changes every ~100 signups
+          var overflowCount = Math.floor((data.count + 500) / 100) * 100;
+          document.getElementById('queue-overflow').textContent = '+' + overflowCount.toLocaleString();
         }
       })
       .catch(function() {}); // silently fail — static fallback stays visible
