@@ -496,8 +496,10 @@
         const data = await res.json();
         position = data.position ?? (Math.floor(Math.random() * 100) + 501);
       } catch (_) {
-        // Fallback: generate a random position
-        position = Math.floor(Math.random() * 100) + 501;
+        if (submitBtn) submitBtn.disabled = false;
+        const position = Math.floor(Math.random() * 100) + 501;
+        window.location.href = `thankyou.html?position=${position}`;
+        return;
       }
 
       window.location.href = `thankyou.html?position=${position}`;

@@ -45,9 +45,9 @@ function doPost(e) {
       }
     }
 
-    // Assign next position: first signup = 501
-    const lastRow = sheet.getLastRow(); // 0 if sheet is empty
-    const position = lastRow + 501;
+    // Assign next position: count only rows with an email — immune to accidental header rows
+    const dataRows = existing.filter(function(r) { return r[1] !== ''; }).length;
+    const position = dataRows + 501;
 
     sheet.appendRow([new Date().toISOString(), email, position]);
 

@@ -159,7 +159,7 @@
         <button
           type="button"
           onclick="shareKakao()"
-          aria-label="Share on KakaoTalk"
+          aria-label="카카오톡으로 공유"
           class="flex-1 flex items-center justify-center gap-2 font-headline font-bold text-sm px-5 py-3 rounded-xl transition-opacity hover:opacity-90 active:scale-95 shadow-sm"
           style="background: #FEE500; color: #3C1E1E;"
         >
@@ -227,14 +227,16 @@
     const n = parseInt(raw, 10);
     if (!isNaN(n) && n > 0) {
       document.getElementById('position-display').textContent = '#' + n.toLocaleString();
+    } else {
+      document.getElementById('position-display').textContent = "You're in!";
     }
 
     // Share URL helper — guards against file:// returning "null"
     function getShareUrl() {
       if (window.location.protocol === 'file:') {
-        return 'https://papayadesign.co/index.html'; // placeholder — update when domain is live
+        return 'https://YOUR_DOMAIN_HERE/index.html'; // TODO: replace before launch
       }
-      return window.location.origin + '/index.html';
+      return window.location.href.replace(/thankyou\.html.*$/, 'index.html');
     }
 
     // Fallback copy for browsers/contexts where clipboard API is unavailable
@@ -266,7 +268,19 @@
 
     // Share helpers
     function shareKakao() {
-      window.open('https://sharer.kakao.com/talk/friends/picker/link', '_blank', 'width=400,height=600');
+      const url = getShareUrl();
+      const msg = '카카오톡으로 링크를 붙여넣기 해서 친구들에게 공유하세요!\n\n' + url;
+      fallbackCopy(url);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function() {
+          alert('링크가 복사되었어요! 카카오톡에 붙여넣기 해서 친구에게 공유하세요 🎉');
+        }).catch(function() {
+          alert('카카오톡에서 공유하려면 이 링크를 복사해 붙여넣으세요:\n' + url);
+        });
+      } else {
+        fallbackCopy(url);
+        alert('카카오톡에서 공유하려면 이 링크를 복사해 붙여넣으세요:\n' + url);
+      }
     }
 
     function shareInstagram() {
