@@ -168,7 +168,7 @@
               <span class="material-symbols-outlined text-primary text-3xl">local_activity</span>
             </div>
             <div>
-              <h3 class="font-headline font-extrabold text-2xl text-on-surface">You are #501 in line</h3>
+              <h3 class="font-headline font-extrabold text-2xl text-on-surface" id="queue-position">You are #501 in line</h3>
               <p class="text-on-surface-muted font-body">Early bird discount secured!</p>
             </div>
           </div>
@@ -471,6 +471,17 @@
      *  That's it! Signups will flow into your Google Sheet.
      * ============================================================
      */
+
+    // Load live queue count on page load
+    fetch(SCRIPT_URL)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.nextPosition) {
+          document.getElementById('queue-position').textContent = 'You are #' + data.nextPosition.toLocaleString() + ' in line';
+          document.getElementById('hero-status').textContent = 'Join ' + (data.nextPosition - 1).toLocaleString() + '+ parents already in line!';
+        }
+      })
+      .catch(function() {}); // silently fail — static fallback stays visible
 
     async function submitWaitlist(email, statusEl, formEl) {
       statusEl.classList.remove('hidden');

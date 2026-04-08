@@ -24,6 +24,17 @@
  *   Duplicate emails get their original position back (no new row added).
  */
 
+function doGet(e) {
+  try {
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    const existing = sheet.getDataRange().getValues();
+    const dataRows = existing.filter(function(r) { return r[1] !== ''; }).length;
+    return respond({ count: dataRows, nextPosition: dataRows + 501 });
+  } catch (err) {
+    return respond({ error: err.message });
+  }
+}
+
 function doPost(e) {
   try {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
