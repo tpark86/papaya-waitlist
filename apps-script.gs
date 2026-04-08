@@ -27,6 +27,9 @@
 function doPost(e) {
   try {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    if (!e || !e.postData || !e.postData.contents) {
+      return respond({ error: 'Missing request body' });
+    }
     const data = JSON.parse(e.postData.contents);
     const email = (data.email || '').trim().toLowerCase();
 
