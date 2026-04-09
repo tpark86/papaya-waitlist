@@ -165,10 +165,10 @@
         <div class="absolute top-0 left-0 w-full h-2 bg-accent-green rounded-t-xl"></div>
 
         <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-2">
-          <!-- Left: % icon + text -->
+          <!-- Left: 10% badge + text -->
           <div class="flex items-center gap-5">
             <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="material-symbols-outlined text-primary text-3xl">percent</span>
+              <span class="font-headline font-black text-primary text-lg leading-none">10%</span>
             </div>
             <div>
               <h3 class="font-headline font-extrabold text-2xl text-on-surface">얼리버드 특별 혜택</h3>
@@ -176,10 +176,24 @@
             </div>
           </div>
 
-          <!-- Right: live signup count -->
-          <div class="text-right">
-            <p class="font-headline font-black text-3xl text-primary" id="queue-overflow">742</p>
-            <p class="text-on-surface-muted text-sm font-body">명이 기다리고 있어요</p>
+          <!-- Right: avatar circles + live signup count -->
+          <div class="flex items-center gap-4">
+            <!-- Avatar circles — replace src with real photos when ready -->
+            <div class="flex -space-x-3">
+              <div class="w-12 h-12 rounded-full border-4 border-card overflow-hidden">
+                <img src="https://placehold.co/48x48/fce4e4/e4002b?text=1" alt="가입자" class="w-full h-full object-cover" id="avatar-1" />
+              </div>
+              <div class="w-12 h-12 rounded-full border-4 border-card overflow-hidden">
+                <img src="https://placehold.co/48x48/e4f5ec/00743c?text=2" alt="가입자" class="w-full h-full object-cover" id="avatar-2" />
+              </div>
+              <div class="w-12 h-12 rounded-full border-4 border-card overflow-hidden">
+                <img src="https://placehold.co/48x48/fff0f5/ff8eb2?text=3" alt="가입자" class="w-full h-full object-cover" id="avatar-3" />
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="font-headline font-black text-3xl text-primary" id="queue-overflow">500</p>
+              <p class="text-on-surface-muted text-sm font-body">명이 기다리고 있어요</p>
+            </div>
           </div>
         </div>
       </div>
@@ -474,7 +488,7 @@
           var parentCount = Math.floor((data.count + 500) / 100) * 100;
           document.getElementById('hero-status').textContent = '벌써 ' + parentCount.toLocaleString() + '명 넘게 가입했어요!';
           // Update overflow bubble — rounds to nearest 100 so it only changes every ~100 signups
-          document.getElementById('queue-overflow').textContent = data.count.toLocaleString();
+          document.getElementById('queue-overflow').textContent = (data.count + 500).toLocaleString();
         }
       })
       .catch(function() {}); // silently fail — static fallback stays visible
