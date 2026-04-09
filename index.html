@@ -212,8 +212,8 @@
           <div class="h-2 w-32 bg-accent-pink mx-auto rounded-full"></div>
         </div>
 
-        <!-- 3-column card grid -->
-        <div class="grid md:grid-cols-3 gap-8">
+        <!-- cards + arrows -->
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 md:gap-6 items-center">
 
           <!-- Step 1: 말해요! -->
           <div class="bg-card p-8 rounded-xl sticker-border shadow-xl rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default">
@@ -221,7 +221,21 @@
               <span class="material-symbols-outlined text-on-surface text-3xl">mic</span>
             </div>
             <h3 class="text-2xl font-headline font-black text-on-surface mb-3">말해요!</h3>
-            <p class="text-on-surface-muted leading-relaxed">만들고 싶은 걸 말해보세요</p>
+            <p class="text-on-surface-muted leading-relaxed"><span class="font-black text-on-surface">1.</span> 만들고 싶은 걸 말해보세요</p>
+          </div>
+
+          <!-- Arrow 1→2 -->
+          <div class="flex items-center justify-center">
+            <!-- Desktop: right arrow -->
+            <svg class="hidden md:block" width="56" height="36" viewBox="0 0 56 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 18 C12 14, 22 22, 32 17 C38 14, 44 18, 50 17" stroke="#e4002b" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M43 10 L52 17 L43 25" stroke="#e4002b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <!-- Mobile: down arrow -->
+            <svg class="md:hidden" width="36" height="48" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 4 C14 12, 22 22, 17 32 C15 38, 18 42, 18 44" stroke="#e4002b" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M10 37 L18 46 L26 37" stroke="#e4002b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
           </div>
 
           <!-- Step 2: 프린트! -->
@@ -230,7 +244,21 @@
               <span class="material-symbols-outlined text-on-surface text-3xl">print</span>
             </div>
             <h3 class="text-2xl font-headline font-black text-on-surface mb-3">프린트!</h3>
-            <p class="text-on-surface-muted leading-relaxed">파파야가 바로 그려서 뽑아줘요</p>
+            <p class="text-on-surface-muted leading-relaxed"><span class="font-black text-on-surface">2.</span> 파파야가 바로 그려서 뽑아줘요</p>
+          </div>
+
+          <!-- Arrow 2→3 -->
+          <div class="flex items-center justify-center">
+            <!-- Desktop: right arrow -->
+            <svg class="hidden md:block" width="56" height="36" viewBox="0 0 56 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 19 C14 15, 24 23, 34 18 C40 15, 46 19, 50 18" stroke="#e4002b" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M43 11 L52 18 L43 26" stroke="#e4002b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <!-- Mobile: down arrow -->
+            <svg class="md:hidden" width="36" height="48" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 4 C22 14, 14 24, 19 34 C21 40, 18 42, 18 44" stroke="#e4002b" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M10 37 L18 46 L26 37" stroke="#e4002b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
           </div>
 
           <!-- Step 3: 붙여요! -->
@@ -239,7 +267,7 @@
               <span class="material-symbols-outlined text-on-surface text-3xl">push_pin</span>
             </div>
             <h3 class="text-2xl font-headline font-black text-on-surface mb-3">붙여요!</h3>
-            <p class="text-on-surface-muted leading-relaxed">떼고, 색칠하고, 친구랑 나눠요</p>
+            <p class="text-on-surface-muted leading-relaxed"><span class="font-black text-on-surface">3.</span> 떼고, 색칠하고, 친구랑 나눠요</p>
           </div>
 
         </div>
