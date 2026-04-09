@@ -119,7 +119,7 @@
         <!-- AI Powered sticker badge -->
         <div class="absolute -bottom-5 -right-2 md:-right-6 bg-accent-green px-5 py-3 rounded-xl rotate-[12deg] sticker-border shadow-[4px_4px_0_0_#383831] z-10">
           <span class="material-symbols-outlined text-on-surface text-xl align-middle">auto_awesome</span>
-          <span class="font-headline font-extrabold text-on-surface text-sm ml-1">AI Powered!</span>
+          <span class="font-headline font-extrabold text-on-surface text-sm ml-1">AI 탑재!</span>
         </div>
       </div>
 
@@ -135,14 +135,14 @@
         <!-- Email capture card -->
         <div class="bg-card p-7 rounded-xl sticker-border space-y-4 shadow-[0_8px_32px_rgba(56,56,49,0.08)]">
           <label for="hero-email" class="block font-headline font-bold text-on-surface text-lg">
-            Reserve your spot in the playground
+            파파야 놀이터 가장 먼저 입장하기
           </label>
           <form id="hero-form" class="flex flex-col sm:flex-row gap-3" onsubmit="handleHeroSubmit(event)">
             <input
               id="hero-email"
               type="email"
               required
-              placeholder="Enter your email"
+              placeholder="이메일을 입력해 주세요"
               class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body"
             />
             <button type="submit" class="btn-primary px-7 py-4 font-headline whitespace-nowrap">
@@ -150,7 +150,7 @@
             </button>
           </form>
           <p id="hero-status" class="text-sm text-on-surface-muted italic">
-            Join 500+ parents already in line!
+            벌써 500명 넘게 가입했어요!
           </p>
         </div>
       </div>
@@ -482,7 +482,7 @@
         if (data.nextPosition) {
           document.getElementById('queue-position').textContent = 'You are #' + data.nextPosition.toLocaleString() + ' in line';
           var parentCount = Math.floor((data.count + 500) / 100) * 100;
-          document.getElementById('hero-status').textContent = 'Join ' + parentCount.toLocaleString() + '+ parents already in line!';
+          document.getElementById('hero-status').textContent = '벌써 ' + parentCount.toLocaleString() + '명 넘게 가입했어요!';
           // Update overflow bubble — rounds to nearest 100 so it only changes every ~100 signups
           var overflowCount = Math.floor((data.count + 500) / 100) * 100;
           document.getElementById('queue-overflow').textContent = '+' + overflowCount.toLocaleString();
