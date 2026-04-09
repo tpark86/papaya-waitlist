@@ -165,31 +165,21 @@
         <div class="absolute top-0 left-0 w-full h-2 bg-accent-green rounded-t-xl"></div>
 
         <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-2">
-          <!-- Left: ticket + text -->
+          <!-- Left: % icon + text -->
           <div class="flex items-center gap-5">
             <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="material-symbols-outlined text-primary text-3xl">local_activity</span>
+              <span class="material-symbols-outlined text-primary text-3xl">percent</span>
             </div>
             <div>
-              <h3 class="font-headline font-extrabold text-2xl text-on-surface" id="queue-position">You are #501 in line</h3>
-              <p class="text-on-surface-muted font-body">Early bird discount secured!</p>
+              <h3 class="font-headline font-extrabold text-2xl text-on-surface">얼리버드 특별 혜택</h3>
+              <p class="text-on-surface-muted font-body">선착순 1,000명 10% 할인</p>
             </div>
           </div>
 
-          <!-- Right: avatars + overflow bubble -->
-          <div class="flex items-center -space-x-3">
-            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#fce4e4] flex items-center justify-center overflow-hidden">
-              <img src="https://placehold.co/48x48/fce4e4/e4002b?text=A" alt="Parent" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#e4fce9] flex items-center justify-center overflow-hidden">
-              <img src="https://placehold.co/48x48/e4fce9/00743c?text=B" alt="Parent" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-12 h-12 rounded-full border-4 border-card bg-[#fff4e4] flex items-center justify-center overflow-hidden">
-              <img src="https://placehold.co/48x48/fff4e4/e4002b?text=C" alt="Parent" class="w-full h-full object-cover" />
-            </div>
-            <div id="queue-overflow" class="w-12 h-12 rounded-full border-4 border-card bg-[#f1ede3] flex items-center justify-center font-headline font-bold text-xs text-on-surface">
-              +500
-            </div>
+          <!-- Right: live signup count -->
+          <div class="text-right">
+            <p class="font-headline font-black text-3xl text-primary" id="queue-overflow">742</p>
+            <p class="text-on-surface-muted text-sm font-body">명이 기다리고 있어요</p>
           </div>
         </div>
       </div>
@@ -484,8 +474,7 @@
           var parentCount = Math.floor((data.count + 500) / 100) * 100;
           document.getElementById('hero-status').textContent = '벌써 ' + parentCount.toLocaleString() + '명 넘게 가입했어요!';
           // Update overflow bubble — rounds to nearest 100 so it only changes every ~100 signups
-          var overflowCount = Math.floor((data.count + 500) / 100) * 100;
-          document.getElementById('queue-overflow').textContent = '+' + overflowCount.toLocaleString();
+          document.getElementById('queue-overflow').textContent = data.count.toLocaleString();
         }
       })
       .catch(function() {}); // silently fail — static fallback stays visible
