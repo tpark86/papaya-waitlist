@@ -755,18 +755,26 @@
      * ============================================================
      */
 
-    // Load live queue count on page load
+    // Show cached count instantly, then update from server in background
+    function updateCountDisplay(total) {
+      var parentCount = Math.floor(total / 100) * 100;
+      document.getElementById('hero-status').textContent = '벌써 ' + parentCount.toLocaleString() + '명 넘게 가입했어요!';
+      document.getElementById('queue-overflow').textContent = total.toLocaleString();
+    }
+
+    var cached = localStorage.getItem('papaya_queue_total');
+    if (cached) updateCountDisplay(parseInt(cached, 10));
+
     fetch(SCRIPT_URL)
       .then(function(r) { return r.json(); })
       .then(function(data) {
         if (data.count !== undefined) {
           var total = data.count + 500;
-          var parentCount = Math.floor(total / 100) * 100;
-          document.getElementById('hero-status').textContent = '벌써 ' + parentCount.toLocaleString() + '명 넘게 가입했어요!';
-          document.getElementById('queue-overflow').textContent = total.toLocaleString();
+          localStorage.setItem('papaya_queue_total', total);
+          updateCountDisplay(total);
         }
       })
-      .catch(function() {}); // silently fail — static fallback stays visible
+      .catch(function() {});
 
     async function submitWaitlist(email, statusEl, formEl) {
       statusEl.classList.remove('hidden');
