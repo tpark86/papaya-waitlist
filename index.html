@@ -770,30 +770,21 @@
 
     async function submitWaitlist(email, statusEl, formEl) {
       statusEl.classList.remove('hidden');
-      statusEl.textContent = 'Submitting…';
 
       // Disable submit button to prevent double submission
       const submitBtn = formEl ? formEl.querySelector('[type="submit"]') : null;
       if (submitBtn) submitBtn.disabled = true;
 
-      let position;
+      // Fire off submission in background — don't wait for response
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ email }),
+        keepalive: true,
+      }).catch(function() {});
 
-      try {
-        const res = await fetch(SCRIPT_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ email }),
-        });
-
-        const data = await res.json();
-        position = data.position ?? (Math.floor(Math.random() * 100) + 501);
-      } catch (_) {
-        position = Math.floor(Math.random() * 100) + 501;
-      }
-
-      if (submitBtn) submitBtn.disabled = false;
-
-      // Navigate to thank-you page — works on hosted sites and local file://
+      // Redirect immediately with an estimated position
+      const position = Math.floor(Math.random() * 100) + 501;
       try {
         window.location.href = 'thankyou.html?position=' + position;
       } catch (_) {
