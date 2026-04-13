@@ -415,7 +415,7 @@
             preload="metadata"
           ></video>
           <!-- Play button overlay -->
-          <div id="play-overlay" class="absolute inset-0 flex items-center justify-center cursor-pointer" onclick="document.getElementById('product-video').play(); this.style.display='none';">
+          <div id="play-overlay" class="absolute inset-0 flex items-center justify-center cursor-pointer" onclick="playVideo()">
             <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
               <span class="material-symbols-outlined text-secondary-section text-5xl translate-x-0.5">play_arrow</span>
             </div>
@@ -716,6 +716,26 @@
         }
       }, 2250);
     })();
+  </script>
+  <script>
+    function playVideo() {
+      const video = document.getElementById('product-video');
+      document.getElementById('play-overlay').style.display = 'none';
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        if (video.webkitEnterFullscreen) {
+          video.play();
+          video.webkitEnterFullscreen();
+        } else if (video.requestFullscreen) {
+          video.requestFullscreen();
+          video.play();
+        } else {
+          video.play();
+        }
+      } else {
+        video.play();
+      }
+    }
   </script>
 
   <!-- 10. FORM SUBMISSION SCRIPT                                    -->
