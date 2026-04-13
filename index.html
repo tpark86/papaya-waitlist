@@ -248,7 +248,7 @@
             </button>
           </form>
           <p id="hero-status" class="text-sm text-on-surface-muted italic">
-            벌써 500명 넘게 가입했어요!
+            벌써 0명 넘게 가입했어요!
           </p>
         </div>
       </div>
@@ -290,7 +290,7 @@
             </div>
             <div class="text-right">
               <p class="text-on-surface-muted text-sm font-body">
-                <span class="font-headline font-black text-xl text-primary" id="queue-overflow">500</span>명이 기다리고 있어요
+                <span class="font-headline font-black text-xl text-primary" id="queue-overflow">0</span>명이 기다리고 있어요
               </p>
             </div>
           </div>
@@ -769,7 +769,7 @@
       .then(function(r) { return r.json(); })
       .then(function(data) {
         if (data.count !== undefined) {
-          var total = data.count + 500;
+          var total = data.count;
           localStorage.setItem('papaya_queue_total', total);
           updateCountDisplay(total);
         }
@@ -792,7 +792,7 @@
       }).catch(function() {});
 
       // Redirect immediately with an estimated position
-      const position = Math.floor(Math.random() * 100) + 501;
+      const position = Math.floor(Math.random() * 10) + 1;
       try {
         window.location.href = 'thankyou.html?position=' + position;
       } catch (_) {
