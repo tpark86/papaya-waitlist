@@ -80,10 +80,10 @@
   <!-- ============================================================ -->
   <!-- 1. MINIMAL NAV                                               -->
   <!-- ============================================================ -->
-  <nav class="w-full bg-[#fcf5e5]/80 backdrop-blur-md shadow-[0_8px_24px_rgba(56,56,49,0.06)]">
-    <div class="max-w-7xl mx-auto px-6 py-4">
+  <nav class="w-full bg-[#fcf5e5]/80 backdrop-blur-md shadow-[0_8px_24px_rgba(56,56,49,0.06)] overflow-visible" style="height:69px;">
+    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
       <a href="index.html" class="inline-block">
-        <img src="logo.png" alt="papaya" class="h-20 w-auto" style="object-fit: contain;">
+        <img src="logo.png" alt="papaya" class="w-auto" style="height:276px; object-fit: contain; object-position: center;">
       </a>
     </div>
   </nav>
@@ -103,7 +103,7 @@
         aria-label="party popper"
       >🎉</div>
       <h1 class="text-3xl md:text-4xl font-headline font-black text-on-surface leading-tight">
-        You're officially in the playground!
+        파파야 놀이터에 입장했어요!
       </h1>
     </div>
 
@@ -114,13 +114,13 @@
       class="pop-in pop-in-delay-1 w-full bg-card rounded-xl sticker-border shadow-[0_12px_36px_rgba(56,56,49,0.10)] rotate-[1deg] p-8 text-center space-y-2"
       style="transform-origin: center;"
     >
-      <p class="text-xs font-headline font-bold uppercase tracking-widest text-on-surface-muted">Your spot in line</p>
+      <p class="text-xs font-headline font-bold uppercase tracking-widest text-on-surface-muted">내 순번</p>
       <p
         id="position-display"
         class="text-6xl md:text-7xl font-headline font-black text-primary leading-none"
         aria-live="polite"
       >#—</p>
-      <p class="text-sm text-on-surface-muted font-body">We'll email you when it's your turn!</p>
+      <p class="text-sm text-on-surface-muted font-body">출시되면 가장 먼저 알려드릴게요</p>
     </div>
 
     <!-- ============================================================ -->
@@ -130,7 +130,7 @@
       class="pop-in pop-in-delay-2 w-full rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.15)] -rotate-[1deg] p-8 text-center space-y-4"
       style="background: #00743c; transform-origin: center;"
     >
-      <p class="text-xs font-headline font-bold uppercase tracking-widest text-white/70">Your exclusive discount</p>
+      <p class="text-xs font-headline font-bold uppercase tracking-widest text-white/70">나만의 할인 코드</p>
       <p class="text-4xl md:text-5xl font-headline font-black text-white tracking-[0.15em] font-mono">PAPAYA10</p>
       <button
         id="copy-btn"
@@ -139,9 +139,9 @@
         aria-label="Copy discount code PAPAYA10"
         class="bg-white text-secondary font-headline font-extrabold text-sm px-6 py-2.5 rounded-full hover:bg-surface-low transition-colors shadow-sm"
       >
-        Copy
+        복사하기
       </button>
-      <p class="text-xs text-white/70 font-body">10% off your first Papaya Starter Pack at launch</p>
+      <p class="text-xs text-white/70 font-body">출시 시 첫 스타터팩 10% 할인</p>
     </div>
 
     <!-- ============================================================ -->
@@ -152,9 +152,9 @@
       style="transform-origin: center;"
     >
       <div class="text-center space-y-1">
-        <h2 class="text-xl font-headline font-black text-on-surface">Move up the line!</h2>
+        <h2 class="text-xl font-headline font-black text-on-surface">순번을 앞당겨보세요!</h2>
         <p class="text-sm text-on-surface-muted font-body leading-relaxed">
-          Share Papaya and every friend who joins pushes you closer to #1.
+          친구를 초대할 때마다 순번이 앞으로 당겨져요.
         </p>
       </div>
 
@@ -205,7 +205,7 @@
           class="flex-1 flex items-center justify-center gap-2 bg-card sticker-border font-headline font-bold text-sm text-on-surface px-5 py-3 rounded-xl hover:bg-surface-low transition-colors active:scale-95 shadow-sm"
         >
           <span class="material-symbols-outlined text-base">link</span>
-          Copy Link
+          링크 복사
         </button>
 
       </div>
@@ -218,7 +218,7 @@
       href="index.html"
       class="text-sm text-on-surface-muted font-body hover:text-primary transition-colors"
     >
-      ← Back to papaya
+      ← 파파야로 돌아가기
     </a>
 
   </main>
@@ -261,7 +261,7 @@
       const text = 'PAPAYA10';
       function onCopied() {
         const original = btn.innerHTML;
-        btn.innerHTML = 'Copied!';
+        btn.innerHTML = '복사됨!';
         setTimeout(() => { btn.innerHTML = original; }, 2000);
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -303,8 +303,8 @@
     function copyLink(btn) {
       const url = getShareUrl();
       function onCopied() {
-        btn.innerHTML = '<span class="material-symbols-outlined text-base">check</span> Copied!';
-        setTimeout(() => { btn.innerHTML = '<span class="material-symbols-outlined text-base">link</span> Copy Link'; }, 2000);
+        btn.innerHTML = '<span class="material-symbols-outlined text-base">check</span> 복사됨!';
+        setTimeout(() => { btn.innerHTML = '<span class="material-symbols-outlined text-base">link</span> 링크 복사'; }, 2000);
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(onCopied).catch(() => { fallbackCopy(url); onCopied(); });
