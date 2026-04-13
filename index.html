@@ -406,6 +406,7 @@
       <div class="max-w-xs sm:max-w-sm mx-auto px-6">
         <div class="relative rounded-xl overflow-hidden sticker-border shadow-2xl" style="aspect-ratio: 9/16;">
           <video
+            id="product-video"
             src="video.mp4"
             poster="video-poster.jpg"
             class="w-full h-full object-cover"
@@ -413,6 +414,12 @@
             playsinline
             preload="metadata"
           ></video>
+          <!-- Play button overlay -->
+          <div id="play-overlay" class="absolute inset-0 flex items-center justify-center cursor-pointer" onclick="document.getElementById('product-video').play(); this.style.display='none';">
+            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+              <span class="material-symbols-outlined text-secondary-section text-5xl translate-x-0.5">play_arrow</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
