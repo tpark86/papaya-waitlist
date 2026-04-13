@@ -291,7 +291,7 @@
 
     function shareInstagram() {
       const url = getShareUrl();
-      function onCopied() { alert('Link copied! Paste it into your Instagram Story.'); }
+      function onCopied() { alert('링크가 복사되었어요! 인스타그램 스토리에 붙여넣기 해서 공유하세요 🎉'); }
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(onCopied).catch(() => { fallbackCopy(url); onCopied(); });
       } else {
