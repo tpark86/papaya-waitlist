@@ -32,8 +32,10 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&family=Be+Vietnam+Pro:wght@400;500;700&family=Caveat:wght@700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&family=Be+Vietnam+Pro:wght@400;500;700&family=Caveat:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&family=Be+Vietnam+Pro:wght@400;500;700&family=Caveat:wght@700&display=swap" /></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" /></noscript>
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
   <script>
     tailwind.config = {
@@ -238,7 +240,7 @@
   <nav id="main-nav" class="fixed w-full z-50 bg-[#efc8aa] shadow-[0_8px_24px_rgba(56,56,49,0.06)] overflow-visible transition-transform duration-300" style="top:42px; height:69px;">
     <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
       <a href="#" class="inline-block">
-        <img src="logo.png" alt="papaya" class="w-auto" style="height:276px; object-fit: contain; object-position: center;">
+        <img src="logo.webp" alt="papaya" width="1024" height="1024" class="w-auto" style="height:276px; object-fit: contain; object-position: center;">
       </a>
     </div>
   </nav>
@@ -256,17 +258,17 @@
         <div class="relative w-full max-w-md rotate-[2deg] group-hover:rotate-0 transition-all duration-500 rounded-xl sticker-border shadow-[0_20px_48px_rgba(56,56,49,0.15)] h-[285px] md:h-auto md:aspect-square overflow-hidden">
 
           <!-- Layer 1 (bottom): colorful background blobs -->
-          <img src="hero-layer1.png" alt="" class="absolute inset-0 w-full h-full object-cover" style="z-index:1;">
+          <img src="hero-layer1.webp" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:1;" fetchpriority="high">
 
           <!-- Layer 2: red cube -->
-          <img src="hero-layer2.png" alt="" class="absolute inset-0 w-full h-full object-cover" style="z-index:2;transform:scale(1.2);transform-origin:center;">
+          <img src="hero-layer2.webp" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:2;transform:scale(1.2);transform-origin:center;" fetchpriority="high">
 
           <!-- Layer 3: rotating sticker overlays inside cube's white squares -->
           <div id="overlay-front" class="absolute" style="z-index:3;left:34%;top:42.4%;width:34.2%;height:34.2%;overflow:hidden;"></div>
           <div id="overlay-top"   class="absolute" style="z-index:3;left:41.65%;top:11.7%;width:21.6%;height:21.6%;overflow:hidden;"></div>
 
           <!-- Layer 4 (top): hands with transparent background — fingers in front of everything -->
-          <img src="hero-layer3.png" alt="Papaya AI Sticker Printer" class="absolute inset-0 w-full h-full object-cover" style="z-index:4;">
+          <img src="hero-layer3.webp" alt="Papaya AI Sticker Printer" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:4;" fetchpriority="high">
 
         </div>
         <!-- AI Powered sticker badge -->
@@ -327,7 +329,7 @@
               </svg>
             </div>
             <div class="relative rounded-xl sticker-border shadow-xl rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
-              <img src="howto1.png" alt="말해요" class="absolute inset-0 w-full h-full object-cover">
+              <img src="howto1.webp" alt="말해요" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
               <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
                 <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">1.</span> 만들고 싶은 걸 말해보세요</p>
               </div>
@@ -361,7 +363,7 @@
               </svg>
             </div>
             <div class="relative rounded-xl sticker-border shadow-xl -rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
-              <img src="howto2.png" alt="프린트" class="absolute inset-0 w-full h-full object-cover">
+              <img src="howto2.webp" alt="프린트" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
               <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
                 <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">2.</span> 파파야가 바로 그려서 뽑아줘요</p>
               </div>
@@ -395,7 +397,7 @@
               </svg>
             </div>
             <div class="relative rounded-xl sticker-border shadow-xl rotate-[2deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
-              <img src="howto3.png" alt="붙여요" class="absolute inset-0 w-full h-full object-cover">
+              <img src="howto3.webp" alt="붙여요" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
               <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
                 <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">3.</span> 떼고, 색칠하고, 친구랑 나눠요</p>
               </div>
@@ -415,7 +417,7 @@
           <video
             id="product-video"
             src="video.mp4"
-            poster="video-poster.jpg"
+            poster="video-poster.webp"
             class="w-full h-full object-cover"
             controls
             playsinline
@@ -480,9 +482,11 @@
 
       <!-- Thumbs up arm from left -->
       <img
-        src="thumbsup.png"
+        src="thumbsup.webp"
         alt=""
         aria-hidden="true"
+        width="1024" height="1024"
+        loading="lazy"
         class="absolute left-0 pointer-events-none select-none w-[200px] md:w-[400px] -top-[60px] md:-top-[120px]"
         style="z-index:0;"
       />
@@ -526,7 +530,7 @@
         <!-- Right: KC certification badge -->
         <div class="flex justify-center md:justify-end">
           <div class="bg-card rounded-xl sticker-border rotate-[6deg] overflow-hidden p-3" style="box-shadow: 10px 10px 0px #FEE500;">
-            <img src="kc.jpeg" alt="KC 안전인증마크" class="w-60 h-auto object-contain" />
+            <img src="kc.webp" alt="KC 안전인증마크" width="646" height="420" loading="lazy" class="w-60 h-auto object-contain" />
           </div>
         </div>
 
@@ -550,7 +554,7 @@
 
           <!-- Card 1 -->
           <div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-[2deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
-            <img src="social1.png" alt="Kid with Papaya" class="w-full h-full object-cover"/>
+            <img src="social1.webp" alt="Kid with Papaya" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover"/>
             <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
               <p class="text-white font-body text-xs leading-relaxed">"와 이건 진짜 올해 산 것 중에 제일 잘 산 듯ㅋㅋ 너무 재밌어요!!!"</p>
               <p class="text-white/70 font-headline font-bold text-xs mt-1">— 이*윤</p>
@@ -559,7 +563,7 @@
 
           <!-- Card 2 -->
           <div class="relative aspect-square sticker-border rounded-xl overflow-hidden rotate-[3deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
-            <img src="social2.png" alt="Girl with stickers" class="w-full h-full object-cover"/>
+            <img src="social2.webp" alt="Girl with stickers" width="2048" height="2048" loading="lazy" class="w-full h-full object-cover"/>
             <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
               <p class="text-white font-body text-xs leading-relaxed">"아이랑 같이 해봤는데 계속 이것만 하네요ㅋㅋ 이런 AI 제품은 처음이에요"</p>
               <p class="text-white/70 font-headline font-bold text-xs mt-1">— 이*준</p>
@@ -568,7 +572,7 @@
 
           <!-- Card 3 -->
           <div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-[3deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
-            <img src="social3.png" alt="Kids reacting to Papaya" class="w-full h-full object-cover"/>
+            <img src="social3.webp" alt="Kids reacting to Papaya" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover"/>
             <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
               <p class="text-white font-body text-xs leading-relaxed">"선물용으로 샀는데 반응이 너무 좋아서 저도 하나 더 살까 고민 중이에요ㅋㅋ"</p>
               <p class="text-white/70 font-headline font-bold text-xs mt-1">— 권*린</p>
@@ -577,7 +581,7 @@
 
           <!-- Card 4 -->
           <div class="relative aspect-square sticker-border rounded-xl overflow-hidden rotate-[2deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
-            <img src="social4.png" alt="Kids with Papaya stickers" class="w-full h-full object-cover"/>
+            <img src="social4.webp" alt="Kids with Papaya stickers" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover"/>
             <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
               <p class="text-white font-body text-xs leading-relaxed">"이거 완전 혁신이에요!! 애들이 너무 좋아해요"</p>
               <p class="text-white/70 font-headline font-bold text-xs mt-1">— Chloe P.</p>
@@ -636,7 +640,7 @@
 
       <!-- Left: wordmark + nav links -->
       <div class="flex flex-col md:flex-row items-center gap-6 md:gap-14">
-        <img src="logo.png" alt="papaya" class="h-20 w-auto" style="object-fit: contain;">
+        <img src="logo.webp" alt="papaya" width="1024" height="1024" loading="lazy" class="h-20 w-auto" style="object-fit: contain;">
         <div class="flex flex-wrap justify-center gap-6 text-xs font-bold tracking-widest text-on-surface">
           <a href="https://www.instagram.com/papaya.toys" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">INSTAGRAM</a>
           <a href="#" class="hover:text-primary transition-colors">TIKTOK</a>
@@ -678,12 +682,12 @@
     // Sticker slideshow for hero product photo overlays
     (function() {
       var stickers = [
-        'stickers/1hf_20260410_071049_fdbb1779-50c5-4275-a070-3483e93c2eee.png',
-        'stickers/2hf_20260410_0710016_bdfad007-e398-48a7-a3e2-42dbdd1f8dbc.png',
-        'stickers/3hf_20260410_071009_8b7483f8-fd75-4d86-aa04-8ae11565fd46.png',
-        'stickers/4hf_20260410_071111_7db25791-88f3-4e3d-bfba-7ba3872f2c9a.png',
-        'stickers/5hf_20260410_071205_2b11c4fa-eb50-44c5-940b-4c08a59fb730.png',
-        'stickers/6hf_20260410_072045_2105aa9a-6e2a-4258-81fe-fe193d3bdd20.png',
+        'stickers/1hf_20260410_071049_fdbb1779-50c5-4275-a070-3483e93c2eee.webp',
+        'stickers/2hf_20260410_0710016_bdfad007-e398-48a7-a3e2-42dbdd1f8dbc.webp',
+        'stickers/3hf_20260410_071009_8b7483f8-fd75-4d86-aa04-8ae11565fd46.webp',
+        'stickers/4hf_20260410_071111_7db25791-88f3-4e3d-bfba-7ba3872f2c9a.webp',
+        'stickers/5hf_20260410_071205_2b11c4fa-eb50-44c5-940b-4c08a59fb730.webp',
+        'stickers/6hf_20260410_072045_2105aa9a-6e2a-4258-81fe-fe193d3bdd20.webp',
       ];
 
       function buildSlides(containerId, startIndex) {
