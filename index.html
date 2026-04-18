@@ -129,9 +129,13 @@
       animation-play-state: paused;
     }
 
-    /* Mobile nav: ~20% smaller */
+    /* Mobile nav + marquee: smaller */
     @media (max-width: 767px) {
-      #main-nav { height: 41px !important; }
+      #marquee-bar { height: 32px !important; line-height: 32px; }
+      #marquee-bar .marquee-inner { line-height: 32px; }
+      #marquee-bar span { font-size: 11px !important; padding: 0 9px !important; line-height: 32px !important; }
+      #marquee-bar svg { width: 15px !important; height: 15px !important; }
+      #main-nav { top: 32px !important; height: 41px !important; }
       #main-nav img { height: 166px !important; }
     }
   </style>
@@ -223,7 +227,7 @@
     </div>
   </nav>
 
-  <main class="pt-[100px] md:pt-32">
+  <main class="pt-[90px] md:pt-32">
 
     <!-- ============================================================ -->
     <!-- 2. HERO SECTION                                               -->
@@ -250,7 +254,7 @@
 
         </div>
         <!-- AI Powered sticker badge -->
-        <div class="absolute -bottom-5 -right-2 md:-right-6 bg-accent-green px-5 py-3 rounded-xl rotate-[12deg] sticker-border z-10">
+        <div class="absolute -top-5 -right-2 md:top-auto md:-bottom-5 md:-right-6 bg-accent-green px-5 py-3 rounded-xl rotate-[12deg] sticker-border z-10">
           <span class="material-symbols-outlined text-on-surface text-xl align-middle">auto_awesome</span>
           <span class="font-headline font-extrabold text-on-surface text-sm ml-1">AI 탑재!</span>
         </div>
