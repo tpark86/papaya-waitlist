@@ -237,7 +237,7 @@
       <!-- Left: product image -->
       <div class="relative group flex justify-center">
         <!-- Rotation wrapper so all layers rotate together -->
-        <div class="relative w-full max-w-md rotate-[2deg] group-hover:rotate-0 transition-all duration-500 rounded-xl sticker-border shadow-[0_20px_48px_rgba(56,56,49,0.15)] aspect-square overflow-hidden">
+        <div class="relative w-full max-w-md rotate-[2deg] group-hover:rotate-0 transition-all duration-500 rounded-xl sticker-border shadow-[0_20px_48px_rgba(56,56,49,0.15)] h-[260px] md:h-auto md:aspect-square overflow-hidden">
 
           <!-- Layer 1 (bottom): colorful background blobs -->
           <img src="hero-layer1.png" alt="" class="absolute inset-0 w-full h-full object-cover" style="z-index:1;">
@@ -276,13 +276,13 @@
               type="email"
               required
               placeholder="이메일을 입력해 주세요"
-              class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body"
+              class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body text-center md:text-left"
             />
             <button type="submit" class="btn-primary px-7 py-4 font-headline whitespace-nowrap">
               사전 예약하기
             </button>
           </form>
-          <p id="hero-status" class="text-sm text-on-surface-muted italic">
+          <p id="hero-status" class="text-sm text-on-surface-muted italic text-center md:text-left">
             선착순 1,000명 10% 할인
           </p>
         </div>
