@@ -741,17 +741,30 @@
       const submitBtn = formEl ? formEl.querySelector('[type="submit"]') : null;
       if (submitBtn) submitBtn.disabled = true;
 
-      // Fire off submission in background — don't wait for response
-      fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), {
-        method: 'GET',
-        keepalive: true,
-      }).catch(function() {});
+      // Wait for server confirmation before redirecting
+      let success = false;
+      try {
+        const res = await fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), {
+          method: 'GET',
+        });
+        if (res.ok) {
+          const json = await res.json();
+          if (json && json.position) success = true;
+        }
+      } catch (_) {}
 
-      // Fire Meta Pixel Lead event — fires after form validation passes,
-      // right before redirect so it runs on this page before navigation.
+      if (!success) {
+        // Show error message with mailto link
+        statusEl.classList.remove('hidden');
+        statusEl.innerHTML = '오류가 발생했습니다. 불편을 드려 죄송합니다. <a href="mailto:tommy@papaya.toys?subject=웨이팅 리스트" style="text-decoration:underline;">tommy@papaya.toys</a>로 이메일을 보내주시면 등록해 드리겠습니다. 내용은 비워두셔도 됩니다.';
+        if (submitBtn) submitBtn.disabled = false;
+        return;
+      }
+
+      // Fire Meta Pixel Lead event
       if (typeof fbq === 'function') fbq('track', 'Lead');
 
-      // Redirect immediately with an estimated position
+      // Redirect to thank you page
       const position = Math.floor(Math.random() * 100) + 501;
       try {
         window.location.href = 'thankyou.html?position=' + position;
