@@ -750,13 +750,11 @@
           if (json && json.position) success = true;
         }
       } catch (_) {
-        // CORS or network error — if online, retry with no-cors (can't read response but request goes through)
-        if (navigator.onLine) {
-          try {
-            await fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), { mode: 'no-cors' });
-            success = true;
-          } catch (_) {}
-        }
+        // CORS or network error — retry with no-cors (can't read response but request goes through)
+        try {
+          await fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), { mode: 'no-cors' });
+          success = true;
+        } catch (_) {}
       }
 
       if (!success) {
