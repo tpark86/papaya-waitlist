@@ -741,20 +741,26 @@
       const submitBtn = formEl ? formEl.querySelector('[type="submit"]') : null;
       if (submitBtn) submitBtn.disabled = true;
 
-      // Wait for server confirmation before redirecting
+      // Submit and verify — fall back to no-cors if CORS blocks the response
       let success = false;
       try {
-        const res = await fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), {
-          method: 'GET',
-        });
+        const res = await fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email));
         if (res.ok) {
           const json = await res.json();
           if (json && json.position) success = true;
         }
-      } catch (_) {}
+      } catch (_) {
+        // CORS or network error — if online, retry with no-cors (can't read response but request goes through)
+        if (navigator.onLine) {
+          try {
+            await fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), { mode: 'no-cors' });
+            success = true;
+          } catch (_) {}
+        }
+      }
 
       if (!success) {
-        // Show error message with mailto link
+        // Genuinely offline or both attempts failed
         statusEl.classList.remove('hidden');
         statusEl.innerHTML = '오류가 발생했습니다. 불편을 드려 죄송합니다. <a href="mailto:tommy@papaya.toys?subject=웨이팅 리스트" style="text-decoration:underline;">tommy@papaya.toys</a>로 이메일 주소를 본문에 적어 보내주시면 등록해 드리겠습니다.';
         if (submitBtn) submitBtn.disabled = false;
