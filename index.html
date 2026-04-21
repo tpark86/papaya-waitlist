@@ -742,10 +742,8 @@
       if (submitBtn) submitBtn.disabled = true;
 
       // Fire off submission in background — don't wait for response
-      fetch(SCRIPT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({ email }),
+      fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), {
+        method: 'GET',
         keepalive: true,
       }).catch(function() {});
 
