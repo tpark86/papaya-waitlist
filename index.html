@@ -260,6 +260,7 @@
               id="hero-phone"
               type="tel"
               inputmode="numeric"
+              autocomplete="tel"
               required
               placeholder="010-0000-0000"
               class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body text-center md:text-left"
@@ -581,6 +582,7 @@
               id="cta-phone"
               type="tel"
               inputmode="numeric"
+              autocomplete="tel"
               required
               placeholder="010-0000-0000"
               class="flex-1 bg-white/15 backdrop-blur-sm px-5 py-4 rounded-xl border-2 border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:border-white font-body"
@@ -725,44 +727,51 @@
   <!-- 10. FORM SUBMISSION SCRIPT                                    -->
   <!-- ============================================================ -->
   <script>
-    /*
-     * ============================================================
-     *  SETUP: Connect to Google Sheets (do this once before launch)
-     * ============================================================
-     *  1. Open apps-script.gs in this folder and follow the
-     *     instructions at the top of that file.
-     *  2. After deploying, paste your Web App URL below:
-     */
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwR7sVodnN6HJPOdT2aFgmTszs4OIcTQ3tTD9HMPKUA-CJ1YH7MjW3Sy4E_NvWcGvGyyA/exec';
-    /*
-     *  That's it! Signups will flow into your Google Sheet.
-     * ============================================================
-     */
 
+    function formatPhone(value) {
+      const digits = value.replace(/\D/g, '').slice(0, 11);
+      if (digits.length <= 3) return digits;
+      if (digits.length <= 7) return digits.slice(0, 3) + '-' + digits.slice(3);
+      return digits.slice(0, 3) + '-' + digits.slice(3, 7) + '-' + digits.slice(7);
+    }
 
-    async function submitWaitlist(email, statusEl, formEl) {
+    document.addEventListener('DOMContentLoaded', function() {
+      ['hero-phone', 'cta-phone'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener('input', function() {
+          var pos = el.selectionStart;
+          var oldLen = el.value.length;
+          el.value = formatPhone(el.value);
+          var newLen = el.value.length;
+          el.setSelectionRange(pos + (newLen - oldLen), pos + (newLen - oldLen));
+        });
+      });
+    });
+
+    async function submitWaitlist(phone, statusEl, formEl) {
+      if (!/^010-\d{4}-\d{4}$/.test(phone)) {
+        statusEl.classList.remove('hidden');
+        statusEl.textContent = '올바른 전화번호를 입력해 주세요 (예: 010-1234-5678)';
+        return;
+      }
+
       statusEl.classList.remove('hidden');
 
-      // Disable submit button to prevent double submission
       const submitBtn = formEl ? formEl.querySelector('[type="submit"]') : null;
       if (submitBtn) submitBtn.disabled = true;
 
-      // If offline, show error immediately
       if (!navigator.onLine) {
-        statusEl.classList.remove('hidden');
-        statusEl.innerHTML = '오류가 발생했습니다. 불편을 드려 죄송합니다. <a href="mailto:tommy@papaya.toys?subject=웨이팅 리스트" style="text-decoration:underline;">tommy@papaya.toys</a>로 이메일 주소를 본문에 적어 보내주시면 등록해 드리겠습니다.';
+        statusEl.innerHTML = '오류가 발생했습니다. 불편을 드려 죄송합니다. <a href="mailto:tommy@papaya.toys?subject=웨이팅 리스트" style="text-decoration:underline;">tommy@papaya.toys</a>로 전화번호를 본문에 적어 보내주시면 등록해 드리겠습니다.';
         if (submitBtn) submitBtn.disabled = false;
         return;
       }
 
-      // Fire submission in background — browser CORS blocks reading the response
-      // but the request goes through when online
-      fetch(SCRIPT_URL + '?email=' + encodeURIComponent(email), { mode: 'no-cors', keepalive: true }).catch(function() {});
+      fetch(SCRIPT_URL + '?phone=' + encodeURIComponent(phone), { mode: 'no-cors', keepalive: true }).catch(function() {});
 
-      // Fire Meta Pixel Lead event
       if (typeof fbq === 'function') fbq('track', 'Lead');
 
-      // Redirect to thank you page
       const position = Math.floor(Math.random() * 100) + 501;
       try {
         window.location.href = 'thankyou.html?position=' + position;
@@ -773,18 +782,18 @@
 
     function handleHeroSubmit(e) {
       e.preventDefault();
-      const email = document.getElementById('hero-email').value.trim();
+      const phone = document.getElementById('hero-phone').value.trim();
       const statusEl = document.getElementById('hero-status');
       const formEl = document.getElementById('hero-form');
-      submitWaitlist(email, statusEl, formEl);
+      submitWaitlist(phone, statusEl, formEl);
     }
 
     function handleCtaSubmit(e) {
       e.preventDefault();
-      const email = document.getElementById('cta-email').value.trim();
+      const phone = document.getElementById('cta-phone').value.trim();
       const statusEl = document.getElementById('cta-status');
       const formEl = document.getElementById('cta-form');
-      submitWaitlist(email, statusEl, formEl);
+      submitWaitlist(phone, statusEl, formEl);
     }
   </script>
 
