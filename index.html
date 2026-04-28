@@ -572,16 +572,17 @@
 
           <h2 class="relative z-10 text-4xl md:text-5xl font-headline font-black">파파야와 놀 준비 됐나요?</h2>
           <p class="relative z-10 text-lg text-white/90 mx-auto font-body whitespace-nowrap">
-            곧 만나요. 사전 예약하면 10% 할인.
+            곧 만나요. 출시 소식 가장 먼저 받아보세요.
           </p>
 
           <form id="cta-form" class="relative z-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleCtaSubmit(event)">
-            <label for="cta-email" class="sr-only">Email address</label>
+            <label for="cta-phone" class="sr-only">전화번호</label>
             <input
-              id="cta-email"
-              type="email"
+              id="cta-phone"
+              type="tel"
+              inputmode="numeric"
               required
-              placeholder="이메일을 입력해 주세요"
+              placeholder="010-0000-0000"
               class="flex-1 bg-white/15 backdrop-blur-sm px-5 py-4 rounded-xl border-2 border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:border-white font-body"
             />
             <button
@@ -593,6 +594,7 @@
           </form>
 
           <p id="cta-status" class="relative z-10 text-white/80 text-sm font-body hidden"></p>
+          <p class="relative z-10 text-white/60 text-xs font-body">전화번호는 출시 알림 전송에만 사용되며, 발송 후 즉시 삭제돼요 🍀</p>
         </div>
       </div>
     </section>
