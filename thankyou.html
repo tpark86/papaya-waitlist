@@ -96,26 +96,10 @@
     </div>
 
     <!-- ============================================================ -->
-    <!-- 3. QUEUE POSITION CARD                                       -->
+    <!-- 3. KAKAO CHANNEL CTA                                         -->
     <!-- ============================================================ -->
     <div
-      class="pop-in pop-in-delay-1 w-full bg-card rounded-xl sticker-border shadow-[0_12px_36px_rgba(56,56,49,0.10)] rotate-[1deg] p-8 text-center space-y-2"
-      style="transform-origin: center;"
-    >
-      <p class="text-xs font-headline font-bold uppercase tracking-widest text-on-surface-muted">내 순번</p>
-      <p
-        id="position-display"
-        class="text-6xl md:text-7xl font-headline font-black text-primary leading-none"
-        aria-live="polite"
-      >#—</p>
-      <p class="text-base text-on-surface font-body font-medium">출시되면 가장 먼저 알려드릴게요</p>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- 4. KAKAO CHANNEL CTA                                         -->
-    <!-- ============================================================ -->
-    <div
-      class="pop-in pop-in-delay-2 w-full rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.15)] rotate-[1deg] p-8 text-center flex flex-col items-center gap-5"
+      class="pop-in pop-in-delay-1 w-full rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.15)] rotate-[1deg] p-8 text-center flex flex-col items-center gap-5"
       style="background: #FEE500; transform-origin: center;"
     >
       <div>
@@ -146,21 +130,6 @@
 
   </main>
 
-  <!-- ============================================================ -->
-  <!-- JAVASCRIPT                                                   -->
-  <!-- ============================================================ -->
-  <script>
-    // Read position from URL
-    const params = new URLSearchParams(window.location.search);
-    const raw = params.get('position');
-    const n = parseInt(raw, 10);
-    if (!isNaN(n) && n > 0) {
-      document.getElementById('position-display').textContent = '#' + n.toLocaleString();
-    } else {
-      document.getElementById('position-display').textContent = "You're in!";
-    }
-
-  </script>
 
 </body>
 </html>
