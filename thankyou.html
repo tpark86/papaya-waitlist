@@ -61,6 +61,12 @@
     .pop-in-delay-1 { animation-delay: 0.1s; }
     .pop-in-delay-2 { animation-delay: 0.2s; }
     .pop-in-delay-3 { animation-delay: 0.35s; }
+    @keyframes nudge-down {
+      0%, 100% { transform: translateY(0); }
+      18%      { transform: translateY(8px); }
+      36%      { transform: translateY(0); }
+    }
+    .bounce-arrow { animation: nudge-down 1.6s ease-in-out infinite; }
   </style>
 </head>
 <body class="bg-surface font-body text-on-surface overflow-x-hidden min-h-screen">
@@ -90,9 +96,14 @@
         role="img"
         aria-label="party popper"
       >🎉</div>
-      <h1 class="text-3xl md:text-4xl font-headline font-black text-on-surface leading-tight">
-        파파야 놀이터에 <span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">입장했어요!</span>
+      <h1 class="text-3xl md:text-4xl font-headline font-black text-on-surface leading-tight" style="letter-spacing: 0.01em;">
+        사전 알림 <span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">신청&nbsp;&nbsp;완료!</span>
       </h1>
+      <div style="margin-top: 16px;">
+        <p class="text-sm font-body" style="color: #65655d;">입력하신 번호</p>
+        <p id="confirmed-phone" class="font-headline font-bold" style="color: #383831; font-size: 1.1rem; margin-top: 2px;">—</p>
+        <p class="text-xs font-body" style="color: #9b9b8e; margin-top: 6px;">번호가 틀렸다면 이전 페이지에서 다시 신청해주세요.</p>
+      </div>
     </div>
 
     <!-- ============================================================ -->
@@ -103,19 +114,23 @@
       style="background: #ffffff; transform-origin: center;"
     >
       <div>
-        <h2 class="text-2xl font-headline font-black leading-tight" style="color: #3C1E1E;">카카오 채널 추가하고<br><span class="text-primary">1차</span> 런칭가 알림 받기</h2>
-        <p class="text-sm font-body mt-2" style="color: #3C1E1E; opacity: 0.7;">선착순 혜택과 출시일을 가장 먼저 보내드릴게요</p>
+        <h2 class="text-2xl font-headline font-black leading-tight" style="color: #3C1E1E;">파파야 카카오 채널 추가하고<br><span style="color:#e4002b;">1차 런칭 혜택</span> 먼저 받기</h2>
+        <p class="text-sm font-body mt-2" style="color: #3C1E1E; opacity: 0.7;">첫 구매 1,000명 혜택이 오픈되면, 카카오톡으로 가장 먼저 안내드릴게요.</p>
+      </div>
+      <div class="bounce-arrow" style="line-height:1;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4a3728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </div>
       <a
         href="https://pf.kakao.com/_jrVTX"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center justify-center font-headline font-extrabold text-base px-8 py-3 rounded-xl shadow-sm transition-opacity hover:opacity-90 active:scale-95 w-full"
-        style="background: #FEE500; color: #1A1A1A;"
+        class="flex items-center justify-center font-headline font-extrabold text-lg rounded-xl transition-opacity hover:opacity-90 active:scale-95 w-full"
+        style="background: #FEE500; color: #1A1A1A; padding: 20px 32px; box-shadow: 0 4px 0 0 #c9b400;"
       >
         <span style="display:inline-flex;align-items:center;gap:8px;white-space:nowrap;">
-          <img src="kakao-ch-icon.png" alt="" style="height:22px;width:22px;display:block;flex-shrink:0;">파파야 채널 추가하고 혜택 받기</span>
+          <img src="kakao-ch-icon.png" alt="" style="height:24px;width:24px;display:block;flex-shrink:0;">99,000원 혜택 카톡으로 받기</span>
       </a>
+      <p class="text-xs font-body" style="color: #3C1E1E; opacity: 0.5; margin-top: -8px;">문자 알림도 함께 보내드리지만, 카카오톡으로 가장 먼저 안내드려요.</p>
     </div>
 
     <!-- ============================================================ -->
@@ -129,7 +144,13 @@
     </a>
 
   </main>
-
-
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var phone = params.get('phone');
+      var el = document.getElementById('confirmed-phone');
+      if (el && phone) el.textContent = decodeURIComponent(phone);
+    })();
+  </script>
 </body>
 </html>

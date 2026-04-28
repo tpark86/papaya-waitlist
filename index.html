@@ -100,12 +100,13 @@
 
     /* Mobile nav + marquee: smaller */
     @media (max-width: 767px) {
-      #marquee-bar { height: 32px !important; line-height: 32px; }
-      #marquee-bar .marquee-inner { line-height: 32px; }
-      #marquee-bar span { font-size: 11px !important; padding: 0 9px !important; line-height: 32px !important; }
-      #marquee-bar svg { width: 15px !important; height: 15px !important; }
-      #main-nav { top: 32px !important; height: 41px !important; }
-      #main-nav img { height: 166px !important; }
+      #marquee-bar { height: 26px !important; line-height: 26px; }
+      #marquee-bar .marquee-inner { line-height: 26px; }
+      #marquee-bar span { font-size: 9px !important; padding: 0 7px !important; line-height: 26px !important; }
+      #marquee-bar svg { width: 12px !important; height: 12px !important; }
+      #main-nav { top: 26px !important; height: 27px !important; }
+      #main-nav img { height: 108px !important; }
+      #main-content { padding-top: 62px !important; }
 
       /* Hero image: fixed height, overlays repositioned for non-square container.
          Container width W = 100vw - 48px. object-cover crops (W - 300px) / 2 from
@@ -130,73 +131,73 @@
   <!-- ============================================================ -->
   <!-- 0. ANNOUNCEMENT MARQUEE BAR                                   -->
   <!-- ============================================================ -->
-  <div id="marquee-bar" class="fixed top-0 w-full z-[60] bg-white overflow-hidden transition-transform duration-300" style="height:42px; border-bottom: 2px solid #e8e8e8;">
-    <div class="marquee-inner h-full" style="line-height:42px;">
+  <div id="marquee-bar" class="fixed top-0 w-full z-[60] bg-white overflow-hidden transition-transform duration-300" style="height:34px;">
+    <div class="marquee-inner h-full" style="line-height:34px;">
       <!-- Set 1 (original) -->
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
       <!-- Set 2 (exact clone for seamless loop) -->
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
-      <span style="display:inline-flex;align-items:center;gap:12px;padding:0 12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        선착순 1,000명에게 10% 할인
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
       </span>
     </div>
   </div>
@@ -204,15 +205,15 @@
   <!-- ============================================================ -->
   <!-- 1. STICKY NAVIGATION                                          -->
   <!-- ============================================================ -->
-  <nav id="main-nav" class="fixed w-full z-50 bg-[#efc8aa] shadow-[0_8px_24px_rgba(56,56,49,0.06)] overflow-visible transition-transform duration-300" style="top:42px; height:69px;">
+  <nav id="main-nav" class="fixed w-full z-50 bg-[#efc8aa] shadow-[0_8px_24px_rgba(56,56,49,0.06)] overflow-visible transition-transform duration-300" style="top:34px; height:45px;">
     <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
       <a href="#" class="inline-block">
-        <img src="logo.webp?v=4" alt="papaya" width="1024" height="1024" class="w-auto" style="height:276px; object-fit: contain; object-position: center;">
+        <img src="logo.webp?v=4" alt="papaya" width="1024" height="1024" class="w-auto" style="height:179px; object-fit: contain; object-position: center;">
       </a>
     </div>
   </nav>
 
-  <main class="pt-[90px] md:pt-32">
+  <main style="padding-top: 79px;" id="main-content">
 
     <!-- ============================================================ -->
     <!-- 2. HERO SECTION                                               -->
@@ -239,9 +240,9 @@
 
         </div>
         <!-- AI Powered sticker badge -->
-        <div class="absolute -top-5 -right-2 md:top-auto md:-bottom-5 md:-right-6 bg-accent-green px-5 py-3 rounded-xl rotate-[12deg] sticker-border z-10">
-          <span class="material-symbols-outlined text-on-surface text-xl align-middle">auto_awesome</span>
-          <span class="font-headline font-extrabold text-on-surface text-sm ml-1">AI 탑재!</span>
+        <div class="absolute -top-5 -right-2 md:top-auto md:-bottom-5 md:-right-6 bg-accent-green rounded-xl rotate-[12deg] sticker-border z-10" style="padding: 10px 17px;">
+          <span class="material-symbols-outlined text-on-surface align-middle" style="font-size: 1.0625rem; line-height: 1.5rem;">auto_awesome</span>
+          <span class="font-headline font-extrabold text-on-surface ml-1" style="font-size: 0.74rem;">AI 탑재!</span>
         </div>
       </div>
 
@@ -253,8 +254,11 @@
         <!-- Phone capture card -->
         <div class="bg-card px-7 py-4 md:p-7 rounded-xl sticker-border space-y-3 md:space-y-4 shadow-[0_8px_32px_rgba(56,56,49,0.08)]">
           <label for="hero-phone" class="block font-headline font-bold text-on-surface text-lg text-center md:text-left">
-            파파야 놀이터 가장 먼저 입장하기
+            <span style="color:#383831; font-size:0.8em; margin-right:5px;">✦</span>첫 구매 1,000명 한정
           </label>
+          <p class="text-center md:text-left font-body" style="line-height:1.3; margin-top:20px;">
+            <span style="font-size:0.9rem; color:#7a7a6e;">정가 </span><span style="font-size:0.9rem; color:#7a7a6e; text-decoration:line-through;">149,000원</span><span style="font-size:0.9rem; color:#7a7a6e; margin: 0 4px;">→</span><span style="font-size:1.05rem; font-weight:800; color:#e4002b; font-family:'Plus Jakarta Sans',sans-serif;">99,000원</span>
+          </p>
           <form id="hero-form" class="flex flex-col sm:flex-row gap-3" onsubmit="handleHeroSubmit(event)">
             <input
               id="hero-phone"
@@ -266,11 +270,11 @@
               class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body text-center md:text-left"
             />
             <button type="submit" class="btn-primary px-7 py-4 font-headline whitespace-nowrap">
-              사전 예약하기
+              99,000원 런칭가 알림 신청하기
             </button>
           </form>
           <p id="hero-status" class="text-sm text-on-surface-muted italic text-center md:text-left hidden"></p>
-          <p class="text-xs text-on-surface-muted/70 text-center md:text-left font-body">전화번호는 출시 알림 전송에만 사용되며, 발송 후 즉시 삭제돼요 🍀</p>
+          <p class="text-xs text-on-surface-muted/70 text-center md:text-left font-body" style="margin-top:20px;">결제는 진행되지 않아요. 출시 시 첫 구매 혜택을 안내드려요.</p>
         </div>
       </div>
     </section>
@@ -596,7 +600,7 @@
           </form>
 
           <p id="cta-status" class="relative z-10 text-white/80 text-sm font-body hidden"></p>
-          <p class="relative z-10 text-white/60 text-xs font-body">전화번호는 출시 알림 전송에만 사용되며, 발송 후 즉시 삭제돼요 🍀</p>
+          <p class="relative z-10 text-white/60 text-xs font-body">결제는 진행되지 않아요. 출시 시 첫 구매 혜택을 안내드려요.</p>
         </div>
       </div>
     </section>
@@ -774,9 +778,9 @@
 
       const position = Math.floor(Math.random() * 100) + 501;
       try {
-        window.location.href = 'thankyou.html?position=' + position;
+        window.location.href = 'thankyou.html?position=' + position + '&phone=' + encodeURIComponent(phone);
       } catch (_) {
-        window.location.assign('thankyou.html?position=' + position);
+        window.location.assign('thankyou.html?position=' + position + '&phone=' + encodeURIComponent(phone));
       }
     }
 
