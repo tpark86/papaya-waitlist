@@ -9,27 +9,47 @@
  * 5. Set "Execute as": Me
  * 6. Set "Who has access": Anyone
  * 7. Click "Deploy" and copy the Web App URL
- * 8. Open index.html, find the line:
- *      const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
- *    and replace 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE' with the URL you copied.
+ * 8. Open index.html, find SCRIPT_URL and replace with the URL you copied.
  *
  * Your Google Sheet will be automatically populated with:
  *   Column A: Timestamp
- *   Column B: Email address
+ *   Column B: Phone number (010-XXXX-XXXX)
  *   Column C: Queue position
  *
  * HOW POSITION IS CALCULATED:
  *   Position = number of rows already in the sheet + 501
  *   So the very first signup gets position 501, second gets 502, etc.
- *   Duplicate emails get their original position back (no new row added).
+ *   Duplicate phone numbers get their original position back (no new row added).
  */
 
 function doGet(e) {
   try {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    const phone = e && e.parameter && e.parameter.phone ? e.parameter.phone.trim() : '';
+
+    if (phone) {
+      if (!/^010-\d{4}-\d{4}$/.test(phone)) {
+        return respond({ error: 'Invalid phone number' });
+      }
+
+      const existing = sheet.getDataRange().getValues();
+
+      for (let i = 0; i < existing.length; i++) {
+        if (existing[i][1] === phone) {
+          return respond({ position: existing[i][2] });
+        }
+      }
+
+      const dataRows = existing.filter(function(r) { return r[1] !== ''; }).length;
+      const position = dataRows + 501;
+      sheet.appendRow([new Date().toISOString(), phone, position]);
+      return respond({ position: position });
+    }
+
     const existing = sheet.getDataRange().getValues();
     const dataRows = existing.filter(function(r) { return r[1] !== ''; }).length;
     return respond({ count: dataRows, nextPosition: dataRows + 501 });
+
   } catch (err) {
     return respond({ error: err.message });
   }
@@ -42,26 +62,22 @@ function doPost(e) {
       return respond({ error: 'Missing request body' });
     }
     const data = JSON.parse(e.postData.contents);
-    const email = (data.email || '').trim().toLowerCase();
+    const phone = (data.phone || '').trim();
 
-    if (!email || !email.includes('@') || !email.includes('.')) {
-      return respond({ error: 'Invalid email' });
+    if (!/^010-\d{4}-\d{4}$/.test(phone)) {
+      return respond({ error: 'Invalid phone number' });
     }
 
-    // Check for duplicate email — return existing position
     const existing = sheet.getDataRange().getValues();
     for (let i = 0; i < existing.length; i++) {
-      if ((existing[i][1] || '').toLowerCase() === email) {
+      if (existing[i][1] === phone) {
         return respond({ position: existing[i][2] });
       }
     }
 
-    // Assign next position: count only rows with an email — immune to accidental header rows
     const dataRows = existing.filter(function(r) { return r[1] !== ''; }).length;
     const position = dataRows + 501;
-
-    sheet.appendRow([new Date().toISOString(), email, position]);
-
+    sheet.appendRow([new Date().toISOString(), phone, position]);
     return respond({ position: position });
 
   } catch (err) {
