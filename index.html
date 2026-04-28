@@ -250,26 +250,26 @@
         <h1 class="text-[clamp(3.5rem,8vw,7rem)] font-headline font-black text-on-surface leading-[1.15] tracking-tighter text-center md:text-left">
           말로 만드는 <span class="italic" style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">스티커!</span>
         </h1>
-        <!-- Email capture card -->
+        <!-- Phone capture card -->
         <div class="bg-card px-7 py-4 md:p-7 rounded-xl sticker-border space-y-3 md:space-y-4 shadow-[0_8px_32px_rgba(56,56,49,0.08)]">
-          <label for="hero-email" class="block font-headline font-bold text-on-surface text-lg text-center md:text-left">
+          <label for="hero-phone" class="block font-headline font-bold text-on-surface text-lg text-center md:text-left">
             파파야 놀이터 가장 먼저 입장하기
           </label>
           <form id="hero-form" class="flex flex-col sm:flex-row gap-3" onsubmit="handleHeroSubmit(event)">
             <input
-              id="hero-email"
-              type="email"
+              id="hero-phone"
+              type="tel"
+              inputmode="numeric"
               required
-              placeholder="이메일을 입력해 주세요"
+              placeholder="010-0000-0000"
               class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body text-center md:text-left"
             />
             <button type="submit" class="btn-primary px-7 py-4 font-headline whitespace-nowrap">
               사전 예약하기
             </button>
           </form>
-          <p id="hero-status" class="text-sm text-on-surface-muted italic text-center md:text-left">
-            선착순 1,000명 10% 할인
-          </p>
+          <p id="hero-status" class="text-sm text-on-surface-muted italic text-center md:text-left hidden"></p>
+          <p class="text-xs text-on-surface-muted/70 text-center md:text-left font-body">전화번호는 출시 알림 전송에만 사용되며, 발송 후 즉시 삭제돼요 🍀</p>
         </div>
       </div>
     </section>
