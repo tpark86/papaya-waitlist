@@ -83,6 +83,23 @@
     }
 
     /* Marquee announcement bar */
+    @keyframes cta-bounce {
+      0%, 100% { transform: translateY(0); }
+      45% { transform: translateY(10px); }
+      55% { transform: translateY(10px); }
+    }
+    .cta-bounce-arrow {
+      animation: cta-bounce 1.6s ease-in-out infinite;
+    }
+    @keyframes card-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .card-scroll-inner {
+      display: flex;
+      width: max-content;
+      animation: card-scroll 29s linear infinite;
+    }
     @keyframes marquee-scroll {
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -102,7 +119,7 @@
     @media (max-width: 767px) {
       #marquee-bar { height: 26px !important; line-height: 26px; }
       #marquee-bar .marquee-inner { line-height: 26px; }
-      #marquee-bar span { font-size: 9px !important; padding: 0 7px !important; line-height: 26px !important; }
+      #marquee-bar span { font-size: 9px !important; padding: 0 14px 0 0 !important; line-height: 26px !important; gap: 14px !important; }
       #marquee-bar svg { width: 12px !important; height: 12px !important; }
       #main-nav { top: 26px !important; height: 27px !important; }
       #main-nav img { height: 108px !important; }
@@ -123,6 +140,14 @@
         height: auto !important;
         aspect-ratio: 1 !important;
       }
+      /* How-to section: scale down on mobile */
+      .howto-step { width: 280px; margin-left: auto; margin-right: auto; }
+      #howto-step-1 { padding-top: 96px !important; }
+      #howto-step-2 { padding-top: 136px !important; }
+      #howto-step-3 { padding-top: 96px !important; }
+      #howto-badge-1 svg { width: 238px; height: 112px; }
+      #howto-badge-2 svg { width: 266px; height: 151px; }
+      #howto-badge-3 svg { width: 241px; height: 112px; }
     }
   </style>
 </head>
@@ -134,71 +159,23 @@
   <div id="marquee-bar" class="fixed top-0 w-full z-[60] bg-white overflow-hidden transition-transform duration-300" style="height:34px;">
     <div class="marquee-inner h-full" style="line-height:34px;">
       <!-- Set 1 (original) -->
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
       <!-- Set 2 (exact clone for seamless loop) -->
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
-      <span style="display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
-        첫 구매 1,000명 99,000원 · 사전 알림 신청 중
-      </span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
     </div>
   </div>
 
@@ -249,12 +226,12 @@
       <!-- Right: headline + form -->
       <div class="space-y-4 md:space-y-8">
         <h1 class="text-[clamp(3.5rem,8vw,7rem)] font-headline font-black text-on-surface leading-[1.15] tracking-tighter text-center md:text-left">
-          말로 만드는 <span class="italic" style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">스티커!</span>
+          말하면&nbsp;&nbsp;<span class="italic" style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">스티커!</span>
         </h1>
         <!-- Phone capture card -->
         <div class="bg-card px-7 py-4 md:p-7 rounded-xl sticker-border space-y-3 md:space-y-4 shadow-[0_8px_32px_rgba(56,56,49,0.08)]">
           <label for="hero-phone" class="block font-headline font-bold text-on-surface text-lg text-center md:text-left">
-            <span style="color:#383831; font-size:0.8em; margin-right:5px;">✦</span>첫 구매 1,000명 한정
+            <span style="color:#383831; font-size:0.8em; margin-right:5px;">✦</span>첫 구매 100명 한정
           </label>
           <div class="text-center md:text-left font-body" style="margin-top:13px; display:flex; flex-direction:column; gap:8px;">
             <span style="font-size:0.78rem; color:#6b6b63; text-decoration:line-through;">정가 149,000원</span>
@@ -281,7 +258,18 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- 4. FEATURES GRID                                              -->
+    <!-- 4. PINK CREATIVE SECTION                                      -->
+    <!-- ============================================================ -->
+    <section style="background-color: #D8752B; padding: 3.5rem 1.5rem 1rem;" class="w-full">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-headline font-black leading-tight" style="color: #ffffff; text-shadow: 3px 3px 0 #8a3a00, 2px 2px 0 #8a3a00, 1px 1px 0 #8a3a00;">화면만 보는 아이에서,<br>상상을 꺼내 만드는 아이로</h2>
+        <p class="text-lg font-body font-medium leading-relaxed" style="color: #ffffff; margin-top: 2rem;">요즘 아이들은 콘텐츠를 보는 데 익숙해요.<br>파파야는 아이가 직접 말하고, 만들고, 색칠하고, 붙이게 해주는 손으로 하는 AI 창의 놀이예요.</p>
+        <img src="screen-zombie.png" alt="screen zombie" width="1024" height="1024" loading="lazy" style="width: 100%; max-width: 360px; height: auto; margin-top: 1.5rem; display: block; margin-left: auto; margin-right: auto;">
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. FEATURES GRID                                              -->
     <!-- ============================================================ -->
     <section id="features" class="bg-secondary-section pt-10 pb-24 w-full">
       <div class="max-w-7xl mx-auto px-6">
@@ -290,9 +278,9 @@
         <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 md:gap-6 items-end">
 
           <!-- Step 1: 말해요! -->
-          <div class="relative" style="padding-top: 144px;">
+          <div id="howto-step-1" class="relative howto-step" style="padding-top: 144px;">
             <!-- Speech bubble shape -->
-            <div class="absolute top-0 left-2 z-20" style="transform: rotate(-6deg);">
+            <div id="howto-badge-1" class="absolute top-0 left-2 z-20" style="transform: rotate(-6deg);">
               <svg width="340" height="160" viewBox="0 0 170 80" xmlns="http://www.w3.org/2000/svg">
                 <path d="M26,7 C14,-1 6,5 18,3 L148,2 C164,-3 160,14 158,22 L155,52 C158,67 138,61 126,61 L64,63 L33,80 L54,61 L18,60 C4,65 2,50 5,40 L13,18 C10,4 24,11 26,7 Z" fill="#ff8eb2"/>
                 <text x="90" y="37" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="#1a1a16">말해요!</text>
@@ -304,7 +292,7 @@
             <div class="relative rounded-xl sticker-border shadow-xl rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
               <img src="howto1.webp?v=4" alt="말해요" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
               <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
-                <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">1.</span> 만들고 싶은 걸 말해보세요</p>
+                <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">1.</span> "서핑하는 유니콘!"</p>
               </div>
             </div>
           </div>
@@ -323,16 +311,16 @@
             </svg>
           </div>
 
-          <!-- Step 2: 프린트! -->
-          <div class="relative" style="padding-top: 200px;">
+          <!-- Step 2: 나와요! -->
+          <div id="howto-step-2" class="relative howto-step" style="padding-top: 200px;">
             <!-- Explosion burst shape -->
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 z-20" style="transform: translateX(-50%) rotate(-7deg);">
+            <div id="howto-badge-2" class="absolute top-0 left-1/2 -translate-x-1/2 z-20" style="transform: translateX(-50%) rotate(-7deg);">
               <svg width="380" height="216" viewBox="0 0 190 108" xmlns="http://www.w3.org/2000/svg">
                 <path d="M95,2 L107,36 L140,18 L124,50 L162,50 L132,70 L150,104 L114,84 L108,108 L90,80 L54,102 L72,70 L40,52 L78,50 L60,18 L92,36 Z" fill="#ff8eb2"/>
-                <text x="99" y="66" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="#1a1a16">프린트!</text>
-                <text x="98" y="65" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="#383831">프린트!</text>
-                <text x="97" y="64" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="#383831">프린트!</text>
-                <text x="95" y="62" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="white" stroke="#383831" stroke-width="2" paint-order="stroke">프린트!</text>
+                <text x="99" y="66" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="#1a1a16">나와요!</text>
+                <text x="98" y="65" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="#383831">나와요!</text>
+                <text x="97" y="64" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="#383831">나와요!</text>
+                <text x="95" y="62" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="white" stroke="#383831" stroke-width="2" paint-order="stroke">나와요!</text>
               </svg>
             </div>
             <div class="relative rounded-xl sticker-border shadow-xl -rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
@@ -358,9 +346,9 @@
           </div>
 
           <!-- Step 3: 붙여요! -->
-          <div class="relative" style="padding-top: 144px;">
+          <div id="howto-step-3" class="relative howto-step" style="padding-top: 144px;">
             <!-- Blob shape -->
-            <div class="absolute top-0 right-2 z-20" style="transform: rotate(-5deg);">
+            <div id="howto-badge-3" class="absolute top-0 right-2 z-20" style="transform: rotate(-5deg);">
               <svg width="344" height="160" viewBox="0 0 172 80" xmlns="http://www.w3.org/2000/svg">
                 <path d="M28,48 Q0,38 4,18 Q8,0 34,4 Q50,-6 68,8 Q84,-4 105,6 Q124,-4 142,10 Q165,2 166,24 Q170,46 148,58 Q130,72 108,60 Q90,76 68,60 Q48,74 28,62 Q10,68 8,52 Z" fill="#ff8eb2"/>
                 <text x="90" y="38" text-anchor="middle" dominant-baseline="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="#1a1a16">붙여요!</text>
@@ -372,7 +360,7 @@
             <div class="relative rounded-xl sticker-border shadow-xl rotate-[2deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
               <img src="howto3.webp?v=4" alt="붙여요" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
               <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
-                <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">3.</span> 떼고, 색칠하고, 친구랑 나눠요</p>
+                <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">3.</span> 스티커로 뽑아 색칠하고, 다이어리·카드·노트에 붙여요</p>
               </div>
             </div>
           </div>
@@ -382,11 +370,52 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- 5. PRODUCT VIDEO                                              -->
+    <!-- 6. PRODUCT VIDEO                                              -->
     <!-- ============================================================ -->
-    <section class="bg-secondary-section py-16 w-full">
-      <div class="max-w-xs sm:max-w-sm mx-auto px-6">
-        <div class="relative rounded-xl overflow-hidden sticker-border shadow-2xl" style="aspect-ratio: 9/16;">
+    <section class="py-16 w-full" style="position: relative; background-color: #ffffff; background-image: linear-gradient(#9FDAF4 1px, transparent 1px), linear-gradient(90deg, #9FDAF4 1px, transparent 1px); background-size: 40px 40px; background-position: 0 0;">
+
+      <!-- Background letter squares -->
+      <div style="position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;" aria-hidden="true">
+        <style>
+          .ls { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; font-family: 'Caveat', cursive; font-size: 1.45rem; font-weight: 700; color: rgba(78,65,50,0.42); }
+          .lw { position: absolute; display: flex; gap: 0; }
+        </style>
+        <!-- FUN -->
+        <div class="lw" style="top:40px; left:0"><span class="ls">F</span><span class="ls">U</span><span class="ls">N</span></div>
+        <!-- WOW -->
+        <div class="lw" style="top:80px; left:280px"><span class="ls">W</span><span class="ls">O</span><span class="ls">W</span></div>
+        <!-- COOL -->
+        <div class="lw" style="top:160px; left:520px"><span class="ls">C</span><span class="ls">O</span><span class="ls">O</span><span class="ls">L</span></div>
+        <!-- STAR -->
+        <div class="lw" style="top:200px; left:880px"><span class="ls">S</span><span class="ls">T</span><span class="ls">A</span><span class="ls">R</span></div>
+        <!-- PLAY -->
+        <div class="lw" style="top:320px; left:40px"><span class="ls">P</span><span class="ls">L</span><span class="ls">A</span><span class="ls">Y</span></div>
+        <!-- LOVE -->
+        <div class="lw" style="top:400px; left:680px"><span class="ls">L</span><span class="ls">O</span><span class="ls">V</span><span class="ls">E</span></div>
+        <!-- YAY -->
+        <div class="lw" style="top:440px; left:1040px"><span class="ls">Y</span><span class="ls">A</span><span class="ls">Y</span></div>
+        <!-- MAGIC -->
+        <div class="lw" style="top:80px; left:440px"><span class="ls">M</span><span class="ls">A</span><span class="ls">G</span><span class="ls">I</span><span class="ls">C</span></div>
+        <!-- HAPPY -->
+        <div class="lw" style="top:520px; left:0"><span class="ls">H</span><span class="ls">A</span><span class="ls">P</span><span class="ls">P</span><span class="ls">Y</span></div>
+        <!-- HELLO -->
+        <div class="lw" style="top:560px; left:760px"><span class="ls">H</span><span class="ls">E</span><span class="ls">L</span><span class="ls">L</span><span class="ls">O</span></div>
+        <!-- SUNNY -->
+        <div class="lw" style="top:240px; left:240px"><span class="ls">S</span><span class="ls">U</span><span class="ls">N</span><span class="ls">N</span><span class="ls">Y</span></div>
+        <!-- DREAM -->
+        <div class="lw" style="top:600px; left:480px"><span class="ls">D</span><span class="ls">R</span><span class="ls">E</span><span class="ls">A</span><span class="ls">M</span></div>
+        <!-- CUTE -->
+        <div class="lw" style="top:360px; left:1000px"><span class="ls">C</span><span class="ls">U</span><span class="ls">T</span><span class="ls">E</span></div>
+        <!-- SMILE -->
+        <div class="lw" style="top:480px; left:160px"><span class="ls">S</span><span class="ls">M</span><span class="ls">I</span><span class="ls">L</span><span class="ls">E</span></div>
+        <!-- BEST -->
+        <div class="lw" style="top:640px; left:680px"><span class="ls">B</span><span class="ls">E</span><span class="ls">S</span><span class="ls">T</span></div>
+        <!-- GLOW -->
+        <div class="lw" style="top:120px; left:360px"><span class="ls">G</span><span class="ls">L</span><span class="ls">O</span><span class="ls">W</span></div>
+      </div>
+
+      <div class="max-w-xs sm:max-w-sm mx-auto px-6" style="position: relative; z-index: 1;">
+        <div class="relative rounded-xl overflow-hidden shadow-2xl" style="aspect-ratio: 9/16; outline: 4px solid #e4002b;">
           <video
             id="product-video"
             src="video.mp4?v=4"
@@ -407,7 +436,231 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- 6. PARENT APPROVED / SAFETY                                   -->
+    <!-- 5. STICKER USES SCROLL                                        -->
+    <!-- ============================================================ -->
+    <section style="background-color: #FBEDB3;" class="w-full py-16 overflow-hidden">
+      <div class="px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface leading-tight text-center">
+          <span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">스티커&nbsp;&nbsp;하나로</span><br>이렇게 놀 수 있어요
+        </h2>
+      </div>
+
+      <!-- Auto-scrolling cards (duplicated for seamless loop) -->
+      <div class="mt-10 overflow-hidden">
+        <div id="sticker-scroll-inner" class="card-scroll-inner gap-5 items-start" style="padding: 28px 0 28px;">
+          <!-- Set 1 -->
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase1.png" alt="이름 스티커" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">이름 스티커</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">내 물건에 붙이는 나만의 이름표</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase2.png" alt="칭찬 스티커" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">칭찬 스티커</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">오늘의 미션을 완성하면 붙이는 보상 스티커</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase3.png" alt="생일 카드" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">생일 카드</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">친구에게 직접 만들어주는 특별한 카드</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase5.png" alt="그림일기" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">그림일기</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">오늘의 상상을 스티커로 기록해요</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase4.png" alt="역할놀이" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">역할놀이</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">가게놀이, 병원놀이, 동물원놀이까지</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase6.png" alt="색칠놀이" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">색칠놀이</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">뽑고, 색칠하고, 붙이며 완성해요</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase7.png" alt="영어 표현 연습" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">영어 표현 연습</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">동물, 음식, 탈것처럼 생활 속 단어를 스티커로 만들며 자연스럽게 익혀요</p>
+          </div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase1.png" alt="이름 스티커" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">이름 스티커</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">내 물건에 붙이는 나만의 이름표</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase2.png" alt="칭찬 스티커" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">칭찬 스티커</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">오늘의 미션을 완성하면 붙이는 보상 스티커</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase3.png" alt="생일 카드" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">생일 카드</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">친구에게 직접 만들어주는 특별한 카드</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase5.png" alt="그림일기" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">그림일기</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">오늘의 상상을 스티커로 기록해요</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase4.png" alt="역할놀이" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">역할놀이</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">가게놀이, 병원놀이, 동물원놀이까지</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase6.png" alt="색칠놀이" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">색칠놀이</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">뽑고, 색칠하고, 붙이며 완성해요</p>
+          </div>
+          <div class="flex-shrink-0 w-60 text-center" style="padding: 0 0 0 20px;">
+            <div class="rounded-xl overflow-hidden sticker-border shadow-lg bg-card aspect-square">
+              <img src="usecase7.png" alt="영어 표현 연습" width="240" height="240" class="w-full h-full object-cover">
+            </div>
+            <p class="font-headline font-black" style="margin-top: 1.5rem; font-size: 1.5rem; color: #000000;">영어 표현 연습</p>
+            <p class="font-body text-sm mt-1" style="color: #000000;">동물, 음식, 탈것처럼 생활 속 단어를 스티커로 만들며 자연스럽게 익혀요</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. MAGIC & SAFETY                                             -->
+    <!-- ============================================================ -->
+    <section style="background-color: #F8D3E5; padding-top: 5rem;" class="w-full pb-24 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface leading-tight text-center">
+          아이에게는 마법처럼,<br><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">부모에게는&nbsp;&nbsp;안심되게</span>
+        </h2>
+
+        <!-- 4 green cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8" style="margin-top: 5rem;">
+
+          <!-- Card 1 -->
+          <div class="relative" style="padding-top: 4rem; display: flex; flex-direction: column;">
+            <div id="card-icon-1" class="absolute left-1/2 z-10" style="top: 0; transform: translateX(-50%); width: 7rem; height: 7rem; overflow: visible; will-change: filter;">
+              <img src="card1.png" alt="스크린 밖 창의 놀이" width="112" height="112" class="w-full h-full object-contain">
+            </div>
+            <div style="background-color: #ffffff; box-shadow: 6px 6px 0 #c4457a; padding: 5rem 1.5rem 2.5rem; border-radius: 1rem; text-align: center; flex: 1;">
+              <p class="font-headline font-black text-on-surface uppercase leading-tight" style="font-size: 1.5rem;">스크린 밖 창의 놀이</p>
+              <p class="font-body text-on-surface leading-relaxed" style="margin-top: 1rem; font-size: 0.95rem;">화면 속 콘텐츠를 보는 대신, 아이의 상상을 손으로 직접 만들어봐요.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative" style="padding-top: 4rem; display: flex; flex-direction: column;">
+            <div id="card-icon-2" class="absolute left-1/2 z-10" style="top: 0; transform: translateX(-50%); width: 7rem; height: 7rem; overflow: visible; will-change: filter;">
+              <img src="card4.png" alt="혼자서도 몰입하는 놀이 시간" width="112" height="112" class="w-full h-full object-contain">
+            </div>
+            <div style="background-color: #ffffff; box-shadow: 6px 6px 0 #c4457a; padding: 5rem 1.5rem 2.5rem; border-radius: 1rem; text-align: center; flex: 1;">
+              <p class="font-headline font-black text-on-surface uppercase leading-tight" style="font-size: 1.5rem;">혼자서도 몰입하는 놀이 시간</p>
+              <p class="font-body text-on-surface leading-relaxed" style="margin-top: 1rem; font-size: 0.95rem;">상상하고, 만들고, 색칠하고, 붙이며 아이가 스스로 놀이에 빠져요.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative" style="padding-top: 4rem; display: flex; flex-direction: column;">
+            <div id="card-icon-3" class="absolute left-1/2 z-10" style="top: 0; transform: translateX(-50%); width: 7rem; height: 7rem; overflow: visible; will-change: filter;">
+              <img src="card2.png" alt="말로 표현하는 연습" width="112" height="112" class="w-full h-full object-contain">
+            </div>
+            <div style="background-color: #ffffff; box-shadow: 6px 6px 0 #c4457a; padding: 5rem 1.5rem 2.5rem; border-radius: 1rem; text-align: center; flex: 1;">
+              <p class="font-headline font-black text-on-surface uppercase leading-tight" style="font-size: 1.5rem;">말로 표현하는 연습</p>
+              <p class="font-body text-on-surface leading-relaxed" style="margin-top: 1rem; font-size: 0.95rem;">상상한 장면을 말로 설명하며, 창의력과 표현력을 함께 키워요.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="relative" style="padding-top: 4rem; display: flex; flex-direction: column;">
+            <div id="card-icon-4" class="absolute left-1/2 z-10" style="top: 0; transform: translateX(-50%); width: 7rem; height: 7rem; overflow: visible; will-change: filter;">
+              <img src="card3.png" alt="상상이 손에 잡히는 성취감" width="112" height="112" class="w-full h-full object-contain">
+            </div>
+            <div style="background-color: #ffffff; box-shadow: 6px 6px 0 #c4457a; padding: 5rem 1.5rem 2.5rem; border-radius: 1rem; text-align: center; flex: 1;">
+              <p class="font-headline font-black text-on-surface uppercase leading-tight" style="font-size: 1.5rem;">상상이 손에 잡히는 성취감</p>
+              <p class="font-body text-on-surface leading-relaxed" style="margin-top: 1rem; font-size: 0.95rem;">내가 말한 상상이 진짜 스티커가 되는 순간, 아이는 '내가 만들었다'는 기쁨을 느껴요.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. 파파야 키트 구성                                            -->
+    <!-- ============================================================ -->
+    <section class="w-full py-20 px-6" style="background-color: #A4D1C3; background-image: linear-gradient(#FBEDB3 1px, transparent 1px), linear-gradient(90deg, #FBEDB3 1px, transparent 1px); background-size: 40px 40px; background-position: center center;">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface leading-tight text-center">
+          <span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">파파야</span>&nbsp;&nbsp;키트 구성
+        </h2>
+
+        <!-- Image with bullets overlaid at bottom -->
+        <div class="relative rounded-xl overflow-hidden" style="margin-top: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; box-shadow: 8px 8px 0 #1a6b45;">
+          <img src="kit-product.png" alt="파파야 키트 구성" width="1024" height="1024" loading="lazy" style="width: 100%; height: 110%; object-fit: cover; object-position: top; margin-top: -8%;">
+
+          <!-- Bullets overlay -->
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: transparent; padding: 1rem 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.4rem; flex: 1 1 40%;">
+              <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+                <path d="M50,2 C50,2 57,46 98,50 C57,54 50,98 50,98 C50,98 43,54 2,50 C43,46 50,2 50,2 Z" fill="#e4002b"/>
+              </svg>
+              <p class="font-headline font-black" style="font-size: 0.8rem; color:#000000;">파파야 프린터 본체 1대</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.4rem; flex: 1 1 40%;">
+              <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+                <path d="M50,5 C50,5 54,44 95,50 C54,56 50,95 50,95 C50,95 46,56 5,50 C46,44 50,5 50,5 Z" fill="#D8752B"/>
+              </svg>
+              <p class="font-headline font-black" style="font-size: 0.8rem; color:#000000;">상상 놀이 스타터북 1권</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.4rem; flex: 1 1 40%;">
+              <svg width="20" height="20" viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+                <path d="M40,2 C40,2 46,44 78,50 C46,56 40,98 40,98 C40,98 34,56 2,50 C34,44 40,2 40,2 Z" fill="#c4457a"/>
+              </svg>
+              <div>
+                <p class="font-headline font-black" style="font-size: 0.8rem; color:#000000;">스티커 롤 3개</p>
+                <p class="font-body" style="font-size: 0.65rem; color:#000000;">*추가 리필 구매 가능</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.4rem; flex: 1 1 40%;">
+              <svg width="20" height="20" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+                <path d="M2,40 C2,40 44,46 50,78 C56,46 98,40 98,40 C98,40 56,34 50,2 C44,34 2,40 2,40 Z" fill="#1a5a8a"/>
+              </svg>
+              <p class="font-headline font-black" style="font-size: 0.8rem; color:#000000;">USB-C 충전 케이블 1개</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 8. PARENT APPROVED / SAFETY                                   -->
     <!-- ============================================================ -->
     <section id="safety" class="py-24 relative overflow-hidden" style="background:#9fdaf4;">
 
@@ -470,32 +723,44 @@
         <!-- Left: headline + checklist -->
         <div class="space-y-8 pl-[50px] md:pl-[100px]">
           <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface leading-tight md:ml-0 ml-[50px]">
-            안전이 먼저,<br /><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">재미는 언제나.</span>
+            안전이 먼저,<br /><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">재미는&nbsp;&nbsp;언제나</span>
           </h2>
           <ul class="space-y-6">
             <li class="flex items-start gap-4">
               <div class="flex-shrink-0 mt-0.5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
               </div>
-              <p class="text-lg font-body font-medium text-on-surface leading-relaxed md:whitespace-nowrap">
-                BPA-free 무독성 용지, 중금속 안전성까지 꼼꼼히 검증했어요.
-              </p>
+              <div>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(transparent 52%, #FFB7C5 52%); padding: 0 2px;">KC 인증 절차를 진행 중이에요</span></p>
+                <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">아이가 사용하는 제품인 만큼, 출시 전 필요한 안전 인증을 꼼꼼히 준비하고 있어요.</p>
+              </div>
             </li>
             <li class="flex items-start gap-4">
               <div class="flex-shrink-0 mt-0.5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
               </div>
-              <p class="text-lg font-body font-medium text-on-surface leading-relaxed md:whitespace-nowrap">
-                아이 눈높이에 맞춘 AI, 엄격한 안전 필터로 걸러낸 콘텐츠만 만들어요.
-              </p>
+              <div>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(178deg, transparent 48%, #FFB7C5 48%); padding: 0 3px;">BPA/BPS-free 스티커 용지를 사용할 예정이에요</span></p>
+                <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">아이 손에 닿는 용지까지 안전성을 확인해 선택하고 있어요.</p>
+              </div>
             </li>
             <li class="flex items-start gap-4">
               <div class="flex-shrink-0 mt-0.5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
               </div>
-              <p class="text-lg font-body font-medium text-on-surface leading-relaxed md:whitespace-nowrap">
-                파파야 앱으로 부모님이 직접 설정하는 안심 기능.
-              </p>
+              <div>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(182deg, transparent 55%, #FFB7C5 55%); padding: 0 1px;">아이에게 맞는 이미지가 나오도록 필터링해요</span></p>
+                <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">부적절하거나 위험한 이미지가 만들어지지 않도록 AI 안전 필터를 적용할 예정이에요.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+              </div>
+              <div>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(175deg, transparent 50%, #FFB7C5 50%); padding: 0 4px;">부모님이 앱에서 사용 환경을 관리할 수 있어요</span></p>
+                <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">아이가 더 안전하게 사용할 수 있도록 보호자 설정 기능을 준비하고 있어요.</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -519,7 +784,7 @@
         <!-- Section heading -->
         <div class="text-center mb-14">
           <span class="font-headline font-bold text-primary uppercase tracking-widest text-sm">#MadeWithPapaya</span>
-          <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface mt-2"><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">우리 집</span> 파파야</h2>
+          <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface mt-2">파파야를 먼저 만나본<br><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">부모님들의&nbsp;&nbsp;반응</span></h2>
         </div>
 
         <!-- 2×2 / 4-col grid -->
@@ -529,7 +794,7 @@
           <div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-[2deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
             <img src="social1.webp?v=4" alt="Kid with Papaya" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover"/>
             <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-              <p class="text-white font-body text-xs leading-relaxed">"와 이건 진짜 올해 산 것 중에 제일 잘 산 듯ㅋㅋ 너무 재밌어요!!!"</p>
+              <p class="text-white font-body text-xs leading-relaxed">"와 이건 진짜 출시되면 바로 사고 싶어요ㅋㅋ 너무 재밌어요!!!"</p>
               <p class="text-white/70 font-headline font-bold text-xs mt-1">— 이*윤</p>
             </div>
           </div>
@@ -547,7 +812,7 @@
           <div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-[3deg] hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg">
             <img src="social3.webp?v=4" alt="Kids reacting to Papaya" width="1024" height="1024" loading="lazy" class="w-full h-full object-cover"/>
             <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-              <p class="text-white font-body text-xs leading-relaxed">"선물용으로 샀는데 반응이 너무 좋아서 저도 하나 더 살까 고민 중이에요ㅋㅋ"</p>
+              <p class="text-white font-body text-xs leading-relaxed">"선물로 주면 진짜 반응 좋을 듯ㅋㅋ 써보니까 저도 하나 갖고 싶어졌어요."</p>
               <p class="text-white/70 font-headline font-bold text-xs mt-1">— 권*린</p>
             </div>
           </div>
@@ -576,9 +841,9 @@
           <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary-soft rounded-full blur-3xl opacity-40 pointer-events-none"></div>
           <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary rounded-full blur-3xl opacity-30 pointer-events-none"></div>
 
-          <h2 class="relative z-10 text-4xl md:text-5xl font-headline font-black">파파야와 놀 준비 됐나요?</h2>
-          <p class="relative z-10 text-lg text-white/90 mx-auto font-body whitespace-nowrap">
-            곧 만나요. 출시 소식 가장 먼저 받아보세요.
+          <h2 class="relative z-10 text-4xl md:text-5xl font-headline font-black">파파야를 가장 먼저 만나보세요</h2>
+          <p class="relative z-10 text-lg text-white/90 mx-auto font-body">
+            선착순 100명에게만<br>99,000원 런칭가 혜택을 드려요.<br><br>출시 소식을 가장 먼저 받아보세요.
           </p>
 
           <form id="cta-form" class="relative z-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleCtaSubmit(event)">
@@ -601,7 +866,115 @@
           </form>
 
           <p id="cta-status" class="relative z-10 text-white/80 text-sm font-body hidden"></p>
-          <p class="relative z-10 text-white/60 text-xs font-body">결제는 진행되지 않아요. 출시 시 첫 구매 혜택을 안내드려요.</p>
+          <p class="relative z-10 text-white/60 text-xs font-body">결제는 진행되지 않아요. 출시 시 첫 구매 혜택만 안내드려요.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bouncing chevron between CTA and FAQ -->
+    <div style="display: flex; justify-content: center; padding: 12px 0 24px;">
+      <svg class="cta-bounce-arrow" xmlns="http://www.w3.org/2000/svg" width="56" height="36" viewBox="0 0 56 36" fill="none">
+        <polyline points="6,8 28,30 50,8" stroke="#383831" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 9. FAQ                                                        -->
+    <!-- ============================================================ -->
+    <section class="bg-secondary-section w-full py-20 px-6">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-4xl font-headline font-black text-center" style="margin-bottom: 3rem; color: #ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">FAQ</h2>
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 언제 출시되나요?</p>
+            <svg width="155" height="10" viewBox="0 0 155 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C12,2 24,8 36,5 C48,2 60,8 72,5 C84,2 96,8 108,5 C120,2 132,8 144,5 L153,5" stroke="#ff8eb2" stroke-width="2.3" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">출시 일정이 확정되면 사전 알림 신청자에게 가장 먼저 안내드릴게요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 지금 결제되는 건가요?</p>
+            <svg width="200" height="10" viewBox="0 0 200 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C14,3 28,9 42,6 C56,3 70,9 84,6 C98,3 112,9 126,6 C140,3 154,9 168,6 C182,3 194,9 198,6" stroke="#ff8eb2" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">아니요. 지금은 사전 알림 신청만 진행되며, 결제는 진행되지 않아요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 몇 살부터 사용할 수 있나요?</p>
+            <svg width="248" height="10" viewBox="0 0 248 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C14,2 28,8 44,5 C60,2 74,8 90,5 C106,2 120,8 136,5 C152,2 166,8 182,5 C198,2 212,8 228,5 C238,2 246,8 246,5" stroke="#ff8eb2" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">파파야는 5세 이상 아이들에게 가장 잘 맞도록 준비하고 있어요. 더 어린 아이들은 보호자와 함께 사용할 수 있고, 조금 큰 아이들은 스스로 말하고 만들며 즐길 수 있어요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 컬러로 출력되나요?</p>
+            <svg width="175" height="10" viewBox="0 0 175 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C12,3 24,9 38,6 C52,3 64,9 78,6 C92,3 104,9 118,6 C132,3 144,9 158,6 C167,3 173,9 173,6" stroke="#ff8eb2" stroke-width="2.7" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">현재는 흑백 스티커 출력 방식으로 준비하고 있어요. 대신 아이가 직접 색칠하며 자기만의 스티커로 완성할 수 있어요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 파파야는 잉크나 토너를 사용하나요?</p>
+            <svg width="300" height="10" viewBox="0 0 300 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C14,2 26,8 40,5 C54,2 66,8 80,5 C94,2 106,8 120,5 C134,2 146,8 160,5 C174,2 186,8 200,5 C214,2 226,8 240,5 C254,2 266,8 280,5 C290,2 298,8 298,5" stroke="#ff8eb2" stroke-width="2.3" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">아니요. 파파야는 잉크, 토너, 카트리지를 사용하지 않아요. 스티커 용지만 교체하면 계속 사용할 수 있어요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 리필 용지는 어디서 구매할 수 있나요?</p>
+            <svg width="312" height="10" viewBox="0 0 312 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C16,3 30,9 46,6 C62,3 76,9 92,6 C108,3 122,9 138,6 C154,3 168,9 184,6 C200,3 214,9 230,6 C246,3 260,9 276,6 C290,3 308,9 310,5" stroke="#ff8eb2" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">공식 파파야 리필 용지는 추후 papaya.toys 또는 파파야 앱에서 구매하실 수 있도록 준비 중이에요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 스티커 용지는 BPA/BPS-free인가요?</p>
+            <svg width="290" height="10" viewBox="0 0 290 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C12,2 24,8 38,5 C52,2 64,8 78,5 C92,2 104,8 118,5 C132,2 144,8 158,5 C172,2 184,8 198,5 C212,2 224,8 238,5 C252,2 264,8 278,5 C284,2 288,8 288,5" stroke="#ff8eb2" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">네. 아이 손에 직접 닿는 만큼 BPA/BPS-free 스티커 용지를 사용할 예정이에요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 파파야가 항상 듣고 있나요?</p>
+            <svg width="232" height="10" viewBox="0 0 232 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C14,3 28,9 44,6 C60,3 74,9 90,6 C106,3 120,9 136,6 C152,3 166,9 182,6 C196,3 210,9 226,6 L230,5" stroke="#ff8eb2" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">아니요. 파파야는 버튼을 눌렀을 때만 아이의 말을 들어요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 음성 데이터가 저장되거나 공유되나요?</p>
+            <svg width="322" height="10" viewBox="0 0 322 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C14,2 28,8 42,5 C56,2 70,8 84,5 C98,2 112,8 126,5 C140,2 154,8 168,5 C182,2 196,8 210,5 C224,2 238,8 252,5 C266,2 280,8 294,5 C308,2 318,8 320,5" stroke="#ff8eb2" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">파파야는 아이의 음성 데이터를 장기간 저장하거나 외부에 공유하지 않도록 설계하고 있어요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. AI가 만든 스티커는 어떻게 안전하게 관리되나요?</p>
+            <svg width="388" height="10" viewBox="0 0 388 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C14,3 28,9 44,6 C60,3 74,9 90,6 C106,3 120,9 136,6 C152,3 166,9 182,6 C198,3 212,9 228,6 C244,3 258,9 274,6 C290,3 304,9 320,6 C336,3 350,9 366,6 C378,3 386,9 386,5" stroke="#ff8eb2" stroke-width="2.3" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">파파야는 아이가 사용하는 제품인 만큼, 말하는 순간부터 스티커로 출력되는 과정까지 안전하게 사용할 수 있도록 준비하고 있어요.</p>
+            <ul class="font-body text-white/80 leading-relaxed" style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; padding-left: 0;">
+              <li style="display: flex; gap: 0.5rem;"><span style="flex-shrink: 0;">·</span><span><strong class="text-white">AI 안전 필터 적용</strong> — 아이에게 맞지 않는 표현이나 이미지가 만들어지지 않도록 필터링해요.</span></li>
+              <li style="display: flex; gap: 0.5rem;"><span style="flex-shrink: 0;">·</span><span><strong class="text-white">항상 켜져 있는 녹음이 아니에요</strong> — 파파야는 버튼을 눌렀을 때만 작동하며, 계속 듣고 있지 않아요.</span></li>
+              <li style="display: flex; gap: 0.5rem;"><span style="flex-shrink: 0;">·</span><span><strong class="text-white">부모님이 안심할 수 있는 사용 환경</strong> — 아이가 낯선 콘텐츠를 무작정 보는 방식이 아니라, 직접 말하고 만든 결과물을 중심으로 놀이할 수 있도록 설계했어요.</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 와이파이 없이도 사용할 수 있나요?</p>
+            <svg width="288" height="10" viewBox="0 0 288 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C12,2 24,8 38,5 C52,2 66,8 80,5 C94,2 108,8 122,5 C136,2 150,8 164,5 C178,2 192,8 206,5 C220,2 234,8 248,5 C260,2 274,8 286,5" stroke="#ff8eb2" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">새로운 스티커 이미지를 만들려면 와이파이 또는 핫스팟 연결이 필요해요. 한 번 연결한 뒤에는 연결 범위 안에서 자유롭게 사용할 수 있어요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 배터리로 작동하나요?</p>
+            <svg width="192" height="10" viewBox="0 0 192 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C12,3 24,9 38,6 C52,3 66,9 80,6 C94,3 108,9 122,6 C136,3 150,9 164,6 C174,3 186,9 190,5" stroke="#ff8eb2" stroke-width="2.7" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">파파야는 USB-C로 충전해서 사용해요. 충전 후에는 선을 빼고 원하는 곳으로 옮겨 사용할 수 있어요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 한국어 외 다른 언어도 사용할 수 있나요?</p>
+            <svg width="322" height="10" viewBox="0 0 322 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C16,2 30,8 46,5 C62,2 76,8 92,5 C108,2 122,8 138,5 C154,2 168,8 184,5 C200,2 214,8 230,5 C246,2 260,8 276,5 C290,2 308,8 320,5" stroke="#ff8eb2" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">네. 한국어를 기본으로 준비하고 있으며, 영어 등 여러 언어도 사용할 수 있도록 준비 중이에요.</p>
+          </div>
+
+          <div>
+            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 열전사 출력 방식은 아이에게 안전한가요?</p>
+            <svg width="338" height="10" viewBox="0 0 338 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C14,3 28,9 44,6 C60,3 74,9 90,6 C106,3 120,9 136,6 C152,3 166,9 182,6 C198,3 212,9 228,6 C244,3 258,9 274,6 C290,3 304,9 320,6 C330,3 336,9 336,5" stroke="#ff8eb2" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+            <p class="font-body text-white/80 leading-relaxed">파파야는 잉크 없이 전용 용지에 이미지를 출력하는 열전사 방식을 사용해요. 아이 손에 닿는 용지는 BPA/BPS-free 기준으로 준비하고 있으며, 안심하고 색칠하고 붙일 수 있도록 꼼꼼히 확인하고 있어요.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -800,6 +1173,130 @@
       const formEl = document.getElementById('cta-form');
       submitWaitlist(phone, statusEl, formEl);
     }
+  </script>
+
+  <script>
+  (function () {
+    var inner = document.getElementById('sticker-scroll-inner');
+    if (!inner) return;
+
+    var NORMAL_DURATION = 29;
+    var isTouching = false;
+    var touchStartX = 0;
+    var touchStartTime = 0;
+    var dragBaseOffset = 0;
+    var flingTimer = null;
+
+    function getOffset() {
+      var matrix = new DOMMatrix(getComputedStyle(inner).transform);
+      var tx = matrix.m41;
+      var halfWidth = inner.scrollWidth / 2;
+      if (!halfWidth) return 0;
+      return ((-tx / halfWidth) % 1 + 1) % 1;
+    }
+
+    function playFrom(offset, duration) {
+      offset = ((offset % 1) + 1) % 1;
+      inner.style.animation = 'none';
+      inner.offsetHeight; // force reflow
+      inner.style.animation = 'card-scroll ' + duration + 's ' + (-(offset * duration)) + 's linear infinite';
+    }
+
+    inner.addEventListener('touchstart', function (e) {
+      if (flingTimer) { clearTimeout(flingTimer); flingTimer = null; }
+      isTouching = true;
+      touchStartX = e.touches[0].clientX;
+      touchStartTime = Date.now();
+      dragBaseOffset = getOffset();
+      // Freeze at current position
+      playFrom(dragBaseOffset, NORMAL_DURATION);
+      inner.style.animationPlayState = 'paused';
+    }, { passive: true });
+
+    inner.addEventListener('touchmove', function (e) {
+      if (!isTouching) return;
+      var dx = e.touches[0].clientX - touchStartX;
+      var halfWidth = inner.scrollWidth / 2;
+      if (!halfWidth) return;
+      var newOffset = ((dragBaseOffset + (-dx / halfWidth)) % 1 + 1) % 1;
+      // Restart paused at dragged position for live feedback
+      inner.style.animation = 'none';
+      inner.offsetHeight;
+      inner.style.animation = 'card-scroll ' + NORMAL_DURATION + 's ' + (-(newOffset * NORMAL_DURATION)) + 's linear infinite';
+      inner.style.animationPlayState = 'paused';
+    }, { passive: true });
+
+    inner.addEventListener('touchend', function (e) {
+      if (!isTouching) return;
+      isTouching = false;
+
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      var dt = Math.max(0.05, (Date.now() - touchStartTime) / 1000);
+      var halfWidth = inner.scrollWidth / 2;
+
+      // Where we landed after dragging
+      var swipeOffset = ((dragBaseOffset + (-dx / halfWidth)) % 1 + 1) % 1;
+
+      if (Math.abs(dx) < 10) {
+        // Hold only — resume from paused position
+        inner.style.animationPlayState = 'running';
+        return;
+      }
+
+      var velocityPx = dx / dt; // px/s, positive = swiped right (backward)
+      var absPx = Math.abs(velocityPx);
+
+      if (dx < 0) {
+        // Forward swipe (left): fling fast, then settle to normal speed
+        var multiplier = Math.min(6, Math.max(1.8, absPx / 120));
+        var fastDuration = NORMAL_DURATION / multiplier;
+        playFrom(swipeOffset, fastDuration);
+        var FLING_MS = 650;
+        flingTimer = setTimeout(function () {
+          flingTimer = null;
+          var elapsed = FLING_MS / 1000;
+          var endOffset = ((swipeOffset + elapsed / fastDuration) % 1 + 1) % 1;
+          playFrom(endOffset, NORMAL_DURATION);
+        }, FLING_MS);
+      } else {
+        // Backward swipe (right): add a little extra backward momentum, then resume forward
+        var momentumOffset = -(absPx / halfWidth) * 0.25; // extra backward nudge
+        var backOffset = ((swipeOffset + momentumOffset) % 1 + 1) % 1;
+        playFrom(backOffset, NORMAL_DURATION);
+      }
+    }, { passive: true });
+
+    inner.addEventListener('touchcancel', function () {
+      isTouching = false;
+      inner.style.animationPlayState = 'running';
+    }, { passive: true });
+  })();
+  </script>
+
+  <script>
+  (function () {
+    var cards = [
+      { id: 'card-icon-1', color: '#71F69D' },
+      { id: 'card-icon-2', color: '#FF6B6B' },
+      { id: 'card-icon-3', color: '#FFD600' },
+      { id: 'card-icon-4', color: '#FF8C42' },
+    ];
+    var icons = cards.map(function (c) {
+      return { el: document.getElementById(c.id), color: c.color };
+    }).filter(function (c) { return c.el; });
+
+    var state = 0;
+    function flip() {
+      state = 1 - state;
+      var x = state === 0 ? '6px' : '-6px';
+      var y = state === 0 ? '6px' : '-6px';
+      icons.forEach(function (c) {
+        c.el.style.filter = 'drop-shadow(' + x + ' ' + y + ' 1px ' + c.color + ')';
+      });
+    }
+    flip();
+    setInterval(flip, 380);
+  })();
   </script>
 
 </body>
