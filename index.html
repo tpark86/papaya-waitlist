@@ -259,15 +259,17 @@
 
     <!-- Bouncing scroll hint -->
     <div style="display: flex; justify-content: center; padding: 0 0 16px;">
-      <svg class="cta-bounce-arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none" style="opacity: 0.45;">
-        <polyline points="3,4 14,14 25,4" stroke="#383831" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
+      <button onclick="document.getElementById('section-creative').scrollIntoView({behavior:'smooth'})" style="background: none; border: none; cursor: pointer; padding: 8px; opacity: 0.45;">
+        <svg class="cta-bounce-arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+          <polyline points="3,4 14,14 25,4" stroke="#383831" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </button>
     </div>
 
     <!-- ============================================================ -->
     <!-- 4. PINK CREATIVE SECTION                                      -->
     <!-- ============================================================ -->
-    <section style="background-color: #D8752B; padding: 3.5rem 1.5rem 1rem;" class="w-full">
+    <section id="section-creative" style="background-color: #D8752B; padding: 3.5rem 1.5rem 1rem;" class="w-full">
       <div class="max-w-2xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-headline font-black leading-tight" style="color: #ffffff; text-shadow: 3px 3px 0 #8a3a00, 2px 2px 0 #8a3a00, 1px 1px 0 #8a3a00;">화면만 보는 아이에서,<br>상상을 꺼내 만드는 아이로</h2>
         <p class="text-lg font-body font-medium leading-relaxed" style="color: #ffffff; margin-top: 2rem;">요즘 아이들은 콘텐츠를 보는 데 익숙해요.<br>파파야는 아이가 직접 말하고, 만들고, 색칠하고, 붙이게 해주는 손으로 하는 AI 창의 놀이예요.</p>
