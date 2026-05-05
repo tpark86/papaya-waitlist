@@ -230,12 +230,15 @@
         </h1>
         <!-- Phone capture card -->
         <div class="bg-card px-7 py-4 md:p-7 rounded-xl sticker-border space-y-3 md:space-y-4 shadow-[0_8px_32px_rgba(56,56,49,0.08)]">
-          <label for="hero-phone" class="block font-headline font-bold text-on-surface text-lg text-center md:text-left">
-            <span style="color:#383831; font-size:0.8em; margin-right:5px;">✦</span>첫 구매 100명 한정
-          </label>
+          <div class="text-center md:text-left">
+            <label for="hero-phone" class="block font-headline font-bold text-on-surface text-lg">
+              <span style="color:#383831; font-size:0.8em; margin-right:5px;">✦</span>첫 구매 100명 한정
+            </label>
+            <p class="font-body" style="font-size:0.82rem; color:#6b6b63; margin-top:2px;">다시 없을 최대 혜택</p>
+          </div>
           <div class="text-center md:text-left font-body" style="margin-top:13px; display:flex; flex-direction:column; gap:8px;">
             <span style="font-size:0.78rem; color:#6b6b63; text-decoration:line-through;">정가 149,000원</span>
-            <span style="font-size:1.15rem; font-weight:800; color:#e4002b; font-family:'Plus Jakarta Sans',sans-serif; line-height:1.2;">런칭가 99,000원</span>
+            <span style="font-size:1.15rem; font-weight:800; color:#e4002b; font-family:'Plus Jakarta Sans',sans-serif; line-height:1.2;"><span style="font-size:0.85rem; font-weight:700; background-color:#e4002b; color:#ffffff; border-radius:4px; padding:1px 6px; margin-right:6px; vertical-align:middle;">33% OFF</span>런칭가 99,000원</span>
           </div>
           <form id="hero-form" class="flex flex-col sm:flex-row gap-2" onsubmit="handleHeroSubmit(event)" style="margin-top:7px;">
             <input
