@@ -1,0 +1,173 @@
+[    4811ms] [ERROR] Error resolving from component map (LocalizedUrl) @ https://kr.godaddy.com/storefront-assets/9471/_next/static/chunks/pages/_app-76c2d715bd9ffccd.js:0
+[    4812ms] [ERROR] Error resolving from component map (BynderInlineVideos) @ https://kr.godaddy.com/storefront-assets/9471/_next/static/chunks/pages/_app-76c2d715bd9ffccd.js:0
+[    4831ms] [ERROR] Error resolving from component map (LocalizedUrl) @ https://kr.godaddy.com/storefront-assets/9471/_next/static/chunks/pages/_app-76c2d715bd9ffccd.js:0
+[    4831ms] [ERROR] Error resolving from component map (BynderInlineVideos) @ https://kr.godaddy.com/storefront-assets/9471/_next/static/chunks/pages/_app-76c2d715bd9ffccd.js:0
+[    4872ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48288)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at sa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48628)
+    at $o (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:83995)
+    at bs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108831)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108571)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4873ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4874ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4874ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4874ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4874ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4874ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120932)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4874ms] Error: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120618)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at ls (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:105136)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103692)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4897ms] Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at oa (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:48168)
+    at Oo (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:78126)
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:121135)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103466)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    4897ms] Error: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at Si (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:120618)
+    at ys (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108510)
+    at gs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108438)
+    at hs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:108301)
+    at ls (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:105136)
+    at rs (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:10:103692)
+    at w (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:1856)
+    at MessagePort.P (https://img6.wsimg.com/ux-assets/react/18/react-dom.umd.js:1:2388)
+[    6097ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://cdn.krxd.net/controltag/ux5nzaxjx.js:0
+[    6632ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://kr.godaddy.com/:0
+[   11934ms] [ERROR] Access to fetch at 'https://notifications-api.godaddy.com/v1/launch' from origin 'https://kr.godaddy.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://kr.godaddy.com/:0
+[   11934ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://notifications-api.godaddy.com/v1/launch:0
+[   18020ms] [WARNING] <link rel=preload> must have a valid `as` value @ https://sso.godaddy.com/?realm=idp&app=venture-redirector&path=%2F%3Freferrer%3Dsso:148
+[   18497ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://kr.godaddy.com') does not match the recipient window's origin ('https://sso.godaddy.com'). @ https://img6.wsimg.com/identity-static-assets/sso-auth/_next/static/chunks/pages/_app-6da2b7367d3abf86.js:0
+[   18498ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://kr.godaddy.com') does not match the recipient window's origin ('https://sso.godaddy.com'). @ https://img6.wsimg.com/identity-static-assets/sso-auth/_next/static/chunks/pages/_app-6da2b7367d3abf86.js:0
+[   18674ms] [WARNING] Could not determine a CSP API key; experimentation events are disabled. You must provide either a cspKey or env config property. @ https://img6.wsimg.com/hivemind/hivemind-3.1.9.js:7
+[   18702ms] [LOG] No experiments or labels provided @ https://img6.wsimg.com/hivemind/hivemind-3.1.9.js:7
+[   18714ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://kr.godaddy.com') does not match the recipient window's origin ('https://sso.godaddy.com'). @ https://img6.wsimg.com/identity-static-assets/sso-auth/_next/static/chunks/pages/_app-6da2b7367d3abf86.js:0
+[   18723ms] [ERROR] Failed to load resource: the server responded with a status of 429 (Too Many Requests) @ https://sso.godaddy.com/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.2.308:0
+[   18813ms] [LOG] Error @ :2
+[   18859ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ https://sso.godaddy.com/?realm=idp&app=venture-redirector&path=%2F%3Freferrer%3Dsso:0
+[   19011ms] [LOG] Error @ :2

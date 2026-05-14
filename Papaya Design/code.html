@@ -1,0 +1,318 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "error": "#be2d06",
+                  "secondary-fixed-dim": "#62e891",
+                  "primary-dim": "#b40020",
+                  "tertiary-dim": "#943859",
+                  "error-container": "#f95630",
+                  "on-error": "#ffffff",
+                  "outline": "#828179",
+                  "on-secondary-fixed": "#004621",
+                  "tertiary-fixed-dim": "#ef81a4",
+                  "secondary": "#00743c",
+                  "primary-container": "#ff7572",
+                  "primary-fixed-dim": "#ff5a5b",
+                  "surface-tint": "#cb0025",
+                  "on-background": "#383831",
+                  "secondary-dim": "#006634",
+                  "on-secondary-container": "#005b2d",
+                  "on-primary": "#ffffff",
+                  "surface-container-high": "#f1eee2",
+                  "surface-variant": "#ebe8dc",
+                  "tertiary-fixed": "#ff8eb2",
+                  "on-tertiary-fixed-variant": "#6c183a",
+                  "inverse-surface": "#0e0f09",
+                  "inverse-primary": "#ff5355",
+                  "surface-container-low": "#fcf9ef",
+                  "inverse-on-surface": "#9f9d94",
+                  "on-secondary-fixed-variant": "#006633",
+                  "outline-variant": "#bbb9b0",
+                  "surface-bright": "#feffd7",
+                  "on-primary-fixed-variant": "#60000c",
+                  "surface-container": "#f6f4e8",
+                  "on-primary-fixed": "#000000",
+                  "on-error-container": "#520c00",
+                  "surface-container-lowest": "#ffffff",
+                  "on-tertiary-fixed": "#380019",
+                  "on-tertiary": "#ffffff",
+                  "on-surface-variant": "#65655d",
+                  "on-surface": "#383831",
+                  "on-tertiary-container": "#600d32",
+                  "surface-dim": "#e5e3d6",
+                  "primary-fixed": "#ff7572",
+                  "secondary-fixed": "#71f69d",
+                  "surface-container-highest": "#ebe8dc",
+                  "on-primary-container": "#4e0008",
+                  "primary": "#cb0025",
+                  "tertiary": "#a34465",
+                  "error-dim": "#b92902",
+                  "background": "#fcf5e5",
+                  "surface": "#fcf5e5",
+                  "tertiary-container": "#ff8eb2",
+                  "on-secondary": "#ffffff",
+                  "secondary-container": "#71f69d"
+          },
+          "borderRadius": {
+                  "DEFAULT": "1rem",
+                  "lg": "2rem",
+                  "xl": "3rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Be Vietnam Pro"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .sticker-border {
+      outline: 4px solid #bbb9b0;
+    }
+    .text-shadow-chunky {
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+    }
+    .perspective-text {
+      transform: perspective(500px) rotateX(10deg);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf5e5]/80 dark:bg-[#1a1a15]/80 backdrop-blur-md shadow-[0_20px_40px_rgba(56,56,49,0.08)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-3xl font-black text-[#e4002b] dark:text-[#ff4d4d] italic font-headline tracking-tight">papaya</div>
+<div class="hidden md:flex gap-8 items-center font-headline font-bold tracking-tight">
+<a class="text-[#383831] dark:text-[#fcf9ef] hover:text-[#cb0025] hover:scale-105 transition-transform" href="#">How it Works</a>
+<a class="text-[#383831] dark:text-[#fcf9ef] hover:text-[#cb0025] hover:scale-105 transition-transform" href="#">Features</a>
+<a class="text-[#383831] dark:text-[#fcf9ef] hover:text-[#cb0025] hover:scale-105 transition-transform" href="#">Safety</a>
+<a class="text-[#383831] dark:text-[#fcf9ef] hover:text-[#cb0025] hover:scale-105 transition-transform" href="#">Community</a>
+</div>
+<button class="bg-[#cb0025] text-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform Active:rotate-2">
+        Join Waitlist
+      </button>
+</div>
+</nav>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+<div class="relative group">
+<div class="absolute inset-0 bg-primary-container rounded-xl -rotate-3 scale-105 opacity-20"></div>
+<img alt="Papaya Sticker Printer" class="relative rounded-xl shadow-[0_20px_40px_rgba(56,56,49,0.15)] rotate-2 group-hover:rotate-0 transition-all duration-500 w-full object-cover aspect-square" data-alt="A chunky, pastel red and cream toy-like sticker printer on a bright yellow table, surrounded by colorful children's drawings and stickers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWQNRFYt-oqisJUWYvygG-IIolMaxRyr6yXUvlQ4hejbxMaXkol0WQ6bj0EWxxOoJ4c25zu5fy9OYqf1f2Y2G-jb4iQlr5RH1Scj6tuLV56ZREGj7CoJtNTIhVRn7cqYO3FkLGGcAZGk3se0FGworixfSdgAPKf1qlPEgcpR2hGlOHXSUrOq22ztTd_d1rZntgMGEEGDIFjE7jM8YO_1RpcvGKTJRE6LPNXl0hZVRt3VpcNwsUCXRfaRFaSl_4GP00RX3Eq0ky4CBb"/>
+<div class="absolute -bottom-6 -right-6 bg-secondary-container p-6 rounded-xl rotate-12 sticker-border shadow-lg hidden md:block">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container" data-icon="auto_awesome">auto_awesome</span>
+<p class="font-headline font-bold text-on-secondary-container">AI Powered!</p>
+</div>
+</div>
+<div class="space-y-8">
+<h1 class="text-6xl md:text-8xl font-headline font-black text-on-surface leading-[0.9] tracking-tighter">
+          Stickers <br/> <span class="text-primary italic">Born from</span> <br/> Imagination.
+        </h1>
+<p class="text-xl text-on-surface-variant max-w-md leading-relaxed">
+          The first AI-powered sticker printer designed for Korean kids. Turn any drawing, word, or dream into a tactile sticker in seconds.
+        </p>
+<div class="bg-surface-container-low p-8 rounded-xl sticker-border space-y-4">
+<p class="font-headline font-bold text-lg">Reserve your spot in the playground</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<input class="flex-1 bg-surface-container-highest px-6 py-4 rounded-xl border-none focus:ring-4 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Enter your email" type="email"/>
+<button class="bg-[#cb0025] text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-[0_8px_0_0_#4e0008]">
+              Join Waitlist
+            </button>
+</div>
+<p class="text-sm text-on-surface-variant/70 italic">Join 5,000+ parents already in line!</p>
+</div>
+</div>
+</section>
+<!-- Queue Tracker -->
+<section class="max-w-4xl mx-auto px-6 py-12">
+<div class="bg-surface-container-lowest p-10 rounded-xl sticker-border shadow-lg -rotate-1 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-secondary-container"></div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="local_activity">local_activity</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-2xl">You are #1,240 in line</h3>
+<p class="text-on-surface-variant">Early bird discount secured!</p>
+</div>
+</div>
+<div class="flex -space-x-4">
+<img alt="User" class="w-12 h-12 rounded-full border-4 border-white object-cover" data-alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAivr6rx_b7JKMApmOMaXg5i5xkki2aY1njSeHRVCFDEfymAP6T0eoBKhgm-0xDBlPb_7IIGuHygPMICP_xWtcfPJDFtgASJTSm0RmtyfQkObRmHPsbYRkkiIfnX_BTVcUO1QTjyvM9AkmRXgkF4TNSqtUjAq-NP6LVzbp9im0fE5CHjhjS2FYtoJxiCEgkuQFK6USCNeKlrMDfYVTZLNE_47MqxO-xWciyOanQOnd7wAG9CRul9Vp6M_m9FVfdLg8_p2_qasT6WseF"/>
+<img alt="User" class="w-12 h-12 rounded-full border-4 border-white object-cover" data-alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDZEdYJvv424NmPA34_pr52WYEbhReSLws8vk7TwoV_xK89A8hSZ8HeG9STG2IropbhY5n5aeWBXSm6Kv8pN7gfEx0dkrwQ-JbKR_4u9B78tta3JXwcTiEOTqRVnkJ-2ptSZIUUczzwDUfDWXwdfcY-56HteBBeAPARbNLy8ji6I0PmsYEOY4PEFKECwcylCh3xgbnHWSZ4juTkk5j9ID26LYKbTb8yfznXWmqd387GxslVYois6omDMq533L9_e6fdlXBXEFd9z7v"/>
+<img alt="User" class="w-12 h-12 rounded-full border-4 border-white object-cover" data-alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfDLwiv1oF82G-4beznTyHIDEsnQ5vRJfGvsSg8nrcwYKmsq4ScKZcmm8MuGb0ulCe8X8djm8yt-lr54o9pJOAZ_RzrsL2gwH1e3zHl3bmILpqktOb9Sc-93AtrlDHlg2wNaQ7-LKuEG_GnQwDYHKYBa2t40EnK7lYi1_SkS_nHFnhqE4JWmN0Bwkm7edz0ngA9ZG9Au_fFGXE_EUlF6SY03Agi0Mh3V7ZIL1QqVgVcAXPhmdyPkOAualPv2NpJ47meZLh_MKCxAou"/>
+<div class="w-12 h-12 rounded-full border-4 border-white bg-surface-dim flex items-center justify-center font-bold text-xs text-on-surface">+8k</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="bg-[#037f59] py-24 w-full">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-5xl font-headline font-black mb-4 text-white">Why Papaya?</h2>
+<div class="h-2 w-32 bg-[#ef81a4] mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- AI Magic -->
+<div class="bg-white p-8 rounded-xl border-2 border-white/20 hover:-translate-y-2 transition-transform rotate-1 shadow-lg">
+<div class="w-16 h-16 bg-[#ff8eb2] rounded-full rotate-12 flex items-center justify-center mb-6 border-4 border-[#383831] shadow-[4px_4px_0px_0px_rgba(56,56,49,1)]">
+<span class="material-symbols-outlined text-[#383831] text-3xl" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h3 class="text-2xl font-headline font-black mb-4 text-[#383831]">AI Magic</h3>
+<p class="text-[#383831]/80 leading-relaxed">Simply describe what you want, and our kid-friendly AI generates a unique sticker illustration in seconds.</p>
+</div>
+<!-- Instant Fun -->
+<div class="bg-white p-8 rounded-xl border-2 border-white/20 hover:-translate-y-2 transition-transform -rotate-1 shadow-lg">
+<div class="w-16 h-16 bg-[#71f69d] rounded-full -rotate-6 flex items-center justify-center mb-6 border-4 border-[#383831] shadow-[4px_4px_0px_0px_rgba(56,56,49,1)]">
+<span class="material-symbols-outlined text-[#383831] text-3xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="text-2xl font-headline font-black mb-4 text-[#383831]">Instant Fun</h3>
+<p class="text-[#383831]/80 leading-relaxed">No ink, no mess. Our thermal printing technology makes stickers pop out instantly, ready to peel and stick.</p>
+</div>
+<!-- Kid-Safe -->
+<div class="bg-white p-8 rounded-xl border-2 border-white/20 hover:-translate-y-2 transition-transform rotate-2 shadow-lg">
+<div class="w-16 h-16 bg-[#ff7572] rounded-full rotate-6 flex items-center justify-center mb-6 border-4 border-[#383831] shadow-[4px_4px_0px_0px_rgba(56,56,49,1)]">
+<span class="material-symbols-outlined text-[#383831] text-3xl" data-icon="shield" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<h3 class="text-2xl font-headline font-black mb-4 text-[#383831]">Kid-Safe</h3>
+<p class="text-[#383831]/80 leading-relaxed">BPA-free materials and a moderated AI environment ensure your children's safety is our number one priority.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Video Placeholder -->
+<section class="bg-[#037f59] py-12 w-full">
+<div class="max-w-6xl mx-auto px-6">
+<div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 aspect-video bg-black/20 group cursor-pointer">
+<img alt="Kids using Papaya" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="A heartwarming scene of two young children laughing while decorating their lunchbox with colorful cartoon stickers produced by a small device." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuOLMKiL-O4dzd04wj9pxMaYRR0PIRBsmQP3QqnrhAo25npDSBX7UZJPFPoD7CUuRTY_YgT6BAdPb7UBzO5mc1RaAM18lwO-iKLL7QxxunJMPNrLcCBn9XMkK0u9Law9slDqbEQ-7Pfdiqe_cUN7lJi-NtlSMgi-n3EJj76AGhnSYQLCqGBej_S5d5RnXVzSY3qY4K2q5gcpfsOkK3ig0N18NL1WdpH8kGkdly4bKnEKeHyhlOG31jd_4x0j4aGIUx87b7HJkiapEW"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-24 h-24 bg-white text-[#037f59] rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-8 left-8">
+<h4 class="text-white text-3xl font-headline font-black text-shadow-chunky">Watch Papaya in Action!</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Parent Approved Section -->
+<section class="bg-[#fcf5e5] py-24 mt-12 rounded-t-[4rem] border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="text-5xl font-headline font-black leading-tight">Safety first, <br/>playtime always.</h2>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<img alt="Checkmark" class="w-8 h-8 flex-shrink-0 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiDd2-d4gjx2tdyMtF4eIvKzA-VoBiJOsevDt0UnseH_25A1Q0Me9fkCefZiv78-pnhkiUOBon908DgTU4pQOA344h9fIyodq_HqqCnxIinshAzqGa3Xuk8tIJAVjJ0dv0CGNLvhpzoA-WGtB752BxD7zw5sCy4xk9TRffekibNHwMqPpCLvFkRsl3Y2ROmzXPokAjbO0ABrPbfkCjI0V2TlQH2mxw2d0n9l9pUEt6YVZFlzPc9AzbSnFrZ0JMWEzUaXlflbyajXGA"/>
+<p class="text-lg font-medium">BPA-Free, Non-toxic sticker rolls tested for heavy metal safety.</p>
+</li>
+<li class="flex items-start gap-4">
+<img alt="Checkmark" class="w-8 h-8 flex-shrink-0 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiDd2-d4gjx2tdyMtF4eIvKzA-VoBiJOsevDt0UnseH_25A1Q0Me9fkCefZiv78-pnhkiUOBon908DgTU4pQOA344h9fIyodq_HqqCnxIinshAzqGa3Xuk8tIJAVjJ0dv0CGNLvhpzoA-WGtB752BxD7zw5sCy4xk9TRffekibNHwMqPpCLvFkRsl3Y2ROmzXPokAjbO0ABrPbfkCjI0V2TlQH2mxw2d0n9l9pUEt6YVZFlzPc9AzbSnFrZ0JMWEzUaXlflbyajXGA"/>
+<p class="text-lg font-medium">Curated AI engine with strict safety filters for age-appropriate content.</p>
+</li>
+<li class="flex items-start gap-4">
+<img alt="Checkmark" class="w-8 h-8 flex-shrink-0 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiDd2-d4gjx2tdyMtF4eIvKzA-VoBiJOsevDt0UnseH_25A1Q0Me9fkCefZiv78-pnhkiUOBon908DgTU4pQOA344h9fIyodq_HqqCnxIinshAzqGa3Xuk8tIJAVjJ0dv0CGNLvhpzoA-WGtB752BxD7zw5sCy4xk9TRffekibNHwMqPpCLvFkRsl3Y2ROmzXPokAjbO0ABrPbfkCjI0V2TlQH2mxw2d0n9l9pUEt6YVZFlzPc9AzbSnFrZ0JMWEzUaXlflbyajXGA"/>
+<p class="text-lg font-medium">Built-in parental controls via the Papaya Companion App.</p>
+</li>
+</ul>
+</div>
+<div class="flex justify-center">
+<div class="w-64 h-64 bg-surface-container-lowest sticker-border rounded-xl rotate-6 flex flex-col items-center justify-center p-8 shadow-xl">
+<div class="w-32 h-32 bg-[#0051a8] rounded-full flex items-center justify-center text-white mb-4">
+<span class="font-headline font-black text-4xl">KC</span>
+</div>
+<p class="text-center font-headline font-bold text-[#0051a8]">KC Certified<br/><span class="text-sm font-normal text-on-surface-variant">Safety Standard</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof (Sticker Grid) -->
+<section class="py-24 max-w-7xl mx-auto px-6" style="background-color: #f5eedc;">
+<div class="text-center mb-16">
+<span class="text-primary font-headline font-bold uppercase tracking-widest">#MadeWithPapaya</span>
+<h2 class="text-5xl font-headline font-black mt-2">What Parents are Saying</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-2 hover:rotate-0 transition-all cursor-pointer">
+<img alt="Instagram style review" class="w-full h-full object-cover" data-alt="A close up of a child's hand holding a custom-made robot sticker against a colorful play mat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkG80Q7C_2nxcudMYDXOR7ceXI7_1afJtMMRuACnUm9U-9gm_qbCl_NYsAt3NhW8-NM7Bs13ob4X3FYYDWdMZn3luTQcrvNIRFkW3v4hJqyQnd3skm8YIdVpAwNJFv_qe4yNQ7jZU4vzjzcm8j_9_FyewEN_BEJ2wAOqk1w__lArS3w1JsmF6UXM_brmYCmslRhPB3RrWqGeQLAdYgdxjIxdOXCf9PJOw5XQQ5xIzMhqKl2UUdBLQW_aq_pTv454KWaQ-vm0sayzHo"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-white text-sm font-bold">@sunny_mom</p>
+<p class="text-white/80 text-xs">"My kid is obsessed!"</p>
+</div>
+</div>
+<div class="relative aspect-square sticker-border rounded-xl overflow-hidden rotate-3 hover:rotate-0 transition-all cursor-pointer">
+<img alt="Instagram style review" class="w-full h-full object-cover" data-alt="A refrigerator door covered in colorful, stylized animal stickers made by a child." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ8e00h440m83NePeNWceQwEp5oc1Z3emte6LD-YRGfC8kpaQ1kgjz7wdWpOcmtsz1rqqFpnj7UwBdY4zvzUexE327sKxYEHQKGNt5b-CM7vy-MI0JbXbFm5Hh3MjQ7zNSUKJVx3X460kqSJJamLKtZBc3ppDHxQn1cyS4K3UzLoGAGxBDtrFibKlm_ucKKGjRYrsIUMcaHBU479Dh-QNGr_fSptOPb4IAyJ6jU1EFXfSGR2fGbV_VQWSrLKrvUAi_qDjq6BJeQdQg"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-white text-sm font-bold">@min_jun_dad</p>
+<p class="text-white/80 text-xs">"Zero mess art time."</p>
+</div>
+</div>
+<div class="relative aspect-square sticker-border rounded-xl overflow-hidden -rotate-3 hover:rotate-0 transition-all cursor-pointer">
+<img alt="Instagram style review" class="w-full h-full object-cover" data-alt="A young girl excitedly showing a sticker she just printed of a magical unicorn." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoS8OAoeQeOE6DwQ7q35rmNtkQT70wqMJUROOWKRB2Yz78UqZ8a507q1m8qTyGtIUE-TQ1FjK3AABIhZAYClcZFzIkPLfE88TjkY9FnaPhEZ_2w7dQ1h9qEj0A5KoCeCc2qfWC5Mid8xQ8kGkZTtPZc5q-8QrCNyw8jiiOyH7zf8DpzpPqz1PD4_-BmvXkfWw5HcRGGBzRZs5I9A5x2oUISlhBtbzXrx4DeiuDBvH7D8YRwVg2_RrHaVCVwXzxRD4cGJfN-uzmFIQ-"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-white text-sm font-bold">@playtime_korea</p>
+<p class="text-white/80 text-xs">"Best birthday gift ever."</p>
+</div>
+</div>
+<div class="relative aspect-square sticker-border rounded-xl overflow-hidden rotate-2 hover:rotate-0 transition-all cursor-pointer">
+<img alt="Instagram style review" class="w-full h-full object-cover" data-alt="A collection of handmade greeting cards decorated with AI-generated cartoon food stickers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3md4-GyZv9ych-cWIDiH3BT4BkAd2JdIcgRJvzO_Xzcjq7pVHtMtMoUxG7abm6tnSki_6z614WEzbuQoZ_NBeCW7SRKpGMaHiMNW1Cib6nhmsTEZaq_Cg0FiE47fTgM2nEi2fM19td-Q_nxSvPKQLkgd5mxOZ5lAlMBkvLz-MVTacrxB7mmw6iIao0TnjaSVaYdy9H-JPsqhsy6Xh42G2jtUe6MF87BmUxJX2qQztWmzzon-flWG0NspEqq58-jPeVLCrFL6Iu7SY"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-white text-sm font-bold">@art_with_jisu</p>
+<p class="text-white/80 text-xs">"Endless creative joy!"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="max-w-4xl mx-auto px-6 py-24">
+<div class="bg-[#cb0025] text-white p-12 rounded-xl sticker-border shadow-2xl text-center space-y-8 relative overflow-hidden">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-[#ff7572] rounded-full blur-3xl opacity-50"></div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#00743c] rounded-full blur-3xl opacity-30"></div>
+<h2 class="text-5xl font-headline font-black relative z-10">Ready to play?</h2>
+<p class="text-xl text-white/90 max-w-lg mx-auto relative z-10">We're launching soon. Join the waitlist now to get 30% off your first Papaya Starter Pack.</p>
+<div class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 relative z-10">
+<input class="flex-1 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border-2 border-white/30 text-white placeholder:text-white/60 focus:ring-0 focus:border-white outline-none" placeholder="Your best email" type="email"/>
+<button class="bg-white text-[#cb0025] px-8 py-4 rounded-full font-extrabold hover:bg-surface-bright transition-colors">
+            Count Me In!
+          </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#fcf9ef] dark:bg-[#12120f] border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-center gap-8 font-headline">
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="text-2xl font-black text-[#e4002b] italic tracking-tight">papaya</div>
+<div class="flex flex-wrap justify-center gap-8 text-sm font-bold tracking-widest text-[#383831]">
+<a class="hover:text-[#e4002b] transition-colors" href="#">INSTAGRAM</a>
+<a class="hover:text-[#e4002b] transition-colors" href="#">TIKTOK</a>
+<a class="hover:text-[#e4002b] transition-colors" href="#">SAFETY SPECS</a>
+<a class="hover:text-[#e4002b] transition-colors" href="#">PRIVACY</a>
+</div>
+</div>
+<div class="text-sm font-bold tracking-widest text-[#383831]">
+    © 2024 PAPAYA. MADE FOR LITTLE CREATORS.
+  </div>
+</div>
+</footer>
+</body></html>

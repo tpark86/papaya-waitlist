@@ -1,0 +1,383 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e7]:
+      - img [ref=e8]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+    - generic [ref=e10]:
+      - img [ref=e11]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e13]:
+      - img [ref=e14]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+    - generic [ref=e16]:
+      - img [ref=e17]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e19]:
+      - img [ref=e20]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+    - generic [ref=e22]:
+      - img [ref=e23]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e25]:
+      - img [ref=e26]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+    - generic [ref=e28]:
+      - img [ref=e29]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e31]:
+      - img [ref=e32]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+    - generic [ref=e34]:
+      - img [ref=e35]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e37]:
+      - img [ref=e38]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+    - generic [ref=e40]:
+      - img [ref=e41]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e43]:
+      - img [ref=e44]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+    - generic [ref=e46]:
+      - img [ref=e47]
+      - text: 첫 구매 100명 한정
+    - generic [ref=e49]:
+      - img [ref=e50]
+      - text: 149,000원 → 99,000원 출시 알림 신청 중
+  - navigation [ref=e52]:
+    - link "papaya" [ref=e54] [cursor=pointer]:
+      - /url: "#"
+      - img "papaya" [ref=e55]
+  - main [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - img "Papaya AI Sticker Printer" [ref=e62]
+        - generic [ref=e63]:
+          - generic [ref=e64]: auto_awesome
+          - text: AI 탑재!
+      - generic [ref=e65]:
+        - heading "말로 만드는 스티커!" [level=1] [ref=e66]
+        - generic [ref=e67]:
+          - generic [ref=e68]: ✦첫 구매 100명 한정
+          - generic [ref=e69]:
+            - generic [ref=e70]: 정가 149,000원
+            - generic [ref=e71]: 런칭가 99,000원
+          - generic [ref=e72]:
+            - textbox "✦첫 구매 100명 한정" [ref=e73]:
+              - /placeholder: 010-0000-0000
+            - button "99,000원 런칭가 알림 신청하기" [ref=e74] [cursor=pointer]
+          - paragraph [ref=e75]: 결제는 진행되지 않아요. 출시 시 첫 구매 혜택을 안내드려요.
+    - generic [ref=e77]:
+      - heading "화면만 보는 아이에서, 상상을 꺼내 만드는 아이로" [level=2] [ref=e78]:
+        - text: 화면만 보는 아이에서,
+        - text: 상상을 꺼내 만드는 아이로
+      - paragraph [ref=e79]:
+        - text: 요즘 아이들은 콘텐츠를 보는 데 익숙해요.
+        - text: 파파야는 아이가 직접 말하고, 만들고, 색칠하고, 붙이게 해주는 손으로 하는 AI 창의 놀이예요.
+      - img "screen zombie" [ref=e80]
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - img [ref=e86]:
+          - generic [ref=e88]: 말해요!
+          - generic [ref=e89]: 말해요!
+          - generic [ref=e90]: 말해요!
+          - generic [ref=e91]: 말해요!
+        - generic [ref=e92]:
+          - img "말해요" [ref=e93]
+          - paragraph [ref=e95]: 1. "서핑하는 유니콘!"
+      - img [ref=e97]
+      - generic [ref=e100]:
+        - img [ref=e102]:
+          - generic [ref=e104]: 나와요!
+          - generic [ref=e105]: 나와요!
+          - generic [ref=e106]: 나와요!
+          - generic [ref=e107]: 나와요!
+        - generic [ref=e108]:
+          - img "프린트" [ref=e109]
+          - paragraph [ref=e111]: 2. 파파야가 바로 그려서 뽑아줘요
+      - img [ref=e113]
+      - generic [ref=e116]:
+        - img [ref=e118]:
+          - generic [ref=e120]: 붙여요!
+          - generic [ref=e121]: 붙여요!
+          - generic [ref=e122]: 붙여요!
+          - generic [ref=e123]: 붙여요!
+        - generic [ref=e124]:
+          - img "붙여요" [ref=e125]
+          - paragraph [ref=e127]: 3. 스티커로 뽑아 색칠하고, 다이어리·카드·노트에 붙여요
+    - generic [ref=e134] [cursor=pointer]: play_arrow
+    - generic [ref=e135]:
+      - heading "스티커 하나로 이렇게 놀 수 있어요" [level=2] [ref=e137]:
+        - text: 스티커 하나로
+        - text: 이렇게 놀 수 있어요
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - img "이름 스티커" [ref=e142]
+          - paragraph [ref=e143]: 이름 스티커
+          - paragraph [ref=e144]: 내 물건에 붙이는 나만의 이름표
+        - generic [ref=e145]:
+          - img "칭찬 스티커" [ref=e147]
+          - paragraph [ref=e148]: 칭찬 스티커
+          - paragraph [ref=e149]: 오늘의 미션을 완성하면 붙이는 보상 스티커
+        - generic [ref=e150]:
+          - img "생일 카드" [ref=e152]
+          - paragraph [ref=e153]: 생일 카드
+          - paragraph [ref=e154]: 친구에게 직접 만들어주는 특별한 카드
+        - generic [ref=e155]:
+          - img "그림일기" [ref=e157]
+          - paragraph [ref=e158]: 그림일기
+          - paragraph [ref=e159]: 오늘의 상상을 스티커로 기록해요
+        - generic [ref=e160]:
+          - img "역할놀이" [ref=e162]
+          - paragraph [ref=e163]: 역할놀이
+          - paragraph [ref=e164]: 가게놀이, 병원놀이, 동물원놀이까지
+        - generic [ref=e165]:
+          - img "색칠놀이" [ref=e167]
+          - paragraph [ref=e168]: 색칠놀이
+          - paragraph [ref=e169]: 뽑고, 색칠하고, 붙이며 완성해요
+        - generic [ref=e170]:
+          - img "이름 스티커" [ref=e172]
+          - paragraph [ref=e173]: 이름 스티커
+          - paragraph [ref=e174]: 내 물건에 붙이는 나만의 이름표
+        - generic [ref=e175]:
+          - img "칭찬 스티커" [ref=e177]
+          - paragraph [ref=e178]: 칭찬 스티커
+          - paragraph [ref=e179]: 오늘의 미션을 완성하면 붙이는 보상 스티커
+        - generic [ref=e180]:
+          - img "생일 카드" [ref=e182]
+          - paragraph [ref=e183]: 생일 카드
+          - paragraph [ref=e184]: 친구에게 직접 만들어주는 특별한 카드
+        - generic [ref=e185]:
+          - img "그림일기" [ref=e187]
+          - paragraph [ref=e188]: 그림일기
+          - paragraph [ref=e189]: 오늘의 상상을 스티커로 기록해요
+        - generic [ref=e190]:
+          - img "역할놀이" [ref=e192]
+          - paragraph [ref=e193]: 역할놀이
+          - paragraph [ref=e194]: 가게놀이, 병원놀이, 동물원놀이까지
+        - generic [ref=e195]:
+          - img "색칠놀이" [ref=e197]
+          - paragraph [ref=e198]: 색칠놀이
+          - paragraph [ref=e199]: 뽑고, 색칠하고, 붙이며 완성해요
+    - generic [ref=e201]:
+      - heading "아이에게는 마법처럼, 부모에게는 안심되게" [level=2] [ref=e202]:
+        - text: 아이에게는 마법처럼,
+        - text: 부모에게는 안심되게
+      - generic [ref=e203]:
+        - generic [ref=e204]:
+          - img "스크린 밖 창의 놀이" [ref=e206]
+          - generic [ref=e207]:
+            - paragraph [ref=e208]: 스크린 밖 창의 놀이
+            - paragraph [ref=e209]: 화면 속 콘텐츠를 보는 대신, 아이의 상상을 손으로 직접 만들어봐요.
+        - generic [ref=e210]:
+          - img "말로 표현하는 연습" [ref=e212]
+          - generic [ref=e213]:
+            - paragraph [ref=e214]: 말로 표현하는 연습
+            - paragraph [ref=e215]: 상상한 장면을 말로 설명하며, 창의력과 표현력을 함께 키워요.
+        - generic [ref=e216]:
+          - img "손으로 완성하는 결과물" [ref=e218]
+          - generic [ref=e219]:
+            - paragraph [ref=e220]: 상상이 손에 잡히는 성취감
+            - paragraph [ref=e221]: 내가 말한 상상이 진짜 스티커가 되는 순간, 아이는 '내가 만들었다'는 기쁨을 느껴요.
+        - generic [ref=e222]:
+          - img "선물하기 좋은 새로운 키즈 디바이스" [ref=e224]
+          - generic [ref=e225]:
+            - paragraph [ref=e226]: 계속 이어지는 상상 놀이
+            - paragraph [ref=e227]: 하나를 만들면 또 다른 이야기가 떠오르고, 아이는 스스로 놀이를 이어가요.
+    - generic [ref=e229]:
+      - heading "파파야 키트 구성" [level=2] [ref=e230]
+      - generic [ref=e231]:
+        - img "파파야 키트 구성" [ref=e232]
+        - generic [ref=e233]:
+          - generic [ref=e234]:
+            - img [ref=e235]
+            - paragraph [ref=e237]: 파파야 프린터 본체 1대
+          - generic [ref=e238]:
+            - img [ref=e239]
+            - paragraph [ref=e241]: 상상 놀이 스타터북 1권
+          - generic [ref=e242]:
+            - img [ref=e243]
+            - generic [ref=e245]:
+              - paragraph [ref=e246]: 스티커 롤 3개
+              - paragraph [ref=e247]: "*추가 리필 구매 가능"
+          - generic [ref=e248]:
+            - img [ref=e249]
+            - paragraph [ref=e251]: USB-C 충전 케이블 1개
+    - generic [ref=e252]:
+      - generic:
+        - img
+        - img
+        - img
+        - img
+        - img
+        - img
+        - img
+      - img
+      - generic [ref=e253]:
+        - generic [ref=e254]:
+          - heading "안전이 먼저, 재미는 언제나." [level=2] [ref=e255]:
+            - text: 안전이 먼저,
+            - text: 재미는 언제나.
+          - list [ref=e256]:
+            - listitem [ref=e257]:
+              - img [ref=e259]
+              - generic [ref=e261]:
+                - paragraph [ref=e262]: KC 인증 절차를 진행 중이에요
+                - paragraph [ref=e263]: 아이가 사용하는 제품인 만큼, 출시 전 필요한 안전 인증을 꼼꼼히 준비하고 있어요.
+            - listitem [ref=e264]:
+              - img [ref=e266]
+              - generic [ref=e268]:
+                - paragraph [ref=e269]: BPA/BPS-free 스티커 용지를 사용할 예정이에요
+                - paragraph [ref=e270]: 아이 손에 닿는 용지까지 안전성을 확인해 선택하고 있어요.
+            - listitem [ref=e271]:
+              - img [ref=e273]
+              - generic [ref=e275]:
+                - paragraph [ref=e276]: 아이에게 맞는 이미지가 나오도록 필터링해요
+                - paragraph [ref=e277]: 부적절하거나 위험한 이미지가 만들어지지 않도록 AI 안전 필터를 적용할 예정이에요.
+            - listitem [ref=e278]:
+              - img [ref=e280]
+              - generic [ref=e282]:
+                - paragraph [ref=e283]: 부모님이 앱에서 사용 환경을 관리할 수 있어요
+                - paragraph [ref=e284]: 아이가 더 안전하게 사용할 수 있도록 보호자 설정 기능을 준비하고 있어요.
+            - listitem [ref=e285]:
+              - img [ref=e287]
+              - generic [ref=e289]:
+                - paragraph [ref=e290]: 아이 손이 닿는 사용 흐름까지 고려하고 있어요
+                - paragraph [ref=e291]: 출력부, 용지 교체, 사용 방식까지 아이와 보호자가 더 안심하고 쓸 수 있도록 설계하고 있어요.
+        - img "KC 안전인증마크" [ref=e294]
+    - generic [ref=e296]:
+      - generic [ref=e297]:
+        - text: "#MadeWithPapaya"
+        - heading "우리 집 파파야" [level=2] [ref=e298]
+      - generic [ref=e299]:
+        - generic [ref=e300] [cursor=pointer]:
+          - img "Kid with Papaya" [ref=e301]
+          - generic [ref=e302]:
+            - paragraph [ref=e303]: "\"와 이건 진짜 올해 산 것 중에 제일 잘 산 듯ㅋㅋ 너무 재밌어요!!!\""
+            - paragraph [ref=e304]: — 이*윤
+        - generic [ref=e305] [cursor=pointer]:
+          - img "Girl with stickers" [ref=e306]
+          - generic [ref=e307]:
+            - paragraph [ref=e308]: "\"아이랑 같이 해봤는데 계속 이것만 하네요ㅋㅋ 이런 AI 제품은 처음이에요\""
+            - paragraph [ref=e309]: — 이*준
+        - generic [ref=e310] [cursor=pointer]:
+          - img "Kids reacting to Papaya" [ref=e311]
+          - generic [ref=e312]:
+            - paragraph [ref=e313]: "\"선물용으로 샀는데 반응이 너무 좋아서 저도 하나 더 살까 고민 중이에요ㅋㅋ\""
+            - paragraph [ref=e314]: — 권*린
+        - generic [ref=e315] [cursor=pointer]:
+          - img "Kids with Papaya stickers" [ref=e316]
+          - generic [ref=e317]:
+            - paragraph [ref=e318]: "\"이거 완전 혁신이에요!! 애들이 너무 좋아해요\""
+            - paragraph [ref=e319]: — Chloe P.
+    - generic [ref=e322]:
+      - heading "파파야를 가장 먼저 만나보세요" [level=2] [ref=e323]
+      - paragraph [ref=e324]:
+        - text: 선착순 100명에게만
+        - text: 99,000원 런칭가 혜택을 드려요.
+        - text: 출시 소식을 가장 먼저 받아보세요.
+      - generic [ref=e325]:
+        - generic [ref=e326]: 전화번호
+        - textbox "전화번호" [ref=e327]:
+          - /placeholder: 010-0000-0000
+        - button "99,000원 런칭가 알림 신청하기" [ref=e328] [cursor=pointer]
+      - paragraph [ref=e329]: 결제는 진행되지 않아요. 출시 시 첫 구매 혜택만 안내드려요.
+    - generic [ref=e331]:
+      - heading "FAQ" [level=2] [ref=e332]
+      - generic [ref=e333]:
+        - generic [ref=e334]:
+          - paragraph [ref=e335]: Q. 언제 출시되나요?
+          - img [ref=e336]
+          - paragraph [ref=e338]: 출시 일정이 확정되면 사전 알림 신청자에게 가장 먼저 안내드릴게요.
+        - generic [ref=e339]:
+          - paragraph [ref=e340]: Q. 지금 결제되는 건가요?
+          - img [ref=e341]
+          - paragraph [ref=e343]: 아니요. 지금은 사전 알림 신청만 진행되며, 결제는 진행되지 않아요.
+        - generic [ref=e344]:
+          - paragraph [ref=e345]: Q. 몇 살부터 사용할 수 있나요?
+          - img [ref=e346]
+          - paragraph [ref=e348]: 파파야는 5세 이상 아이들에게 가장 잘 맞도록 준비하고 있어요. 더 어린 아이들은 보호자와 함께 사용할 수 있고, 조금 큰 아이들은 스스로 말하고 만들며 즐길 수 있어요.
+        - generic [ref=e349]:
+          - paragraph [ref=e350]: Q. 컬러로 출력되나요?
+          - img [ref=e351]
+          - paragraph [ref=e353]: 현재는 흑백 스티커 출력 방식으로 준비하고 있어요. 대신 아이가 직접 색칠하며 자기만의 스티커로 완성할 수 있어요.
+        - generic [ref=e354]:
+          - paragraph [ref=e355]: Q. 파파야는 잉크나 토너를 사용하나요?
+          - img [ref=e356]
+          - paragraph [ref=e358]: 아니요. 파파야는 잉크, 토너, 카트리지를 사용하지 않아요. 스티커 용지만 교체하면 계속 사용할 수 있어요.
+        - generic [ref=e359]:
+          - paragraph [ref=e360]: Q. 리필 용지는 어디서 구매할 수 있나요?
+          - img [ref=e361]
+          - paragraph [ref=e363]: 공식 파파야 리필 용지는 추후 papaya.toys 또는 파파야 앱에서 구매하실 수 있도록 준비 중이에요.
+        - generic [ref=e364]:
+          - paragraph [ref=e365]: Q. 스티커 용지는 BPA/BPS-free인가요?
+          - img [ref=e366]
+          - paragraph [ref=e368]: 네. 아이 손에 직접 닿는 만큼 BPA/BPS-free 스티커 용지를 사용할 예정이에요.
+        - generic [ref=e369]:
+          - paragraph [ref=e370]: Q. 파파야가 항상 듣고 있나요?
+          - img [ref=e371]
+          - paragraph [ref=e373]: 아니요. 파파야는 버튼을 눌렀을 때만 아이의 말을 들어요.
+        - generic [ref=e374]:
+          - paragraph [ref=e375]: Q. 음성 데이터가 저장되거나 공유되나요?
+          - img [ref=e376]
+          - paragraph [ref=e378]: 파파야는 아이의 음성 데이터를 장기간 저장하거나 외부에 공유하지 않도록 설계하고 있어요.
+        - generic [ref=e379]:
+          - paragraph [ref=e380]: Q. AI가 만든 스티커는 어떻게 안전하게 관리되나요?
+          - img [ref=e381]
+          - paragraph [ref=e383]: 파파야는 아이가 사용하는 제품인 만큼, 말하는 순간부터 스티커로 출력되는 과정까지 안전하게 사용할 수 있도록 준비하고 있어요.
+          - list [ref=e384]:
+            - listitem [ref=e385]:
+              - generic [ref=e386]: ·
+              - generic [ref=e387]:
+                - strong [ref=e388]: AI 안전 필터 적용
+                - text: — 아이에게 맞지 않는 표현이나 이미지가 만들어지지 않도록 필터링해요.
+            - listitem [ref=e389]:
+              - generic [ref=e390]: ·
+              - generic [ref=e391]:
+                - strong [ref=e392]: 항상 켜져 있는 녹음이 아니에요
+                - text: — 파파야는 버튼을 눌렀을 때만 작동하며, 계속 듣고 있지 않아요.
+            - listitem [ref=e393]:
+              - generic [ref=e394]: ·
+              - generic [ref=e395]:
+                - strong [ref=e396]: 부모님이 안심할 수 있는 사용 환경
+                - text: — 아이가 낯선 콘텐츠를 무작정 보는 방식이 아니라, 직접 말하고 만든 결과물을 중심으로 놀이할 수 있도록 설계했어요.
+        - generic [ref=e397]:
+          - paragraph [ref=e398]: Q. 와이파이 없이도 사용할 수 있나요?
+          - img [ref=e399]
+          - paragraph [ref=e401]: 새로운 스티커 이미지를 만들려면 와이파이 또는 핫스팟 연결이 필요해요. 한 번 연결한 뒤에는 연결 범위 안에서 자유롭게 사용할 수 있어요.
+        - generic [ref=e402]:
+          - paragraph [ref=e403]: Q. 배터리로 작동하나요?
+          - img [ref=e404]
+          - paragraph [ref=e406]: 파파야는 USB-C로 충전해서 사용해요. 충전 후에는 선을 빼고 원하는 곳으로 옮겨 사용할 수 있어요.
+        - generic [ref=e407]:
+          - paragraph [ref=e408]: Q. 한국어 외 다른 언어도 사용할 수 있나요?
+          - img [ref=e409]
+          - paragraph [ref=e411]: 네. 한국어를 기본으로 준비하고 있으며, 영어 등 여러 언어도 사용할 수 있도록 준비 중이에요.
+        - generic [ref=e412]:
+          - paragraph [ref=e413]: Q. 열전사 출력 방식은 아이에게 안전한가요?
+          - img [ref=e414]
+          - paragraph [ref=e416]: 파파야는 잉크 없이 전용 용지에 이미지를 출력하는 열전사 방식을 사용해요. 아이 손에 닿는 용지는 BPA/BPS-free 기준으로 준비하고 있으며, 안심하고 색칠하고 붙일 수 있도록 꼼꼼히 확인하고 있어요.
+  - contentinfo [ref=e417]:
+    - generic [ref=e418]:
+      - generic [ref=e419]:
+        - img "papaya" [ref=e420]
+        - generic [ref=e421]:
+          - link "INSTAGRAM" [ref=e422] [cursor=pointer]:
+            - /url: https://www.instagram.com/papaya.toys
+          - link "TIKTOK" [ref=e423] [cursor=pointer]:
+            - /url: "#"
+          - link "SAFETY SPECS" [ref=e424] [cursor=pointer]:
+            - /url: "#"
+          - link "PRIVACY" [ref=e425] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=e426]:
+        - generic [ref=e427]: © 2026 PAPAYA. MADE FOR LITTLE CREATORS.
+        - generic [ref=e428]:
+          - text: "상호명: 인더나잇 (In The Night) | 대표자: PARK TOMMY"
+          - text: "사업자등록번호: 374-71-00444 | 문의:"
+          - link "tommy@papaya.toys" [ref=e429] [cursor=pointer]:
+            - /url: mailto:tommy@papaya.toys

@@ -50,36 +50,44 @@
       word-break: keep-all;
     }
     .btn-primary {
-      background: #e4002b;
-      color: #fff;
+      background: #F88962;
+      color: #ffffff;
       border-radius: 9999px;
       font-weight: 800;
       font-family: "Plus Jakarta Sans", sans-serif;
-      box-shadow: 0 8px 0 0 #4e0008;
+      box-shadow: 0 8px 0 0 #c45030;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 0 0 #4e0008;
+      box-shadow: 0 10px 0 0 #c45030;
     }
     .btn-primary:active {
       transform: translateY(4px);
-      box-shadow: 0 4px 0 0 #4e0008;
+      box-shadow: 0 4px 0 0 #c45030;
     }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
     /* Sticker slideshow overlays */
     .sticker-slide {
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       opacity: 0;
       transition: opacity 0.8s ease;
     }
     .sticker-slide.active {
       opacity: 1;
+    }
+    #overlay-front .sticker-slide {
+      transform: translateX(-8px) translateY(14px) scale(0.84);
+      transform-origin: center;
+    }
+    #overlay-top .sticker-slide {
+      transform: translateX(calc(-8% - 5px)) translateY(calc(-20% + 42px)) rotate(-90deg) scale(1.271);
+      clip-path: inset(0 0 0 26%);
     }
 
     /* Marquee announcement bar */
@@ -121,9 +129,9 @@
       #marquee-bar .marquee-inner { line-height: 26px; }
       #marquee-bar span { font-size: 9px !important; padding: 0 14px 0 0 !important; line-height: 26px !important; gap: 14px !important; }
       #marquee-bar svg { width: 12px !important; height: 12px !important; }
-      #main-nav { top: 26px !important; height: 27px !important; }
+      #main-nav { top: 26px !important; height: 36px !important; }
       #main-nav img { height: 22px !important; }
-      #main-content { padding-top: 62px !important; }
+      #main-content { padding-top: 71px !important; }
 
       /* Hero image: fixed height, overlays repositioned for non-square container.
          Container width W = 100vw - 48px. object-cover crops (W - 300px) / 2 from
@@ -152,6 +160,7 @@
     /* FAQ section: dark text on light green background */
     #faq-section .text-white { color: #383831 !important; }
     #faq-section .text-white\/80 { color: rgba(56,56,49,0.75) !important; }
+    #faq-section svg path { stroke: #F88962 !important; }
   </style>
 </head>
 <body class="bg-surface font-body text-on-surface overflow-x-hidden">
@@ -162,30 +171,30 @@
   <div id="marquee-bar" class="fixed top-0 w-full z-[60] bg-white overflow-hidden transition-transform duration-300" style="height:34px;">
     <div class="marquee-inner h-full" style="line-height:34px;">
       <!-- Set 1 (original) -->
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
       <!-- Set 2 (exact clone for seamless loop) -->
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
-      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>첫 구매 100명 한정</span>
+      <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:11px;color:#111;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true" style="display:inline-block;flex-shrink:0;"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>149,000원 → 99,000원 출시 알림 신청 중</span>
     </div>
   </div>
 
   <!-- ============================================================ -->
   <!-- 1. STICKY NAVIGATION                                          -->
   <!-- ============================================================ -->
-  <nav id="main-nav" class="fixed w-full z-50 overflow-visible transition-transform duration-300" style="top:34px; height:45px; background-color: #fcf5e5;">
+  <nav id="main-nav" class="fixed w-full z-50 overflow-visible transition-transform duration-300" style="top:34px; height:56px; background-color: #fcf5e5;">
     <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
       <a href="#" class="inline-block">
         <img src="logo.webp?v=5" alt="papaya" width="699" height="159" class="w-auto" style="height:36px; object-fit: contain; object-position: center;">
@@ -193,7 +202,7 @@
     </div>
   </nav>
 
-  <main style="padding-top: 79px;" id="main-content">
+  <main style="padding-top: 90px;" id="main-content">
 
     <!-- ============================================================ -->
     <!-- 2. HERO SECTION                                               -->
@@ -209,14 +218,14 @@
           <img src="hero-layer1.webp?v=4" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:1;" fetchpriority="high">
 
           <!-- Layer 2: red cube -->
-          <img src="hero-layer2.webp?v=4" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:2;transform:scale(1.2);transform-origin:center;" fetchpriority="high">
+          <img src="hero-layer2-new.png" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:2;transform:scale(0.756);transform-origin:center;" fetchpriority="high">
 
           <!-- Layer 3: rotating sticker overlays inside cube's white squares -->
           <div id="overlay-front" class="absolute" style="z-index:3;left:34%;top:42.4%;width:34.2%;height:34.2%;overflow:hidden;"></div>
-          <div id="overlay-top"   class="absolute" style="z-index:3;left:41.65%;top:11.7%;width:21.6%;height:21.6%;overflow:hidden;"></div>
+          <div id="overlay-top"   class="absolute" style="z-index:3;left:41.65%;top:11.7%;width:21.6%;height:21.6%;overflow:visible;"></div>
 
           <!-- Layer 4 (top): hands with transparent background — fingers in front of everything -->
-          <img src="hero-layer3.webp?v=4" alt="Papaya AI Sticker Printer" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:4;" fetchpriority="high">
+          <img src="hero-layer3-new.png" alt="Papaya AI Sticker Printer" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:4;transform:scale(1.3) translateY(-18%);" fetchpriority="high">
 
         </div>
         <!-- AI Powered sticker badge -->
@@ -241,7 +250,7 @@
           </div>
           <div class="text-center md:text-left font-body" style="margin-top:13px; display:flex; flex-direction:column; gap:8px;">
             <span style="font-size:0.78rem; color:#6b6b63; text-decoration:line-through;">정가 149,000원</span>
-            <span style="font-size:1.15rem; font-weight:800; color:#e4002b; font-family:'Plus Jakarta Sans',sans-serif; line-height:1.2;"><span style="font-size:0.85rem; font-weight:700; background-color:#e4002b; color:#ffffff; border-radius:4px; padding:1px 6px; margin-right:6px; vertical-align:middle;">33% OFF</span>&nbsp;런칭가 99,000원</span>
+            <span style="font-size:1.15rem; font-weight:800; color:#F88962; font-family:'Plus Jakarta Sans',sans-serif; line-height:1.2;"><span style="font-size:0.85rem; font-weight:700; background-color:#F88962; color:#ffffff; border-radius:4px; padding:1px 6px; margin-right:6px; vertical-align:middle;">33% OFF</span>&nbsp;런칭가 99,000원</span>
           </div>
           <form id="hero-form" class="flex flex-col sm:flex-row gap-2" onsubmit="handleHeroSubmit(event)" style="margin-top:7px;">
             <input
@@ -275,10 +284,10 @@
     <!-- ============================================================ -->
     <!-- 4. PINK CREATIVE SECTION                                      -->
     <!-- ============================================================ -->
-    <section id="section-creative" style="background-color: #D8752B; padding: 3.5rem 1.5rem 1rem;" class="w-full">
+    <section id="section-creative" style="background-color: #F88962; padding: 3.5rem 1.5rem 1rem;" class="w-full">
       <div class="max-w-2xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-headline font-black leading-tight" style="color: #ffffff; text-shadow: 3px 3px 0 #8a3a00, 2px 2px 0 #8a3a00, 1px 1px 0 #8a3a00;">화면만 보는 아이에서,<br>상상을 꺼내 만드는 아이로</h2>
-        <p class="text-lg font-body font-medium leading-relaxed" style="color: #ffffff; margin-top: 2rem;">요즘 아이들은 콘텐츠를 보는 데 익숙해요.<br>파파야는 아이가 직접 말하고, 만들고, 색칠하고, 붙이게 해주는 손으로 하는 AI 창의 놀이예요.</p>
+        <p class="text-lg font-body font-medium leading-relaxed" style="color: #000000; margin-top: 2rem;">요즘 아이들은 콘텐츠를 보는 데 익숙해요.<br>파파야는 아이가 직접 말하고, 만들고, 색칠하고, 붙이게 해주는 손으로 하는 AI 창의 놀이예요.</p>
         <img src="screen-zombie.png" alt="screen zombie" width="1024" height="1024" loading="lazy" style="width: 100%; max-width: 360px; height: auto; margin-top: 1.5rem; display: block; margin-left: auto; margin-right: auto;">
       </div>
     </section>
@@ -305,10 +314,10 @@
               </svg>
             </div>
             <div class="relative rounded-xl sticker-border shadow-xl rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
-              <img src="howto1.webp?v=4" alt="말해요" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
-                <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">1.</span> "서핑하는 유니콘!"</p>
-              </div>
+              <img src="howto1.png" alt="말해요" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div style="margin-top: 0.75rem; padding: 0 0.25rem; text-align: center;">
+              <p class="font-body leading-relaxed text-sm" style="color: #ffffff;"><span class="font-black" style="font-size:1.512rem; font-family:'Caveat', cursive; color: #ffffff;">1.</span> "서핑하는 유니콘!"</p>
             </div>
           </div>
 
@@ -339,10 +348,10 @@
               </svg>
             </div>
             <div class="relative rounded-xl sticker-border shadow-xl -rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
-              <img src="howto2.webp?v=4" alt="프린트" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
-                <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">2.</span> 파파야가 바로 그려서 뽑아줘요</p>
-              </div>
+              <img src="howto2.gif" alt="프린트" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div style="margin-top: 0.75rem; padding: 0 0.25rem; text-align: center;">
+              <p class="font-body leading-relaxed text-sm" style="color: #ffffff;"><span class="font-black" style="font-size:1.512rem; font-family:'Caveat', cursive; color: #ffffff;">2.</span> 파파야가 바로 그려서 뽑아줘요</p>
             </div>
           </div>
 
@@ -374,9 +383,9 @@
             </div>
             <div class="relative rounded-xl sticker-border shadow-xl rotate-[2deg] hover:rotate-0 hover:-translate-y-2 transition-all duration-300 cursor-default overflow-hidden aspect-square">
               <img src="howto3.webp?v=4" alt="붙여요" width="1024" height="1024" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
-              <div class="absolute bottom-0 left-0 right-0 p-4 pl-7">
-                <p class="text-on-surface-muted font-body leading-relaxed text-sm"><span class="font-black text-on-surface" style="font-size:1.512rem; font-family:'Caveat', cursive;">3.</span> 스티커로 뽑아 색칠하고, 다이어리·카드·노트에 붙여요</p>
-              </div>
+            </div>
+            <div style="margin-top: 0.75rem; padding: 0 0.25rem; text-align: center;">
+              <p class="font-body leading-relaxed text-sm" style="color: #ffffff;"><span class="font-black" style="font-size:1.512rem; font-family:'Caveat', cursive; color: #ffffff;">3.</span> 스티커로 뽑아 색칠하고 붙여요</p>
             </div>
           </div>
 
@@ -430,7 +439,7 @@
       </div>
 
       <div class="max-w-xs sm:max-w-sm mx-auto px-6" style="position: relative; z-index: 1;">
-        <div class="relative rounded-xl overflow-hidden shadow-2xl" style="aspect-ratio: 9/16; outline: 4px solid #e4002b;">
+        <div class="relative rounded-xl overflow-hidden shadow-2xl" style="aspect-ratio: 9/16; outline: 4px solid #F88962;">
           <video
             id="product-video"
             src="video.mp4?v=4"
@@ -443,7 +452,7 @@
           <!-- Play button overlay -->
           <div id="play-overlay" class="absolute inset-0 flex items-center justify-center cursor-pointer" onclick="playVideo()">
             <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
-              <span class="material-symbols-outlined text-secondary-section text-5xl translate-x-0.5">play_arrow</span>
+              <span class="material-symbols-outlined text-5xl translate-x-0.5" style="color: #F88962;">play_arrow</span>
             </div>
           </div>
         </div>
@@ -749,37 +758,37 @@
           <ul class="space-y-6">
             <li class="flex items-start gap-4">
               <div class="flex-shrink-0 mt-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
               </div>
               <div>
-                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(transparent 52%, #FFB7C5 52%); padding: 0 2px;">KC 인증 절차를 진행 중이에요</span></p>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(transparent 52%, #F9C293 52%); padding: 0 2px;">KC 인증 절차를 진행 중이에요</span></p>
                 <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">아이가 사용하는 제품인 만큼, 출시 전 필요한 안전 인증을 꼼꼼히 준비하고 있어요.</p>
               </div>
             </li>
             <li class="flex items-start gap-4">
               <div class="flex-shrink-0 mt-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
               </div>
               <div>
-                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(178deg, transparent 48%, #FFB7C5 48%); padding: 0 3px;">BPA/BPS-free 스티커 용지를 사용할 예정이에요</span></p>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(178deg, transparent 48%, #F9C293 48%); padding: 0 3px;">BPA/BPS-free 스티커 용지를 사용할 예정이에요</span></p>
                 <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">아이 손에 닿는 용지까지 안전성을 확인해 선택하고 있어요.</p>
               </div>
             </li>
             <li class="flex items-start gap-4">
               <div class="flex-shrink-0 mt-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
               </div>
               <div>
-                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(182deg, transparent 55%, #FFB7C5 55%); padding: 0 1px;">아이에게 맞는 이미지가 나오도록 필터링해요</span></p>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(182deg, transparent 55%, #F9C293 55%); padding: 0 1px;">아이에게 맞는 이미지가 나오도록 필터링해요</span></p>
                 <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">부적절하거나 위험한 이미지가 만들어지지 않도록 AI 안전 필터를 적용할 예정이에요.</p>
               </div>
             </li>
             <li class="flex items-start gap-4">
               <div class="flex-shrink-0 mt-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#e4002b" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><path fill="#F88962" d="M50,5 L58,30 L82,18 L70,42 L95,50 L70,58 L82,82 L58,70 L50,95 L42,70 L18,82 L30,58 L5,50 L30,42 L18,18 L42,30 Z"/></svg>
               </div>
               <div>
-                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(175deg, transparent 50%, #FFB7C5 50%); padding: 0 4px;">부모님이 앱에서 사용 환경을 관리할 수 있어요</span></p>
+                <p class="text-base font-body font-bold text-on-surface leading-snug"><span style="background: linear-gradient(175deg, transparent 50%, #F9C293 50%); padding: 0 4px;">부모님이 앱에서 사용 환경을 관리할 수 있어요</span></p>
                 <p class="text-sm font-body text-on-surface leading-relaxed" style="opacity:0.75; margin-top:2px;">아이가 더 안전하게 사용할 수 있도록 보호자 설정 기능을 준비하고 있어요.</p>
               </div>
             </li>
@@ -804,7 +813,7 @@
 
         <!-- Section heading -->
         <div class="text-center mb-14">
-          <span class="font-headline font-bold text-primary uppercase tracking-widest text-sm">#MadeWithPapaya</span>
+          <span class="font-headline font-bold uppercase tracking-widest text-sm" style="color: #F88962;">#MadeWithPapaya</span>
           <h2 class="text-4xl md:text-5xl font-headline font-black text-on-surface mt-2">파파야를 먼저 만나본<br><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">아이들의&nbsp;&nbsp;반응</span></h2>
         </div>
 
@@ -858,7 +867,7 @@
     <section class="py-20 px-6" style="background-color: #A4D1C3;">
       <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-xl sticker-border shadow-2xl p-12 text-center space-y-6 relative overflow-hidden">
-          <h2 class="relative z-10 text-4xl md:text-5xl font-headline font-black text-on-surface">파파야를 가장 먼저 만나보세요</h2>
+          <h2 class="relative z-10 text-4xl md:text-5xl font-headline font-black" style="color: #F88962;">파파야를 가장 먼저 만나보세요</h2>
           <p class="relative z-10 text-lg text-on-surface mx-auto font-body">
             선착순 100명에게만<br>99,000원 런칭가 혜택을 드려요.<br><br>출시 소식을 가장 먼저 받아보세요.
           </p>
@@ -876,7 +885,7 @@
             />
             <button
               type="submit"
-              class="bg-primary text-white font-headline font-extrabold px-8 py-4 rounded-full hover:opacity-90 transition-colors whitespace-nowrap shadow-[0_8px_0_0_#4e0008]"
+              style="background-color:#F88962; color:#ffffff; box-shadow:0 8px 0 0 #c45030;" class="font-headline font-extrabold px-8 py-4 rounded-full hover:opacity-90 transition-colors whitespace-nowrap"
             >
               99,000원 런칭가 알림 신청하기
             </button>
@@ -1045,12 +1054,12 @@
     // Sticker slideshow for hero product photo overlays
     (function() {
       var stickers = [
-        'stickers/1hf_20260410_071049_fdbb1779-50c5-4275-a070-3483e93c2eee.webp?v=4',
-        'stickers/2hf_20260410_0710016_bdfad007-e398-48a7-a3e2-42dbdd1f8dbc.webp?v=4',
-        'stickers/3hf_20260410_071009_8b7483f8-fd75-4d86-aa04-8ae11565fd46.webp?v=4',
-        'stickers/4hf_20260410_071111_7db25791-88f3-4e3d-bfba-7ba3872f2c9a.webp?v=4',
-        'stickers/5hf_20260410_071205_2b11c4fa-eb50-44c5-940b-4c08a59fb730.webp?v=4',
-        'stickers/6hf_20260410_072045_2105aa9a-6e2a-4258-81fe-fe193d3bdd20.webp?v=4',
+        'stickers/hf_20260514_084655_3dae465c-6877-4cf7-8b99-e57a41d2fa31.png',
+        'stickers/hf_20260514_085931_792a14b8-9413-45b4-94b1-11b0e105f479.png',
+        'stickers/hf_20260514_090036_0af10495-eff4-4342-8c9d-ffba25c7bc50.png',
+        'stickers/hf_20260514_090122_db0528bf-778f-4a23-8973-a668ea213577.png',
+        'stickers/hf_20260514_090325_f91c2c46-d4ca-4596-8e86-aa2f7119542e.png',
+        'stickers/hf_20260514_090700_d01c9827-9451-41d0-807f-e6e0296c35e4.png',
       ];
 
       function buildSlides(containerId, startIndex) {

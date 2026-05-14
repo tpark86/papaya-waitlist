@@ -1,0 +1,174 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e7]:
+      - img [ref=e8]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e10]:
+      - img [ref=e11]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e13]:
+      - img [ref=e14]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e16]:
+      - img [ref=e17]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e19]:
+      - img [ref=e20]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e22]:
+      - img [ref=e23]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e25]:
+      - img [ref=e26]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e28]:
+      - img [ref=e29]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e31]:
+      - img [ref=e32]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e34]:
+      - img [ref=e35]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e37]:
+      - img [ref=e38]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e40]:
+      - img [ref=e41]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e43]:
+      - img [ref=e44]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e46]:
+      - img [ref=e47]
+      - text: 선착순 1,000명에게 10% 할인
+    - generic [ref=e49]:
+      - img [ref=e50]
+      - text: 선착순 1,000명에게 10% 할인
+  - navigation [ref=e52]:
+    - link "papaya" [ref=e54] [cursor=pointer]:
+      - /url: "#"
+      - img "papaya" [ref=e55]
+  - main [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - img "Papaya AI Sticker Printer" [ref=e62]
+        - generic [ref=e63]:
+          - generic [ref=e64]: auto_awesome
+          - text: AI 탑재!
+      - generic [ref=e65]:
+        - heading "말로 만드는 스티커!" [level=1] [ref=e66]
+        - generic [ref=e67]:
+          - generic [ref=e68]: 파파야 놀이터 가장 먼저 입장하기
+          - generic [ref=e69]:
+            - textbox "파파야 놀이터 가장 먼저 입장하기" [ref=e70]:
+              - /placeholder: 이메일을 입력해 주세요
+            - button "사전 예약하기" [ref=e71] [cursor=pointer]
+          - paragraph [ref=e72]: 선착순 1,000명 10% 할인
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - img [ref=e78]:
+          - generic [ref=e80]: 말해요!
+          - generic [ref=e81]: 말해요!
+          - generic [ref=e82]: 말해요!
+          - generic [ref=e83]: 말해요!
+        - generic [ref=e84]:
+          - img "말해요" [ref=e85]
+          - paragraph [ref=e87]: 1. 만들고 싶은 걸 말해보세요
+      - img [ref=e89]
+      - generic [ref=e92]:
+        - img [ref=e94]:
+          - generic [ref=e96]: 프린트!
+          - generic [ref=e97]: 프린트!
+          - generic [ref=e98]: 프린트!
+          - generic [ref=e99]: 프린트!
+        - generic [ref=e100]:
+          - img "프린트" [ref=e101]
+          - paragraph [ref=e103]: 2. 파파야가 바로 그려서 뽑아줘요
+      - img [ref=e105]
+      - generic [ref=e108]:
+        - img [ref=e110]:
+          - generic [ref=e112]: 붙여요!
+          - generic [ref=e113]: 붙여요!
+          - generic [ref=e114]: 붙여요!
+          - generic [ref=e115]: 붙여요!
+        - generic [ref=e116]:
+          - img "붙여요" [ref=e117]
+          - paragraph [ref=e119]: 3. 떼고, 색칠하고, 친구랑 나눠요
+    - generic [ref=e126] [cursor=pointer]: play_arrow
+    - generic [ref=e127]:
+      - generic:
+        - img
+        - img
+        - img
+        - img
+        - img
+        - img
+        - img
+      - img
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - heading "안전이 먼저, 재미는 언제나." [level=2] [ref=e130]:
+            - text: 안전이 먼저,
+            - text: 재미는 언제나.
+          - list [ref=e131]:
+            - listitem [ref=e132]:
+              - img [ref=e134]
+              - paragraph [ref=e136]: BPA-free 무독성 용지, 중금속 안전성까지 꼼꼼히 검증했어요.
+            - listitem [ref=e137]:
+              - img [ref=e139]
+              - paragraph [ref=e141]: 아이 눈높이에 맞춘 AI, 엄격한 안전 필터로 걸러낸 콘텐츠만 만들어요.
+            - listitem [ref=e142]:
+              - img [ref=e144]
+              - paragraph [ref=e146]: 파파야 앱으로 부모님이 직접 설정하는 안심 기능.
+        - img "KC 안전인증마크" [ref=e149]
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - text: "#MadeWithPapaya"
+        - heading "우리 집 파파야" [level=2] [ref=e153]
+      - generic [ref=e154]:
+        - generic [ref=e155] [cursor=pointer]:
+          - img "Kid with Papaya" [ref=e156]
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: "\"와 이건 진짜 올해 산 것 중에 제일 잘 산 듯ㅋㅋ 너무 재밌어요!!!\""
+            - paragraph [ref=e159]: — 이*윤
+        - generic [ref=e160] [cursor=pointer]:
+          - img "Girl with stickers" [ref=e161]
+          - generic [ref=e162]:
+            - paragraph [ref=e163]: "\"아이랑 같이 해봤는데 계속 이것만 하네요ㅋㅋ 이런 AI 제품은 처음이에요\""
+            - paragraph [ref=e164]: — 이*준
+        - generic [ref=e165] [cursor=pointer]:
+          - img "Kids reacting to Papaya" [ref=e166]
+          - generic [ref=e167]:
+            - paragraph [ref=e168]: "\"선물용으로 샀는데 반응이 너무 좋아서 저도 하나 더 살까 고민 중이에요ㅋㅋ\""
+            - paragraph [ref=e169]: — 권*린
+        - generic [ref=e170] [cursor=pointer]:
+          - img "Kids with Papaya stickers" [ref=e171]
+          - generic [ref=e172]:
+            - paragraph [ref=e173]: "\"이거 완전 혁신이에요!! 애들이 너무 좋아해요\""
+            - paragraph [ref=e174]: — Chloe P.
+    - generic [ref=e177]:
+      - heading "파파야와 놀 준비 됐나요?" [level=2] [ref=e178]
+      - paragraph [ref=e179]: 곧 만나요. 사전 예약하면 10% 할인.
+      - generic [ref=e180]:
+        - generic [ref=e181]: Email address
+        - textbox "Email address" [ref=e182]:
+          - /placeholder: 이메일을 입력해 주세요
+        - button "나도 참여할래요!" [ref=e183] [cursor=pointer]
+  - contentinfo [ref=e184]:
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - img "papaya" [ref=e187]
+        - generic [ref=e188]:
+          - link "INSTAGRAM" [ref=e189] [cursor=pointer]:
+            - /url: https://www.instagram.com/papaya.toys
+          - link "TIKTOK" [ref=e190] [cursor=pointer]:
+            - /url: "#"
+          - link "SAFETY SPECS" [ref=e191] [cursor=pointer]:
+            - /url: "#"
+          - link "PRIVACY" [ref=e192] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=e193]: © 2026 PAPAYA. MADE FOR LITTLE CREATORS.

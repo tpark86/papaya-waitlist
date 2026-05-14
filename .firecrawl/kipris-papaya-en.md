@@ -1,0 +1,10 @@
+### \[원하시는 페이지를 찾을 수가 없습니다.\]
+
+서비스 이용에 불편을 끼쳐드려 죄송합니다.
+
+찾으시려는 웹페이지의 이름이 바뀌었거나 현재 사용할 수 없거나 삭제되었습니다.
+
+입력하신 페이지 주소가 정확한지 다시 한번 확인해보시기 바랍니다.
+
+
+[KIPIRIS 홈](https://www.kipris.or.kr/khome/search.do?query=PAPAYA&searchType=trademark#)
