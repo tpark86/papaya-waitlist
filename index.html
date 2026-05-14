@@ -86,8 +86,7 @@
       transform-origin: center;
     }
     #overlay-top .sticker-slide {
-      transform: translateX(calc(-8% - 5px)) translateY(calc(-20% + 42px)) rotate(-90deg) scale(1.271);
-      clip-path: inset(0 0 0 26%);
+      transform: translateX(calc(-8% - 5px)) translateY(calc(-20% + 7px)) rotate(-90deg) scale(1.402);
     }
 
     /* Marquee announcement bar */
@@ -133,21 +132,29 @@
       #main-nav img { height: 22px !important; }
       #main-content { padding-top: 71px !important; }
 
-      /* Hero image: fixed height, overlays repositioned for non-square container.
-         Container width W = 100vw - 48px. object-cover crops (W - 300px) / 2 from
-         top and bottom. New top = original_pct × W - crop = original_pct × W - (W-300)/2. */
+      #how-it-works { padding-top: 6px !important; margin-top: -6px !important; }
+      #hero-card { height: 330px !important; }
       #overlay-front {
-        top: calc(-7.6vw + 146.1px) !important;
-        width: 34.2% !important;
-        height: auto !important;
-        aspect-ratio: 1 !important;
+        left: calc(50vw - 101px) !important;
+        top: 186px !important;
+        width: 149px !important;
+        height: 84px !important;
+        aspect-ratio: unset !important;
+        overflow: hidden !important;
       }
       #overlay-top {
-        top: calc(-38.3vw + 160.9px) !important;
-        width: 21.6% !important;
-        height: auto !important;
-        aspect-ratio: 1 !important;
+        display: block !important;
+        left: calc(50vw - 82px) !important;
+        top: 29px !important;
+        width: 115px !important;
+        height: 88px !important;
+        overflow: visible !important;
+        aspect-ratio: unset !important;
       }
+      #hero-layer2 { object-fit: contain !important; transform: translateY(30px) scale(0.882) !important; }
+      #hero-layer3 { display: none !important; }
+      #overlay-top .sticker-slide { width: 100% !important; height: auto !important; object-fit: unset !important; transform: rotate(-90deg) !important; }
+      #overlay-front .sticker-slide { width: 100% !important; height: 100% !important; object-fit: contain !important; transform: none !important; }
       /* How-to section: scale down on mobile */
       .howto-step { width: 280px; margin-left: auto; margin-right: auto; }
       #howto-step-1 { padding-top: 96px !important; }
@@ -212,26 +219,21 @@
       <!-- Left: product image -->
       <div class="relative group flex justify-center">
         <!-- Rotation wrapper so all layers rotate together -->
-        <div class="relative w-full max-w-md rotate-[2deg] group-hover:rotate-0 transition-all duration-500 rounded-xl sticker-border shadow-[0_20px_48px_rgba(56,56,49,0.15)] h-[285px] md:h-auto md:aspect-square overflow-hidden">
+        <div id="hero-card" class="relative w-full max-w-md rotate-[2deg] group-hover:rotate-0 transition-all duration-500 rounded-xl sticker-border shadow-[0_20px_48px_rgba(56,56,49,0.15)] h-[285px] md:h-auto md:aspect-square overflow-hidden">
 
           <!-- Layer 1 (bottom): colorful background blobs -->
           <img src="hero-layer1.webp?v=4" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:1;" fetchpriority="high">
 
           <!-- Layer 2: red cube -->
-          <img src="hero-layer2-new.png" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:2;transform:scale(0.756);transform-origin:center;" fetchpriority="high">
+          <img id="hero-layer2" src="hero-layer2-new.png" alt="" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:2;transform:scale(0.756) translateY(20px);transform-origin:center;" fetchpriority="high">
 
           <!-- Layer 3: rotating sticker overlays inside cube's white squares -->
-          <div id="overlay-front" class="absolute" style="z-index:3;left:34%;top:42.4%;width:34.2%;height:34.2%;overflow:hidden;"></div>
-          <div id="overlay-top"   class="absolute" style="z-index:3;left:41.65%;top:11.7%;width:21.6%;height:21.6%;overflow:visible;"></div>
+          <div id="overlay-front" class="absolute" style="z-index:3;left:34%;top:calc(42.4% + 15px);width:34.2%;height:34.2%;overflow:hidden;"></div>
+          <div id="overlay-top"   class="absolute" style="z-index:3;left:41.65%;top:calc(11.7% + 12px);width:21.6%;height:21.6%;overflow:visible;"></div>
 
           <!-- Layer 4 (top): hands with transparent background — fingers in front of everything -->
-          <img src="hero-layer3-new.png" alt="Papaya AI Sticker Printer" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:4;transform:scale(1.3) translateY(-18%);" fetchpriority="high">
+          <img id="hero-layer3" src="hero-layer3-new.png" alt="Papaya AI Sticker Printer" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:4;transform:scale(1.3) translateY(calc(-18% + 20px));" fetchpriority="high">
 
-        </div>
-        <!-- AI Powered sticker badge -->
-        <div class="absolute -top-5 -right-2 md:top-auto md:-bottom-5 md:-right-6 bg-accent-green rounded-xl rotate-[12deg] sticker-border z-10" style="padding: 10px 17px;">
-          <span class="material-symbols-outlined text-on-surface align-middle" style="font-size: 1.0625rem; line-height: 1.5rem;">auto_awesome</span>
-          <span class="font-headline font-extrabold text-on-surface ml-1" style="font-size: 0.74rem;">AI 탑재!</span>
         </div>
       </div>
 
