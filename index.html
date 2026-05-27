@@ -133,6 +133,8 @@
       #main-content { padding-top: 71px !important; }
 
       #how-it-works { padding-top: 6px !important; margin-top: -6px !important; }
+      #hero-image-col { order: 1 !important; }
+      #hero-text-col { order: 2 !important; }
       #hero-card { height: 330px !important; }
       #overlay-front {
         left: calc(50vw - 101px) !important;
@@ -254,9 +256,30 @@
     <!-- ============================================================ -->
     <section id="how-it-works" class="max-w-7xl mx-auto px-6 py-6 md:py-24 grid md:grid-cols-2 gap-6 md:gap-16 items-center" style="background-color: #fcf5e5;">
 
-      <!-- Left: product image -->
-      <div class="relative group flex justify-center">
-        <!-- Rotation wrapper so all layers rotate together -->
+      <!-- Left on desktop: headline + CTA -->
+      <div id="hero-text-col" class="space-y-4 md:space-y-6" style="order: 2;">
+        <!-- Badge -->
+        <div class="text-center md:text-left">
+          <span class="inline-block font-headline font-bold text-sm" style="background-color: #383831; color: #ffffff; border-radius: 999px; padding: 6px 18px;">우리 아이 첫 AI 친구</span>
+        </div>
+        <!-- Main headline -->
+        <h1 class="text-4xl md:text-5xl font-headline font-black text-on-surface leading-tight text-center md:text-left">
+          말하면 그림이 되는<br><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">AI&nbsp;&nbsp;스티커 프린터</span>
+        </h1>
+        <!-- Subheader -->
+        <p class="font-body text-center md:text-left" style="font-size: 1.05rem; color: #6b6b63;">상상한 이야기가 바로 스티커가 되는 시간</p>
+        <!-- CTA row -->
+        <div class="flex items-center gap-5 justify-center md:justify-start" style="margin-top: 8px;">
+          <button class="btn-primary px-7 py-4 font-headline whitespace-nowrap">구매하기</button>
+          <div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #F88962; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.2;">149,000원</div>
+            <div style="font-size: 0.78rem; color: #6b6b63; margin-top: 2px;">무료 배송</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right on desktop: product image -->
+      <div id="hero-image-col" class="relative group flex justify-center" style="order: 1;">
         <div id="hero-card" class="relative w-full max-w-md rotate-[2deg] group-hover:rotate-0 transition-all duration-500 rounded-xl sticker-border shadow-[0_20px_48px_rgba(56,56,49,0.15)] h-[285px] md:h-auto md:aspect-square overflow-hidden">
 
           <!-- Layer 1 (bottom): colorful background blobs -->
@@ -272,29 +295,6 @@
           <!-- Layer 4 (top): hands with transparent background — fingers in front of everything -->
           <img id="hero-layer3" src="hero-layer3-new.png" alt="Papaya AI Sticker Printer" width="1024" height="1024" class="absolute inset-0 w-full h-full object-cover" style="z-index:4;transform:scale(1.3) translateY(calc(-18% + 20px));" fetchpriority="high">
 
-        </div>
-      </div>
-
-      <!-- Right: headline + form -->
-      <div class="space-y-4 md:space-y-8">
-        <h1 class="text-4xl md:text-5xl font-headline font-black text-on-surface leading-tight text-center md:text-left">
-          말하면 그림이 되는<br><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">AI&nbsp;&nbsp;스티커 프린터</span>
-        </h1>
-        <!-- Phone capture card -->
-        <div class="bg-card px-7 py-4 md:p-7 rounded-xl sticker-border space-y-3 md:space-y-4 shadow-[0_8px_32px_rgba(56,56,49,0.08)]">
-          <div class="text-center md:text-left">
-            <label for="hero-phone" class="block font-headline font-bold text-on-surface text-lg">
-              <span style="color:#383831; font-size:0.8em; margin-right:5px;">✦</span>파파야 스타터 키트
-            </label>
-            <p class="font-body" style="font-size:0.82rem; color:#6b6b63; margin-top:2px;">프린터 + 스티커 세트</p>
-          </div>
-          <div class="text-center md:text-left font-body" style="margin-top:13px; display:flex; flex-direction:column; gap:8px;">
-            <span style="font-size:1.15rem; font-weight:800; color:#F88962; font-family:'Plus Jakarta Sans',sans-serif; line-height:1.2;">149,000원</span>
-            <span style="font-size:0.78rem; color:#6b6b63;">스타터 워크북 무료 증정 · 무료배송</span>
-          </div>
-          <button class="btn-primary w-full px-7 py-4 font-headline" style="margin-top:7px;">
-            구매하기
-          </button>
         </div>
       </div>
     </section>
