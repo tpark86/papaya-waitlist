@@ -163,6 +163,23 @@
       #howto-badge-1 svg { width: 238px; height: 112px; }
       #howto-badge-2 svg { width: 266px; height: 151px; }
       #howto-badge-3 svg { width: 241px; height: 112px; }
+
+      /* Sticker uses: 2-col grid instead of horizontal scroll */
+      #sticker-scroll-inner {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        width: auto !important;
+        animation: none !important;
+        padding: 20px 16px !important;
+        gap: 20px !important;
+      }
+      #sticker-scroll-inner .flex-shrink-0 {
+        width: auto !important;
+        padding: 0 !important;
+      }
+      #sticker-scroll-inner .flex-shrink-0:nth-child(n+8) {
+        display: none !important;
+      }
     }
     /* FAQ section: dark text on light green background */
     #faq-section .text-white { color: #383831 !important; }
