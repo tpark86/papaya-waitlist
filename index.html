@@ -135,6 +135,8 @@
       #how-it-works { padding-top: 6px !important; margin-top: -6px !important; }
       #hero-image-col { order: 1 !important; }
       #hero-text-col { order: 2 !important; }
+      #hero-cta-row { text-align: center !important; }
+      #hero-cta-row button { max-width: 100% !important; }
       #hero-card { height: 330px !important; }
       #overlay-front {
         left: calc(50vw - 101px) !important;
@@ -182,6 +184,10 @@
       #sticker-scroll-inner .flex-shrink-0:nth-child(n+9) {
         display: none !important;
       }
+    }
+    /* Hero image: 20% larger on desktop */
+    @media (min-width: 768px) {
+      #hero-card { max-width: 34rem !important; }
     }
     /* Sticker uses: 4-col grid on desktop */
     @media (min-width: 768px) {
@@ -259,7 +265,7 @@
       <!-- Left on desktop: headline + CTA -->
       <div id="hero-text-col" class="space-y-4 md:space-y-6" style="order: 1;">
         <!-- Badge -->
-        <div class="text-center md:text-left">
+        <div class="text-center md:text-left" style="margin-bottom: 24px;">
           <span class="inline-block font-headline font-bold text-sm" style="background-color: #383831; color: #ffffff; border-radius: 999px; padding: 6px 18px;">우리 아이 첫 AI 친구</span>
         </div>
         <!-- Main headline -->
@@ -267,14 +273,15 @@
           말하면 그림이 되는<br><span style="color:#ffffff; text-shadow: -2px -2px 0 #383831, 2px -2px 0 #383831, -2px 2px 0 #383831, 2px 2px 0 #383831, 4px 4px 0 #383831, 6px 6px 0 #383831, 8px 8px 0 #1a1a16;">AI&nbsp;&nbsp;스티커 프린터</span>
         </h1>
         <!-- Subheader -->
-        <p class="font-body text-center md:text-left" style="font-size: 1.05rem; color: #6b6b63;">상상한 이야기가 바로 스티커가 되는 시간</p>
         <!-- CTA row -->
-        <div class="flex items-center gap-5 justify-center md:justify-start" style="margin-top: 8px;">
-          <button class="btn-primary px-7 py-4 font-headline whitespace-nowrap">구매하기</button>
-          <div>
-            <div style="font-size: 1.15rem; font-weight: 800; color: #F88962; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.2;">149,000원</div>
-            <div style="font-size: 0.78rem; color: #6b6b63; margin-top: 2px;">무료 배송</div>
+        <div id="hero-cta-row" style="margin-top: 40px;">
+          <div style="margin-bottom: 6px;">
+            <span class="font-body" style="font-size: 0.85rem; color: #9ca3af; text-decoration: line-through;">정가 175,000원</span>
           </div>
+          <div style="margin-bottom: 12px;">
+            <span class="font-headline font-black text-on-surface" style="font-size: 2rem; line-height: 1;"><span style="font-size: 1rem;">런칭가</span> 149,000 <span style="font-size: 1rem;">원</span></span>
+          </div>
+          <button class="btn-primary py-4 font-headline w-full" style="max-width: 400px;">구매하기</button>
         </div>
       </div>
 
@@ -837,31 +844,19 @@
       <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-xl sticker-border shadow-2xl p-12 text-center space-y-6 relative overflow-hidden">
           <h2 class="relative z-10 text-4xl md:text-5xl font-headline font-black" style="color: #F88962;">파파야를 가장 먼저 만나보세요</h2>
-          <p class="relative z-10 text-lg text-on-surface mx-auto font-body">
-            선착순 100명에게만<br>99,000원 런칭가 혜택을 드려요.<br><br>출시 소식을 가장 먼저 받아보세요.
-          </p>
+          <div class="relative z-10" style="display: flex; flex-direction: column; align-items: center; gap: 0;">
+            <p class="font-headline font-bold" style="font-size: 1rem; color: #9ca3af; text-decoration: line-through; margin: 0;">정가 175,000원</p>
+            <p class="font-headline font-black text-on-surface" style="font-size: 2.5rem; line-height: 1; margin: 0;"><span style="font-size: 1.2rem;">런칭가 </span>149,000 <span style="font-size: 1.2rem;">원</span></p>
+          </div>
+          <div class="relative z-10 font-body text-on-surface" style="font-size: 1rem; line-height: 2; display: block; text-align: left; width: fit-content; margin-left: auto; margin-right: auto;">
+            <div><span style="color: #22c55e; font-weight: 700; margin-right: 8px;">✓</span>15% 할인</div>
+            <div><span style="color: #22c55e; font-weight: 700; margin-right: 8px;">✓</span>스타터 워크북 무료 증정</div>
+            <div><span style="color: #22c55e; font-weight: 700; margin-right: 8px;">✓</span>무료배송</div>
+          </div>
 
-          <form id="cta-form" class="relative z-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleCtaSubmit(event)">
-            <label for="cta-phone" class="sr-only">전화번호</label>
-            <input
-              id="cta-phone"
-              type="tel"
-              inputmode="numeric"
-              autocomplete="tel"
-              required
-              placeholder="010-0000-0000"
-              class="flex-1 bg-[#f1ede3] px-5 py-4 rounded-xl border-0 focus:ring-4 focus:ring-primary/30 focus:outline-none text-on-surface placeholder:text-on-surface-muted/60 font-body text-center"
-            />
-            <button
-              type="submit"
-              style="background-color:#F88962; color:#ffffff; box-shadow:0 8px 0 0 #c45030;" class="font-headline font-extrabold px-8 py-4 rounded-full hover:opacity-90 transition-colors whitespace-nowrap"
-            >
-              99,000원 런칭가 알림 신청하기
-            </button>
-          </form>
-
-          <p id="cta-status" class="relative z-10 text-on-surface-muted text-sm font-body hidden"></p>
-          <p class="relative z-10 text-on-surface-muted/70 text-xs font-body">결제는 진행되지 않아요. 출시 시 첫 구매 혜택만 안내드려요.</p>
+          <button class="relative z-10 btn-primary py-4 font-headline w-full" style="max-width: 360px;">
+            구매하기
+          </button>
         </div>
       </div>
     </section>
@@ -878,12 +873,6 @@
             <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 언제 출시되나요?</p>
             <svg width="155" height="10" viewBox="0 0 155 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,5 C12,2 24,8 36,5 C48,2 60,8 72,5 C84,2 96,8 108,5 C120,2 132,8 144,5 L153,5" stroke="#ff8eb2" stroke-width="2.3" stroke-linecap="round" fill="none"/></svg>
             <p class="font-body text-white/80 leading-relaxed">출시 일정이 확정되면 사전 알림 신청자에게 가장 먼저 안내드릴게요.</p>
-          </div>
-
-          <div>
-            <p class="font-headline font-black text-white" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Q. 지금 결제되는 건가요?</p>
-            <svg width="200" height="10" viewBox="0 0 200 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block; margin-bottom: 0.75rem;"><path d="M2,6 C14,3 28,9 42,6 C56,3 70,9 84,6 C98,3 112,9 126,6 C140,3 154,9 168,6 C182,3 194,9 198,6" stroke="#ff8eb2" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
-            <p class="font-body text-white/80 leading-relaxed">아니요. 지금은 사전 알림 신청만 진행되며, 결제는 진행되지 않아요.</p>
           </div>
 
           <div>
